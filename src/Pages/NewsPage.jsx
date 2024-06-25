@@ -3,10 +3,10 @@ import React from 'react';
 
 const NewsSection = () => {
     return (
-        <section>
+        <div className="m-5">
             <h2>News Section</h2>
             <p>This is the News Section.</p>
-        </section>
+        </div>
     );
 };
 

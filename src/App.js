@@ -6,12 +6,14 @@ import {
     Routes
 } from 'react-router-dom';
 import Navbar from './components/NavBar';
-import Home from './components/Home';
-import Team from './components/Team';
-import Services from './components/Services';
-import Query from './components/Query';
+import HomePage from './Pages/HomePage';
+import TeamPage from './Pages/TeamPage';
+import ServicesPage from './Pages/ServicesPage';
+import QueryPage from './Pages/QueryPage';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ContactUsPage from './Pages/ContactUsPage';
+import ApplicationPage from './Pages/ApplicationPage';
 
 function App() {
     return (
@@ -21,10 +23,12 @@ function App() {
                 <Navbar />
                 <main>
                     <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/team" element={<Team />} />
-                        <Route path="/services" element={<Services />} />
-                        <Route path="/query" element={<Query />} />
+                        <Route path="/" element={ <HomePage /> } />
+                        <Route path="/team" element={ <TeamPage /> } />
+                        <Route path="/services" element={ <ServicesPage /> } />
+                        <Route path="/query" element={ <QueryPage /> } />
+                        <Route path="/contact" element={ <ContactUsPage /> } />
+                        <Route path="/apply" element={ <ApplicationPage /> } />
                     </Routes>
                 </main>
                 <Footer />
