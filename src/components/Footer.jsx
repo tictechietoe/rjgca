@@ -55,7 +55,7 @@ const Footer = () => {
 
                     return (
                         <li key={ name } className="hover:ml-2 focus:ml-2 focus:shadow-lg transition-all duration-300 my-2 hover:font-medium">
-                            <a href={ url } target="_blank">
+                            <a href={ url } target="_blank" rel="noreferrer">
                                 { name }
                             </a>
                         </li>

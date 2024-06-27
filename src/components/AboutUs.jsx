@@ -1,6 +1,5 @@
 // src/components/AboutUs.js
 import React from 'react';
-import _ from 'lodash';
 import Slider from './Slider';
 
 const AboutUs = () => {
