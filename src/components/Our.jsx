@@ -6,15 +6,19 @@ import { BsPeopleFill } from "react-icons/bs";
 import { MdOutlineSecurity } from "react-icons/md";
 import { IoDiamondOutline } from "react-icons/io5";
 import { FaAddressCard } from "react-icons/fa";
+import { TiTick } from "react-icons/ti";
 
 
 const Our = () => {
 
     const liTagLine = (content = "", quality = "", icon = <></>) => {
         return (
-            <div className="flex px-10 my-2 items-center justify-between">
-                <li>{ content } <b>{ quality }</b></li>
-                <div className="mx-10">{ icon }</div>
+            <div key={ quality } className="flex justify-between align-center">
+                <div className="flex my-2">
+                    <div className="mr-4">{ icon }</div>
+                    <div>{ content } <b>{ quality }</b></div>
+                </div>
+                <div className="rounded bg-green-500 text-white my-2"><TiTick size={ 20 } /></div>
             </div>
         );
     };
@@ -75,17 +79,15 @@ const Our = () => {
         {
             title: "OUR VALUES",
             content:  <>
-                <ul className="list-disc pl-5">
-                    {
-                        _.map(values, value => {
-                            return liTagLine(
-                                value.content,
-                                value.quality,
-                                value.icon
-                            );
-                        })
-                    }
-                </ul>
+                {
+                    _.map(values, value => {
+                        return liTagLine(
+                            value.content,
+                            value.quality,
+                            value.icon
+                        );
+                    })
+                }
                 <div className="pt-2 flex justify-center">
                     <button className="bg-gray-500 text-white font-bold py-2 px-4 rounded-md">
                         More Details
@@ -96,7 +98,7 @@ const Our = () => {
     ];
 
     return (
-        <div className="flex p-5">
+        <div className="flex p-5 flex-wrap">
             {
                 _.map(ourData, (data, i) => {
                     const {

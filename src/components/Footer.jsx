@@ -130,8 +130,8 @@ const Footer = () => {
         } = section;
 
         return (
-            <div key={ title } className="mx-3 flex-1 min-w-[400px] justify-center">
-                <div className="flex justify-center py-2 text-2xl font-medium border-b sm:border-dashed">
+            <div key={ title } className="mx-3 flex-1 flex-wrap justify-center">
+                <div className="flex flex-wrap justify-center py-2 text-2xl font-medium border-b sm:border-dashed">
                     { title }
                 </div>
                 <div className="text-md font-light my-3">
@@ -142,8 +142,8 @@ const Footer = () => {
     };
 
     return (
-        <footer className="bg-gray-500 text-gray-200 m-5">
-            <div className="flex flex-wrap mx-2">
+        <footer className="bg-gray-500 text-gray-200 mt-10 m-0.5">
+            <div className="flex flex-wrap mx-2 my-1">
                 {
                     _.map(sectionDetails, section => sectionTitle(section))
                 }

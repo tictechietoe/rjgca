@@ -66,14 +66,14 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="sticky top-0 bg-gray-200 border-black border-t border-b border-1 z-10">
-            <div className="max-w-screen-xl px-4 py-0.5">
+        <nav className="sticky top-0 bg-gray-200 border-black border-t border-b border-1 z-20">
+            <div className="px-4 py-0.5">
                 <div className="flex items-center">
-                    <ul className="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
+                    <div className="flex flex-1 font-medium text-sm flex-wrap">
                         {
                             _.map(navbarContent, content => navItem(content))
                         }
-                    </ul>
+                    </div>
                 </div>
             </div>
         </nav>

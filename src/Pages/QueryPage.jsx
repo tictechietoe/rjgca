@@ -1,8 +1,8 @@
 // src/components/QueryForm.js
 import React, { useState } from 'react';
 
-const Query = () => {
-    const [formData, setFormData] = useState({
+const QueryPage = () => {
+    const defaultObject = {
         name: '',
         designation: '',
         organization: '',
@@ -14,7 +14,9 @@ const Query = () => {
         updates: '',
         subject: '',
         query: ''
-    });
+    };
+
+    const [formData, setFormData] = useState(defaultObject);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -28,19 +30,17 @@ const Query = () => {
         e.preventDefault();
         console.log(formData);
         // Here you can add code to send the formData to a server
+        setFormData(defaultObject);
+        alert("Form Submitted Succesfully");
     };
 
     return (
         <div className="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-lg mt-10">
-            <h2 className="flex text-xl font-bold text-center mb-6 justify-around">
-                <div>
-                    Help us to help you
-                </div>
-                <div>
-                    QUERY SHEET
-                </div>
-            </h2>
-            <form onSubmit={handleSubmit}>
+            <h2 className="flex text-xl font-bold text-center mb-6 justify-around">QUERY SHEET</h2>
+            <p className="text-center mb-6">
+                Help us to help you! Close and continuous communication with clients is one of our top priorities. We put our clients and their queries as the main proprity and at the centre of our business.
+            </p>
+            <form onSubmit={ handleSubmit }>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label className="block text-gray-700">Name <span className="text-red-500">*</span></label>
@@ -48,8 +48,8 @@ const Query = () => {
                             type="text"
                             name="name"
                             className="mt-1 p-2 w-full border rounded"
-                            value={formData.name}
-                            onChange={handleChange}
+                            value={ formData.name }
+                            onChange={ handleChange }
                             required
                         />
                     </div>
@@ -163,7 +163,7 @@ const Query = () => {
                             required
                         >
                             <option value="">-Select-</option>
-                            <option value="">Services</option>
+                            <option value="services">Services</option>
                         </select>
                     </div>
                     <div className="md:col-span-2">
@@ -191,4 +191,4 @@ const Query = () => {
     );
 };
 
-export default Query;
+export default QueryPage;

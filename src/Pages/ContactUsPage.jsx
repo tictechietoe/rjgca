@@ -4,7 +4,7 @@ import React from 'react';
 const ContactInfo = () => {
     return (
         <div className="max-w-6xl mx-auto p-6 bg-white shadow-md rounded-lg mt-10">
-            <h2 className="text-2xl font-bold mb-6">CONTACT INFORMATION</h2>
+            <h2 className="flex justify-center text-2xl font-bold border-b mb-6">CONTACT INFORMATION</h2>
             <div className="flex flex-col lg:flex-row justify-between">
                 <div className="lg:w-1/2">
                     <iframe

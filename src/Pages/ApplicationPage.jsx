@@ -1,194 +1,212 @@
-// src/components/QueryForm.js
 import React, { useState } from 'react';
 
-const Application = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        designation: '',
-        organization: '',
-        officeAddress: '',
-        city: '',
+const ApplicationPage = () => {
+    const defaultForm = {
+        firstName: '',
+        lastName: '',
         email: '',
-        telephone: '',
-        mobile: '',
-        updates: '',
-        subject: '',
-        query: ''
-    });
+        mobileNo: '',
+        gender: '',
+        dob: '',
+        position: '',
+        qualification: '',
+        portfolio: '',
+        company: '',
+        resume: null,
+        experienceYear: '',
+        experienceMonth: '',
+        comments: ''
+    };
+
+    const [formData, setFormData] = useState(defaultForm);
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value
-        });
+        const { name, value, type, files } = e.target;
+        setFormData((prevFormData) => ({
+            ...prevFormData,
+            [name]: type === 'file' ? files[0] : value
+        }));
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(formData);
         // Here you can add code to send the formData to a server
+        alert("Form Submitted Successfully");
+        // Reset formData to default values
+        setFormData(defaultForm);
     };
 
     return (
-        <div className="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-lg mt-10">
-            <h2 className="flex text-xl font-bold text-center mb-6 justify-around">
+        <form onSubmit={handleSubmit} className="max-w-4xl mx-auto p-8 bg-white shadow-md rounded-lg">
+            <h2 className="text-center text-2xl font-bold mb-6"> Apply Here </h2>
+            <p className="text-center mb-6">
+                We nurture and cultivate a sense of pride in the work and create team leaders. Your growth chart will be governed by well-defined transparent policies of the firm. Apply via the form given below and meet us for face-to-face interview.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                    Help us to help you
+                    <label className="block  font-medium text-gray-700">First name *</label>
+                    <input
+                        type="text"
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleChange}
+                        required
+                        className="mt-1 p-2 w-full border rounded"
+                    />
                 </div>
                 <div>
-                    QUERY SHEET
+                    <label className="block  font-medium text-gray-700">Last name *</label>
+                    <input
+                        type="text"
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleChange}
+                        required
+                        className="mt-1 p-2 w-full border rounded"
+                    />
                 </div>
-            </h2>
-            <form onSubmit={handleSubmit}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label className="block  font-medium text-gray-700">Email *</label>
+                    <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        className="mt-1 p-2 w-full border rounded"
+                    />
+                </div>
+                <div>
+                    <label className="block  font-medium text-gray-700">Mobile No *</label>
+                    <input
+                        type="text"
+                        name="mobileNo"
+                        value={formData.mobileNo}
+                        onChange={handleChange}
+                        required
+                        className="mt-1 p-2 w-full border rounded"
+                    />
+                </div>
+                <div>
+                    <label className="block  font-medium text-gray-700">Gender *</label>
+                    <select
+                        name="gender"
+                        value={formData.gender}
+                        onChange={handleChange}
+                        required
+                        className="mt-1 p-2 w-full border rounded"
+                    >
+                        <option value="">Select..</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div>
+                    <label className="block  font-medium text-gray-700">Position you are applying for</label>
+                    <input
+                        type="text"
+                        name="position"
+                        value={formData.position}
+                        onChange={handleChange}
+                        className="mt-1 p-2 w-full border rounded"
+                    />
+                </div>
+                <div>
+                    <label className="block  font-medium text-gray-700">Date Of Birth (DD/MM/YYYY) *</label>
+                    <input
+                        type="text"
+                        name="dob"
+                        value={formData.dob}
+                        onChange={handleChange}
+                        required
+                        className="mt-1 p-2 w-full border rounded"
+                    />
+                </div>
+                <div>
+                    <label className="block  font-medium text-gray-700">Highest Qualification</label>
+                    <input
+                        type="text"
+                        name="qualification"
+                        value={formData.qualification}
+                        onChange={handleChange}
+                        className="mt-1 p-2 w-full border rounded"
+                    />
+                </div>
+                <div>
+                    <label className="block  font-medium text-gray-700">Portfolio website</label>
+                    <input
+                        type="url"
+                        name="portfolio"
+                        value={formData.portfolio}
+                        onChange={handleChange}
+                        className="mt-1 p-2 w-full border rounded"
+                    />
+                </div>
+                <div>
+                    <label className="block  font-medium text-gray-700">Last company you worked for</label>
+                    <input
+                        type="text"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleChange}
+                        className="mt-1 p-2 w-full border rounded"
+                    />
+                </div>
+                <div>
+                    <label className="block  font-medium text-gray-700">Upload Resume * (Max size 1 mb)</label>
+                    <input
+                        type="file"
+                        name="resume"
+                        onChange={handleChange}
+                        required
+                        className="mt-1 p-2 w-full border rounded"
+                    />
+                </div>
+                <div className="grid grid-cols-2 gap-4">
                     <div>
-                        <label className="block text-gray-700">Name <span className="text-red-500">*</span></label>
-                        <input
-                            type="text"
-                            name="name"
-                            className="mt-1 p-2 w-full border rounded"
-                            value={formData.name}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
-                    <div>
-                        <label className="block text-gray-700">Designation</label>
-                        <input
-                            type="text"
-                            name="designation"
-                            className="mt-1 p-2 w-full border rounded"
-                            value={formData.designation}
-                            onChange={handleChange}
-                        />
-                    </div>
-                    <div>
-                        <label className="block text-gray-700">Organization</label>
-                        <input
-                            type="text"
-                            name="organization"
-                            className="mt-1 p-2 w-full border rounded"
-                            value={formData.organization}
-                            onChange={handleChange}
-                        />
-                    </div>
-                    <div>
-                        <label className="block text-gray-700">Office Address</label>
-                        <input
-                            type="text"
-                            name="officeAddress"
-                            className="mt-1 p-2 w-full border rounded"
-                            value={formData.officeAddress}
-                            onChange={handleChange}
-                        />
-                    </div>
-                    <div>
-                        <label className="block text-gray-700">City <span className="text-red-500">*</span></label>
-                        <input
-                            type="text"
-                            name="city"
-                            className="mt-1 p-2 w-full border rounded"
-                            value={formData.city}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
-                    <div>
-                        <label className="block text-gray-700">E-mail address <span className="text-red-500">*</span></label>
-                        <input
-                            type="email"
-                            name="email"
-                            className="mt-1 p-2 w-full border rounded"
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
-                    <div>
-                        <label className="block text-gray-700">Telephone No.</label>
-                        <input
-                            type="text"
-                            name="telephone"
-                            className="mt-1 p-2 w-full border rounded"
-                            value={formData.telephone}
-                            onChange={handleChange}
-                        />
-                    </div>
-                    <div>
-                        <label className="block text-gray-700">Mobile <span className="text-red-500">*</span></label>
-                        <input
-                            type="text"
-                            name="mobile"
-                            className="mt-1 p-2 w-full border rounded"
-                            value={formData.mobile}
-                            onChange={ handleChange }
-                            required
-                        />
-                    </div>
-                    <div>
-                        <label className="block text-gray-700">Other professional updates <span className="text-red-500">*</span></label>
-                        <div className="mt-1">
-                            <label className="inline-flex items-center">
-                                <input
-                                    type="radio"
-                                    name="updates"
-                                    value="yes"
-                                    className="form-radio"
-                                    onChange={ handleChange }
-                                    checked
-                                    required
-                                />
-                                <span className="ml-2">Yes</span>
-                            </label>
-                            <label className="inline-flex items-center ml-4">
-                                <input
-                                    type="radio"
-                                    name="updates"
-                                    value="no"
-                                    className="form-radio"
-                                    onChange={ handleChange }
-                                />
-                                <span className="ml-2">No</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div>
-                        <label className="block text-gray-700">Subject of Query <span className="text-red-500">*</span></label>
+                        <label className="block  font-medium text-gray-700">Years Of Experience</label>
                         <select
-                            name="subject"
+                            name="experienceYear"
+                            value={formData.experienceYear}
+                            onChange={handleChange}
                             className="mt-1 p-2 w-full border rounded"
-                            value={ formData.subject }
-                            onChange={ handleChange }
-                            required
                         >
-                            <option value="">-Select-</option>
-                            <option value="">Services</option>
+                            <option value="">Select Year</option>
+                            {/* Add year options here */}
                         </select>
                     </div>
-                    <div className="md:col-span-2">
-                        <label className="block text-gray-700">Query <span className="text-red-500">*</span></label>
-                        <textarea
-                            name="query"
+                    <div>
+                        <label className="block  font-medium text-gray-700">Month</label>
+                        <select
+                            name="experienceMonth"
+                            value={formData.experienceMonth}
+                            onChange={handleChange}
                             className="mt-1 p-2 w-full border rounded"
-                            rows="4"
-                            value={ formData.query }
-                            onChange={ handleChange }
-                            required
-                        />
+                        >
+                            <option value="">Select Month</option>
+                            {/* Add month options here */}
+                        </select>
                     </div>
                 </div>
-                <div className="flex justify-between mt-6">
-                    <button type="button" className="bg-gray-300 text-gray-700 font-bold py-2 px-4 rounded" onClick={() => setFormData({})}>
-                        Back
-                    </button>
-                    <button type="submit" className="bg-blue-500 text-white font-bold py-2 px-4 rounded">
-                        Submit
-                    </button>
+                <div className="md:col-span-2">
+                    <label className="block  font-medium text-gray-700">Reference / Comments / Questions</label>
+                    <textarea
+                        name="comments"
+                        value={formData.comments}
+                        onChange={handleChange}
+                        className="mt-1 p-2 w-full border rounded"
+                    />
                 </div>
-            </form>
-        </div>
+            </div>
+            <div className="mt-6 text-center">
+                <button type="submit" className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+                    Send Application
+                </button>
+            </div>
+        </form>
     );
 };
 
-export default Application;
+export default ApplicationPage;
