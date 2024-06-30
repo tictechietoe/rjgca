@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const ApplicationPage = () => {
-    const defaultForm = {
+    const defaultApplication = {
         firstName: '',
         lastName: '',
         email: '',
@@ -18,7 +18,7 @@ const ApplicationPage = () => {
         comments: ''
     };
 
-    const [formData, setFormData] = useState(defaultForm);
+    const [formData, setFormData] = useState(defaultApplication);
 
     const handleChange = (e) => {
         const { name, value, type, files } = e.target;
@@ -30,11 +30,28 @@ const ApplicationPage = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formData);
-        // Here you can add code to send the formData to a server
-        alert("Form Submitted Successfully");
-        // Reset formData to default values
-        setFormData(defaultForm);
+        // Here you can add code to send the formData to a serve
+
+        fetch("https://script.google.com/macros/s/AKfycbzMUQ8CIY3OsCSldz1llRileM7nB11VazV7eRSp1IUgwWldMR2sFvicJQHGlgY7UwBwlg/exec", {
+            method: "POST",
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                type: "application",
+                data: formData
+            })
+        })
+        .then((res) => {
+            alert("Application has been recorded succesfully.")
+        })
+        .catch((err) => {
+            alert("Some error recording the query. Can you please try again after some time.")
+        });
+
+        // set the form data to default values
+        setFormData(defaultApplication);
     };
 
     return (
@@ -45,18 +62,18 @@ const ApplicationPage = () => {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                    <label className="block  font-medium text-gray-700">First name *</label>
+                    <label className="block font-medium text-gray-700">First name *</label>
                     <input
                         type="text"
                         name="firstName"
-                        value={formData.firstName}
-                        onChange={handleChange}
+                        value={ formData.firstName }
+                        onChange={ handleChange }
                         required
                         className="mt-1 p-2 w-full border rounded"
                     />
                 </div>
                 <div>
-                    <label className="block  font-medium text-gray-700">Last name *</label>
+                    <label className="block font-medium text-gray-700">Last name *</label>
                     <input
                         type="text"
                         name="lastName"
@@ -67,7 +84,7 @@ const ApplicationPage = () => {
                     />
                 </div>
                 <div>
-                    <label className="block  font-medium text-gray-700">Email *</label>
+                    <label className="block font-medium text-gray-700">Email *</label>
                     <input
                         type="email"
                         name="email"

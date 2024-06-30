@@ -55,11 +55,11 @@ const Team = () => {
     ];
 
     return (
-        <div className="mx-3 flex-1 justify-center">
-            <div className="flex py-2 text-xl font-medium border-b sm:border-dashed justify-center mt-5">
+        <div>
+            <div className="flex py-2 text-xl font-medium border-b sm:border-dashed justify-center mt-5 mx-20 md:mx-40 lg:mx-60">
                 OUR TEAM
             </div>
-            <div className="text-sm font-light my-3 mx-20 md:mx-40 lg:mx-60">
+            <div className="text-lg font-light my-3 mx-20 md:mx-40 lg:mx-60">
                 <div className="my-5">
                     We  generate our strength from our team of professionals who have significant functional and industry expertise across services and are well-equipped to deliver outstanding results. Quality of our people is the foundation of our ability to serve our clients in the best way. From our newest staff members through senior staff, exceptional client service represents a dedication to going above and beyond expectations in every working relationship.
                 </div>

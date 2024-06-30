@@ -143,7 +143,7 @@ const Footer = () => {
 
     return (
         <footer className="bg-gray-500 text-gray-200 mt-10 m-0.5">
-            <div className="flex flex-wrap mx-2 my-1">
+            <div className="flex flex-wrap mx-2 my-1 grid grid-cols-1 md:grid-cols-3">
                 {
                     _.map(sectionDetails, section => sectionTitle(section))
                 }

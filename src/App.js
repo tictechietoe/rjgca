@@ -14,6 +14,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ContactUsPage from './Pages/ContactUsPage';
 import ApplicationPage from './Pages/ApplicationPage';
+import ValuesPage from './Pages/ValuesPage';
 
 function App() {
     return (
@@ -29,6 +30,7 @@ function App() {
                         <Route path="/query" element={ <QueryPage /> } />
                         <Route path="/contact" element={ <ContactUsPage /> } />
                         <Route path="/apply" element={ <ApplicationPage /> } />
+                        <Route path="/values" element={ <ValuesPage /> } />
                     </Routes>
                 </main>
                 <Footer />

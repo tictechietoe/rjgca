@@ -98,7 +98,7 @@ const Our = () => {
     ];
 
     return (
-        <div className="flex p-5 flex-wrap">
+        <div className="flex p-5 flex-wrap grid grid-cols-1 md:grid-cols-3">
             {
                 _.map(ourData, (data, i) => {
                     const {

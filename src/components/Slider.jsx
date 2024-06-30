@@ -34,7 +34,7 @@ const Slider = ({ data, isServices, slidesNumber = 1 }) => {
                             <SwiperSlide key={ index } className="px-5">
                                 {
                                     !isServices
-                                    ? <div className="mx-10 pb-10">{ d }</div>
+                                    ? <div className="mx-10 pb-10 ">{ d }</div>
                                     : <div className="flex mx-10 pb-10">
                                         <Card data={ d } />
                                     </div>

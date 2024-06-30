@@ -28,10 +28,28 @@ const QueryPage = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formData);
-        // Here you can add code to send the formData to a server
+        // Here you can add code to send the formData to a serve
+
+        fetch("https://script.google.com/macros/s/AKfycbzMUQ8CIY3OsCSldz1llRileM7nB11VazV7eRSp1IUgwWldMR2sFvicJQHGlgY7UwBwlg/exec", {
+            method: "POST",
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                type: "query",
+                data: formData
+            })
+        })
+        .then((res) => {
+            alert("Query has been recorded succesfully.")
+        })
+        .catch((err) => {
+            alert("Some error recording the query. Can you please try again after some time.")
+        })
+
+        // set the form data to default values
         setFormData(defaultObject);
-        alert("Form Submitted Succesfully");
     };
 
     return (
@@ -59,8 +77,8 @@ const QueryPage = () => {
                             type="text"
                             name="designation"
                             className="mt-1 p-2 w-full border rounded"
-                            value={formData.designation}
-                            onChange={handleChange}
+                            value={ formData.designation }
+                            onChange={ handleChange }
                         />
                     </div>
                     <div>
