@@ -11,8 +11,20 @@ const ServicesPage = () => {
     useEffect(() => {
       if (location.hash) {
         const element = document.getElementById(location.hash.slice(1));
+
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+            const navbarElement = document.querySelector('.navbar');
+
+            // Adjust this value based on your header height
+            const headerOffset = navbarElement ? navbarElement.getBoundingClientRect().height : 80;
+
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.scrollY - headerOffset;
+  
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
         }
       } else {
         window.scrollTo(0, 0);
@@ -20,7 +32,7 @@ const ServicesPage = () => {
     }, [location]);
 
     return (
-        <div className="mx-20 md:mx-40 lg:mx-60">
+        <div className="mx-5 md:mx-40 lg:mx-60">
             <h2 className="flex py-2 text-xl font-medium border-b sm:border-dashed justify-center mt-5">
                 SERVICES PROVIDED
             </h2>

@@ -1,14 +1,20 @@
 // src/components/Navbar.js
-import React from 'react';
+import React, { useState } from 'react';
 import _ from 'lodash';
 import { Link } from 'react-router-dom';
 import { RiTeamFill, RiBillFill } from "react-icons/ri";
 import { FaHome, FaWpforms } from "react-icons/fa";
 import { MdSupportAgent } from "react-icons/md";
 import { PiPhoneCallFill } from "react-icons/pi";
+import { LuMenuSquare } from "react-icons/lu";
 
 
 const Navbar = () => {
+    const [showNavbarBlock, setShowNavBarBlock] = useState(false);
+
+    const handleNavbarClick = () => {
+        setShowNavBarBlock(!showNavbarBlock);
+    };
 
     const navbarContent = [
         {
@@ -53,7 +59,7 @@ const Navbar = () => {
         return (
             <button
                 key={ title }
-                className="text-gray-900 hover:bg-gray-600 px-5 py-1 rounded-sm hover:text-gray-200 transition delay-150 duration-100 ease-in-out"
+                className="text-gray-900 hover:bg-gray-600 px-5 py-1 rounded-sm hover:text-gray-200 transition delay-100 duration-100 ease-in-out"
             >
                 <Link to={ navigateUrl }>
                     <div className="flex items-center py-2">
@@ -66,8 +72,8 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="sticky top-0 bg-gray-200 border-black border-t border-b border-1 z-20">
-            <div className="px-4 py-0.5">
+        <nav className="sticky top-0 bg-gray-200 border-black border-t border-b z-20 navbar">
+            <div className="px-4 py-0.5 hidden md:block lg:block">
                 <div className="flex items-center">
                     <div className="flex flex-1 font-medium text-sm flex-wrap">
                         {
@@ -75,6 +81,25 @@ const Navbar = () => {
                         }
                     </div>
                 </div>
+            </div>
+            <div className="py-0.5 md:hidden lg:hidden">
+                <div className="flex items-center">
+                    <button
+                        className="my-2 mx-4 p-1 hover:bg-gray-600 hover:text-gray-200 justify-center"
+                        onClick={ handleNavbarClick }
+                    >
+                        <LuMenuSquare size={ 40 } />
+                    </button>
+                    <p className="text-lg font-medium">Navigation Button</p>
+                </div>
+                {
+                    showNavbarBlock &&
+                    <div className="border-t border-black pt-1 px-1 grid grid-cols-2">
+                        {
+                            _.map(navbarContent, content => navItem(content))
+                        }
+                    </div>
+                }
             </div>
         </nav>
     );

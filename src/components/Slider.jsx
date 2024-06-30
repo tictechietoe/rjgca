@@ -15,7 +15,7 @@ const Slider = ({ data, isServices, slidesNumber = 1 }) => {
 
     return (
         <section
-            className='bg-white mt-10 hover:cursor-pointer'
+            className='bg-white mt-2 hover:cursor-pointer'
             onMouseEnter={ () => swiperRef.current.autoplay.stop() }
             onMouseLeave={ () => swiperRef.current.autoplay.start() }
         >

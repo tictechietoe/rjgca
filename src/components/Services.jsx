@@ -24,7 +24,7 @@ const OurServices = () => {
             <h2 className="flex justify-center font-medium text-3xl">
                 OUR SERVICES
             </h2>
-            <div className="my-1">
+            <div className="mb-5">
                 <Slider
                     data={ servicesData }
                     isServices={ true }

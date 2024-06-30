@@ -1,15 +1,17 @@
 // src/components/OurServices.js
 import React from 'react';
 import _ from 'lodash';
-import { PiHandshakeBold } from "react-icons/pi";
-import { BsPeopleFill } from "react-icons/bs";
-import { MdOutlineSecurity } from "react-icons/md";
-import { IoDiamondOutline } from "react-icons/io5";
-import { FaAddressCard } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
+import valuesData from '../data/valuesData';
 import { TiTick } from "react-icons/ti";
 
-
 const Our = () => {
+
+    const navigate = useNavigate();
+
+    const onMoreValuesClick = () => {
+        navigate(`/values`);
+    };
 
     const liTagLine = (content = "", quality = "", icon = <></>) => {
         return (
@@ -22,34 +24,6 @@ const Our = () => {
             </div>
         );
     };
-
-    const values = [
-        {
-            content: "We value the",
-            quality: "RELATIONS",
-            icon: <PiHandshakeBold size={ 20 } />
-        },
-        {
-            content: "We work with",
-            quality: "INTEGRITY",
-            icon: <MdOutlineSecurity size={ 20 } />
-        },
-        {
-            content: "We value the",
-            quality: "PEOPLE",
-            icon: <BsPeopleFill size={ 20 } />
-        },
-        {
-            content: "We add",
-            quality: "VALUE",
-            icon: <IoDiamondOutline size={ 20 } />
-        },
-        {
-            content: "We act",
-            quality: "RESPONSIBLY",
-            icon: <FaAddressCard size={ 20 } />
-        },
-    ]
 
     const ourData = [
         {
@@ -80,7 +54,7 @@ const Our = () => {
             title: "OUR VALUES",
             content:  <>
                 {
-                    _.map(values, value => {
+                    _.map(valuesData, value => {
                         return liTagLine(
                             value.content,
                             value.quality,
@@ -89,7 +63,7 @@ const Our = () => {
                     })
                 }
                 <div className="pt-2 flex justify-center">
-                    <button className="bg-gray-500 text-white font-bold py-2 px-4 rounded-md">
+                    <button className="bg-gray-500 text-white font-bold py-2 px-4 rounded-md" onClick={ onMoreValuesClick }>
                         More Details
                     </button>
                 </div>
