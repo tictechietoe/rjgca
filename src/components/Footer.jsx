@@ -4,155 +4,173 @@ import _ from 'lodash';
 import { CgWebsite } from "react-icons/cg";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+  const navigate = useNavigate();
 
-    const disclaimerSection = <>
-        <p>
-            Your access to this website constitutes your agreement to be bound by all terms and conditions listed herein below. 
-            If you do not agree to this, you may not access or otherwise use the website.
-        </p>
-        <br />
-        <p>
-            The material displayed on this website may be downloaded for non-commercial..
-        </p>
-        <button className="mt-3 rounded-full bg-white text-slate-500 px-2 py-1 font-medium">
-            Read More
-        </button>
-    </>;
+  const handleReadMoreDisclaimerClick = () => {
+    navigate(`/disclaimer`);
+  };
 
-    const linksMap = [
-        {
-            url: 'https://incometaxindia.gov.in/Pages/default.aspx',
-            name: 'Income Tax Department'
-        },
-        {
-            url: 'https://incometaxindia.gov.in/Pages/default.aspx',
-            name: 'Central Board of Excise and Customs'
-        },
-        {
-            url: 'https://incometaxindia.gov.in/Pages/default.aspx',
-            name: 'E-Tax Information Network'
-        },
-        {
-            url: 'https://incometaxindia.gov.in/Pages/default.aspx',
-            name: 'Ministry of Corporate Affairs'
-        },
-        {
-            url: 'https://www.epfindia.gov.in/site_en/index.php',
-            name: 'Employees Provident Fund'
-        }
-    ];
+  const disclaimerSection = <>
+    <p>
+      Your access to this website constitutes your agreement to be bound by all terms and conditions listed herein below.
+    </p>
+    <br />
+    <p>
+      If you do not agree to this, you may not access or otherwise use the website.
+    </p>
+    <button className="mt-3 rounded-md bg-white text-slate-500 px-2 py-1 font-medium" onClick={handleReadMoreDisclaimerClick}>
+      Read More
+    </button>
+  </>;
 
-    const sectionUsefulLinks = <>
-        <ul className="list-disc pl-5">
-            {
-                _.map(linksMap, link => {
-                    const {
-                        url = '',
-                        name = ''
-                    } = link;
+  const linksMap = [
+    {
+      url: 'https://incometaxindia.gov.in/Pages/default.aspx',
+      name: 'Income Tax Department'
+    },
+    {
+      url: 'https://incometaxindia.gov.in/Pages/default.aspx',
+      name: 'Central Board of Excise and Customs'
+    },
+    {
+      url: 'https://incometaxindia.gov.in/Pages/default.aspx',
+      name: 'E-Tax Information Network'
+    },
+    {
+      url: 'https://incometaxindia.gov.in/Pages/default.aspx',
+      name: 'Ministry of Corporate Affairs'
+    },
+    {
+      url: 'https://www.epfindia.gov.in/site_en/index.php',
+      name: 'Employees Provident Fund'
+    }
+  ];
 
-                    return (
-                        <li key={ name } className="hover:ml-2 focus:ml-2 focus:shadow-lg transition-all duration-300 my-2 hover:font-medium">
-                            <a href={ url } target="_blank" rel="noreferrer">
-                                { name }
-                            </a>
-                        </li>
-                    );
-                })
-            }
-        </ul>
-    </>;
+  const sectionUsefulLinks = <>
+    <ul className="list-disc pl-5">
+      {
+        _.map(linksMap, link => {
+          const {
+            url = '',
+            name = ''
+          } = link;
 
-    const linksData = [
-        {
-            symbol: <CgWebsite size={ 25 } />,
-            value: <>www.rgjgala.com</>,
-            key: "website"
-        },
-        {
-            symbol: <FaPhoneAlt size={ 25 } />,
-            value: <>
-                <p>12345678</p>
-                <p>Help us to help you !</p>
-            </>,
-            key: "contact"
-        },
-        {
-            symbol: <MdOutlineMailOutline size={ 25 } />,
-            value: <>
-                <p>email 1</p>
-                <p>email 2</p>
-            </>,
-            key: "email"
-        }
-    ];
+          return (
+            <li key={name} className="hover:ml-2 focus:ml-2 focus:shadow-lg transition-all duration-300 my-2 hover:font-bold">
+              <a href={url} target="_blank" rel="noreferrer">
+                {name}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </>;
 
-    const contactUsSection = <>
-        {
-            _.map(linksData, link => {
-                const {
-                    symbol = <></>,
-                    value = <></>,
-                    key = ""
-                } = link;
+  const linksData = [
+    {
+      symbol: <CgWebsite size={25} />,
+      value: <>
+        <a
+          href="https://rjgca.netlify.app"
+          target="_blank"
+          rel="noreferrer"
+        >
+          rjgca.netlify.app
+        </a>
+      </>,
+      key: "website"
+    },
+    {
+      symbol: <FaPhoneAlt size={25} />,
+      value: <>
+        <div><a href="tel:9372597268">+91 9372597268</a></div>
+        <div><a href="tel:9022573304">+91 9022573304</a></div>
+      </>,
+      key: "contact"
+    },
+    {
+      symbol: <MdOutlineMailOutline size={25} />,
+      value: <>
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=connect@rjgca.in"
+          target="_blank"
+          rel="noreferrer"
+        >
+          connect@rjgca.in
+        </a>
+      </>,
+      key: "email"
+    }
+  ];
 
-                return (
-                    <div key={ key } className="flex justify-normal items-center p-2">
-                        <div className="px-2">{ symbol }</div>
-                        <div className="px-2">{ value }</div>
-                    </div>
-                );
-            })
-        }
-    </>;
-
-    const sectionDetails = [
-        {
-            title: 'DISCLAIMER',
-            content: disclaimerSection
-        },
-        {
-            title: 'USEFUL LINKS',
-            content: sectionUsefulLinks
-        },
-        {
-            title: 'CONTACT US',
-            content: contactUsSection
-        }
-    ];
-
-    const sectionTitle = (section = {}) => {
+  const contactUsSection = <>
+    {
+      _.map(linksData, link => {
         const {
-            title = '',
-            content = <></>
-        } = section;
+          symbol = <></>,
+          value = <></>,
+          key = ""
+        } = link;
 
         return (
-            <div key={ title } className="mx-3 flex-1 flex-wrap justify-center">
-                <div className="flex flex-wrap justify-center py-2 text-2xl font-medium border-b sm:border-dashed">
-                    { title }
-                </div>
-                <div className="text-md font-light my-3">
-                    { content }
-                </div>
-            </div>
+          <div key={key} className="flex justify-normal items-center p-2 hover:ml-2 focus:ml-2 focus:shadow-lg transition-all duration-300 my-2 hover:font-bold">
+            <div className="px-2">{symbol}</div>
+            <div className="px-2">{value}</div>
+          </div>
         );
-    };
+      })
+    }
+  </>;
+
+  const sectionDetails = [
+    {
+      title: 'DISCLAIMER',
+      content: disclaimerSection
+    },
+    {
+      title: 'USEFUL LINKS',
+      content: sectionUsefulLinks
+    },
+    {
+      title: 'CONTACT US',
+      content: contactUsSection
+    }
+  ];
+
+  const sectionTitle = (section = {}) => {
+    const {
+      title = '',
+      content = <></>
+    } = section;
 
     return (
-        <footer className="bg-gray-500 text-gray-200 mt-10 m-0.5">
-            <div className="flex flex-wrap mx-2 my-1 grid grid-cols-1 md:grid-cols-3">
-                {
-                    _.map(sectionDetails, section => sectionTitle(section))
-                }
-            </div>
-            <div className="flex justify-center border-t border-b py-2">
-                &copy; 2023 My React App. All rights reserved.
-            </div>
-        </footer>
+      <div key={title} className="mx-5 flex-1 flex-wrap justify-center">
+        <div className="flex flex-wrap justify-center py-2 text-2xl font-medium border-b sm:border-dashed">
+          {title}
+        </div>
+        <div className="text-md font-light my-3">
+          {content}
+        </div>
+      </div>
     );
+  };
+
+  return (
+    <footer className="bg-gray-500 text-gray-200 mt-10 m-0.5">
+      <div className="flex flex-wrap mx-5 my-1 grid grid-cols-1 md:grid-cols-3">
+        {
+          _.map(sectionDetails, section => sectionTitle(section))
+        }
+      </div>
+      <div className="flex justify-center border-t border-b py-2">
+        &copy; 2023 My React App. All rights reserved.
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;

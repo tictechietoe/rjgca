@@ -1,14 +1,14 @@
 // src/components/Header.js
 import React from 'react';
-import companyLogo from '../assets/companyLogo.png';
+import companyLogo from '../assets/logo/companyLogo.png';
 
 const Header = () => {
-    return (
-        <header className="flex justify-center my-5 px-5">
-            <img width="100px" src={ companyLogo } />
-            <h2 className="px-10 font-medium text-5xl text-sky-800">R J GALA & ASSOCIATES</h2>
-        </header>
-    );
+  return (
+    <header className="flex justify-center my-3 px-5 items-center">
+      <img width="75px" src={companyLogo} alt='company logo' />
+      <h2 className="px-5 font-normal text-4xl text-sky-800 font-serif tracking-wide">R J GALA & ASSOCIATES</h2>
+    </header>
+  );
 };
 
 export default Header;
