@@ -1,26 +1,27 @@
 // src/components/Navbar.js
-import React, { useState } from 'react';
+import React from 'react';
 import _ from 'lodash';
 import { Link } from 'react-router-dom';
 import { RiTeamFill, RiBillFill } from "react-icons/ri";
 import { FaHome, FaWpforms } from "react-icons/fa";
 import { MdSupportAgent } from "react-icons/md";
 import { PiPhoneCallFill } from "react-icons/pi";
-import { LuMenuSquare } from "react-icons/lu";
+import { SiAboutdotme } from "react-icons/si";
+import Logo from './Logo';
 
 
 const Navbar = () => {
-  const [showNavbarBlock, setShowNavBarBlock] = useState(false);
-
-  const handleNavbarClick = () => {
-    setShowNavBarBlock(!showNavbarBlock);
-  };
 
   const navbarContent = [
     {
       title: 'HOME',
       to: '/',
       icon: <FaHome size={20} />
+    },
+    {
+      title: 'ABOUT US',
+      to: '/aboutus',
+      icon: <SiAboutdotme size={20} />
     },
     {
       title: 'TEAM',
@@ -38,8 +39,8 @@ const Navbar = () => {
       icon: <FaWpforms size={20} />
     },
     {
-      title: 'APPLY HERE',
-      to: '/apply',
+      title: 'CAREERS',
+      to: '/careers',
       icon: <RiBillFill size={20} />
     },
     {
@@ -57,14 +58,11 @@ const Navbar = () => {
     } = content;
 
     return (
-      <button
-        key={title}
-        className="text-gray-900 hover:bg-gray-600 px-5 py-1 rounded-sm hover:text-gray-200 transition delay-100 duration-100 ease-in-out"
-      >
+      <button key={title} className="text-custom-secondary px-2 rounded-sm transition delay-100 duration-100 ease-in-out hover:font-extrabold">
         <Link to={navigateUrl}>
-          <div className="flex items-center py-2">
+          <div className="flex items-center py-1 px-1 hover:border-2 hover:bg-custom-secondary hover:border-white hover:text-white">
             <div className="mx-1">{icon}</div>
-            <div className="mx-1 text-base">{title}</div>
+            <div className="mx-1 hover:text-lg">{title}</div>
           </div>
         </Link>
       </button>
@@ -72,34 +70,29 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky top-0 bg-gray-200 border-black border-t border-b z-20 navbar">
-      <div className="px-4 py-0.5 hidden md:block lg:block">
-        <div className="flex items-center">
-          <div className="flex flex-1 font-medium text-sm flex-wrap">
-            {
-              _.map(navbarContent, content => navItem(content))
-            }
+    <nav className="flex items-center justify-between sticky top-0 z-30 bg-custom-nav-color drop-shadow-lg">
+      <Logo />
+      <div>
+        {/* <div className="flex justify-end py-3">
+          {
+            _.map(quickLinks, item => {
+              return (
+                <div className="px-5 py-1 mx-5 text-white border-white border-2 hover:font-bold hover:bg-white hover:text-custom-secondary rounded-xl">
+                  { item }
+                </div>
+              );
+            })
+          }
+        </div> */}
+        <div className="px-4 py-0.5 hidden md:block lg:block py-2">
+          <div className="flex flex-col items-center">
+            <div className="flex flex-1 font-medium text-sm flex-wrap">
+              {
+                _.map(navbarContent, content => navItem(content))
+              }
+            </div>
           </div>
         </div>
-      </div>
-      <div className="py-0.5 md:hidden lg:hidden">
-        <div className="flex items-center">
-          <button
-            className="my-2 mx-4 p-1 hover:bg-gray-600 hover:text-gray-200 justify-center"
-            onClick={handleNavbarClick}
-          >
-            <LuMenuSquare size={40} />
-          </button>
-          <p className="text-lg font-medium">Navigation Button</p>
-        </div>
-        {
-          showNavbarBlock &&
-          <div className="border-t border-black pt-1 px-1 grid grid-cols-2">
-            {
-              _.map(navbarContent, content => navItem(content))
-            }
-          </div>
-        }
       </div>
     </nav>
   );

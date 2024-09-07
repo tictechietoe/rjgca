@@ -62,7 +62,7 @@ const QueryPage = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-lg mt-10">
+    <div className="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-lg my-10">
       <form onSubmit={handleSubmit}>
         <h2 className="flex text-2xl text-center mb-6 justify-around">QUERY SHEET</h2>
         <p className="text-center mb-6">

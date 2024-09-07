@@ -2,6 +2,8 @@
 import React from 'react';
 import _ from 'lodash';
 import { MdFace, MdFace3 } from "react-icons/md";
+import teamImage from '../assets/images/team.jpg';
+import BannerImage from '../components/BannerImage';
 
 const TeamCard = ({ data }) => {
 
@@ -56,6 +58,13 @@ const Team = () => {
 
   return (
     <div>
+      <BannerImage
+        image={ teamImage }
+        title="TEAM"
+        fromText="Home"
+        fromLink="/"
+        toText="Team"
+      />
       <div className="flex py-2 text-xl font-medium border-b sm:border-dashed justify-center mt-5 mx-20 md:mx-40 lg:mx-60">
         OUR TEAM
       </div>

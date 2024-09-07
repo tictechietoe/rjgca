@@ -11,41 +11,41 @@ import '../styles/Slider.css';
 import Card from './Card';
 
 const Slider = ({ data, isServices, slidesNumber = 1 }) => {
-    const swiperRef = useRef(null);
+  const swiperRef = useRef(null);
 
-    return (
-        <section
-            className='bg-white mt-2 hover:cursor-pointer'
-            onMouseEnter={ () => swiperRef.current.autoplay.stop() }
-            onMouseLeave={ () => swiperRef.current.autoplay.start() }
-        >
-            <Swiper
-                modules={ [Autoplay, A11y, Pagination, Navigation] }
-                spaceBetween={ 30 } // Adjust the spacing as needed
-                slidesPerView={ slidesNumber } // Show only one slide by default
-                autoplay={ { delay: 5000 } }
-                pagination={ { clickable: true } }
-                navigation
-                onSwiper={ (swiper) => (swiperRef.current = swiper) }
-            >
+  return (
+    <section
+      className='bg-white mt-2 hover:cursor-pointer'
+      onMouseEnter={() => swiperRef.current.autoplay.stop()}
+      onMouseLeave={() => swiperRef.current.autoplay.start()}
+    >
+      <Swiper
+        modules={[Autoplay, A11y, Pagination, Navigation]}
+        spaceBetween={30} // Adjust the spacing as needed
+        slidesPerView={slidesNumber} // Show only one slide by default
+        autoplay={{ delay: 5000 }}
+        pagination={{ clickable: true }}
+        navigation
+        onSwiper={(swiper) => (swiperRef.current = swiper)}
+      >
+        {
+          _.map(data, (d, index) => {
+            return (
+              <SwiperSlide key={index} className="px-5">
                 {
-                    _.map(data, (d, index) => {
-                        return (
-                            <SwiperSlide key={ index } className="px-5">
-                                {
-                                    !isServices
-                                    ? <div className="mx-10 pb-10 ">{ d }</div>
-                                    : <div className="flex mx-10 pb-10">
-                                        <Card data={ d } />
-                                    </div>
-                                }
-                            </SwiperSlide>
-                        );
-                    })
+                  !isServices
+                    ? <div className="mx-10 pb-10 ">{d}</div>
+                    : <div className="flex mx-10 pb-10">
+                      <Card data={d} />
+                    </div>
                 }
-            </Swiper>
-        </section>
-    );
+              </SwiperSlide>
+            );
+          })
+        }
+      </Swiper>
+    </section>
+  );
 };
 
 export default Slider;

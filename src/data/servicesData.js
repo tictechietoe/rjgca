@@ -124,6 +124,81 @@ const services = [
     icon: <GrCompliance size={30} />
   },
   {
+    name: "Corporate Advisory",
+    description: "Business cannot last in today's world economy without a clear sense of purpose and a strategy. Timely strategic financial advice is the prerequisite of all transactions that take place in today's rapidly evolving competitive landscape.",
+    content: <>
+      <div>
+        Business cannot last in today's world economy without a clear sense of purpose and a strategy to reach goals. RJGCA supports clients as they plan and adapt in order to meet the challenges of expansion and going international. Timely strategic financial advice is the prerequisite of all transactions that take place in today's rapidly evolving competitive landscape. We understand this and assist in identifying opportunities for, or risks to, our clients' interests, which accompany most financial advisory engagements. We provide businesses with corporate finance advice and support across a range of issues, drawing on the resources, expertise and experience.
+      </div>
+      <br />
+      <div>Our services include:</div>
+      <ol className="list-decimal ml-5">
+        <li>Fund raising — Debt, Venture capital and private equity.</li>
+        <li>Business Valuations</li>
+        <li>Accounting & Financial Due Diligence</li>
+        <li>Tax Due Diligence</li>
+        <li>Building Business Model </li>
+        <li>Transaction Advisory Services</li>
+        <li>Ind AS Advisory</li>
+        <li>Transaction Support services</li>
+        <li>Business Structuring services</li>
+        <li>Business Advisory</li>
+        <li>Risk Assessment</li>
+      </ol>
+    </>,
+    id: "corporate_advisory",
+    icon: <GiTakeMyMoney size={30} />
+  },
+  {
+    name: "FEMA Advisory",
+    description: "It is impperative for the enterprise to keep a regular watch on foreign exchange transactions, in the context of sectoral caps, investment caps, so as to overcome from the adverse regulatory actions.",
+    content: <>
+      <div>
+        India has become significant player in global market and have seen surge of cross border activities. A breakthrough flow of funds, inbound as well as outbound has expanded the level of check on compliances in context of the foreign exchange regulations. It is impperative for the enterprise to keep a regular watch on foreign exchange transactions, in the context of sectoral caps, investment caps, so as to overcome from the adverse regulatory actions. In order to circumvent detrimental circumstances, we have specially designed these services, to ensure due compliance of FEMA laws.
+      </div>
+      <br />
+      <div>Our services include:</div>
+      <ol className="list-decimal ml-5">
+        <li>Foreign Direct Investment in India (FDI)- Advisory & compliances.</li>
+        <li>Advising on inbound investments in India on repatriable or non-repatriable basis.</li>
+        <li>Advisory and setting up of entry structure like subsidiary Company/branch/liaison office/project/site office in India.</li>
+        <li>Advisory on Foreign Policies & procedures in India, Transfer of shares from residents to non-residents, Transfer of immovable property and regulatory compliance thereon.</li>
+        <li>Obtaining prior/post facto approvals under FEMA from Reserve Bank of India (RBI).</li>
+        <li>External Commercial Borrowings- Advisory & Compliances.</li>
+        <li>Periodical Filing of Returns with RBI.</li>
+        <li>Other Advisory Services under FEMA</li>
+        <li>Issue of Statutory Certificates under FEMA & RBI regulation.</li>
+      </ol>
+    </>,
+    id: "fema_advisory",
+    icon: <TbDeviceIpadSearch size={30} />
+  },
+  {
+    name: "Societies, Trust and Co-operative Society Regulations & Advisory",
+    description: "It is impperative for the enterprise to keep a regular watch on foreign exchange transactions, in the context of sectoral caps, investment caps, so as to overcome from the adverse regulatory actions.",
+    content: <>
+      <div>
+        Charity begins at home and has countless ripples that affect the societies and communities at large. Whether it is a trust managed by a few people or a large section of the society, we provide the best financial advice and services. Trust and societies form a pivotal pillar of the economic structure of the country, hence it is our duty to ensure that your organization stands on a strong and sustainable economic pillar.
+      </div>
+      <br />
+      <div>Our services include:</div>
+      <ol className="list-decimal ml-5">
+        <li>Formation of Society, Trust & Section 8 Company</li>
+        <li>Registration U/s 12AA and 80G of Income Tax Act</li>
+        <li>Registration and filing of returns under Foreign Contribution Regulation Act (FCRA)</li>
+        <li>Statutory Audit under Maharashtra Society Registration Act, 1860</li>
+        <li>Internal Audit as per model Bye-Laws and Act</li>
+        <li>Accounting & Support Services</li>
+        <li>Direct & Indirect taxation compliances</li>
+        <li>Minutes Drafting for Various Meetings i.e. Board Meeting, EGM & AGM</li>
+        <li>Compliances relating to Bye-Laws and Act</li>
+        <li>Advisory in above matters</li>
+      </ol>
+    </>,
+    id: "societies_trust_and_cooperative_society_regulations_and_advisory",
+    icon: <SiHomeadvisor size={30} />
+  },
+  {
     name: "Audit & Assurance",
     description: "The Audit renders an opportunity to provide you with updated insight into your business and insight that could identify potential threats or opportunities that can be factored into your future business plans.",
     content: <>
@@ -151,30 +226,28 @@ const services = [
     icon: <FaMoneyBillTransfer size={30} />
   },
   {
-    name: "Corporate Advisory",
-    description: "Business cannot last in today's world economy without a clear sense of purpose and a strategy. Timely strategic financial advice is the prerequisite of all transactions that take place in today's rapidly evolving competitive landscape.",
+    name: "Loan Syndication Services",
+    description: "We understand that the businesses depends on efficient utilization of funds and a lot depends on a well-organised fund flow system to keep businesses running. Aims to provide customised financing solutions to meet their working capital and growth finance needs",
     content: <>
       <div>
-        Business cannot last in today's world economy without a clear sense of purpose and a strategy to reach goals. RJGCA supports clients as they plan and adapt in order to meet the challenges of expansion and going international. Timely strategic financial advice is the prerequisite of all transactions that take place in today's rapidly evolving competitive landscape. We understand this and assist in identifying opportunities for, or risks to, our clients' interests, which accompany most financial advisory engagements. We provide businesses with corporate finance advice and support across a range of issues, drawing on the resources, expertise and experience.
+        RJGCA deals with SMEs, mid-corporate and large corporate clients, and aims to provide customised financing solutions to meet their working capital and growth finance needs. We understand that businesses depend on efficient utilization of funds and a lot depends on a well-organised fund flow system to keep businesses running.
+        <br />
+        RJGCA enjoys a sound reputation in the banking segment as it has a strong relationships with financial institutions, banks and NBFCs.
       </div>
       <br />
       <div>Our services include:</div>
       <ol className="list-decimal ml-5">
-        <li>Fund raising — Debt, Venture capital and private equity.</li>
-        <li>Business Valuations</li>
-        <li>Accounting & Financial Due Diligence</li>
-        <li>Tax Due Diligence</li>
-        <li>Building Business Model </li>
-        <li>Transaction Advisory Services</li>
-        <li>Ind AS Advisory</li>
-        <li>Transaction Support services</li>
-        <li>Business Structuring services</li>
-        <li>Business Advisory</li>
-        <li>Risk Assessment</li>
+        <li>Project Finance</li>
+        <li>Working Capital Loan</li>
+        <li>Overdraft /Cash Credit Facility</li>
+        <li>Term Loan</li>
+        <li>Packing Credit limits</li>
+        <li>Housing Loan & Loan against property and stock</li>
+        <li>Personal Loan</li>
       </ol>
     </>,
-    id: "corporate_advisory",
-    icon: <GiTakeMyMoney size={30} />
+    id: "loan_syndication_services",
+    icon: <BsBank size={30} />
   },
   {
     name: "Secretarial Services",
@@ -214,79 +287,6 @@ const services = [
     </>,
     id: "secretarial_services",
     icon: <MdOutlineGroupAdd size={30} />
-  },
-  {
-    name: "FEMA Advisory",
-    description: "It is impperative for the enterprise to keep a regular watch on foreign exchange transactions, in the context of sectoral caps, investment caps, so as to overcome from the adverse regulatory actions.",
-    content: <>
-      <div>
-        India has become significant player in global market and have seen surge of cross border activities. A breakthrough flow of funds, inbound as well as outbound has expanded the level of check on compliances in context of the foreign exchange regulations. It is impperative for the enterprise to keep a regular watch on foreign exchange transactions, in the context of sectoral caps, investment caps, so as to overcome from the adverse regulatory actions. In order to circumvent detrimental circumstances, we have specially designed these services, to ensure due compliance of FEMA laws.
-      </div>
-      <br />
-      <div>Our services include:</div>
-      <ol className="list-decimal ml-5">
-        <li>Foreign Direct Investment in India (FDI)- Advisory & compliances.</li>
-        <li>Advising on inbound investments in India on repatriable or non-repatriable basis.</li>
-        <li>Advisory and setting up of entry structure like subsidiary Company/branch/liaison office/project/site office in India.</li>
-        <li>Advisory on Foreign Policies & procedures in India, Transfer of shares from residents to non-residents, Transfer of immovable property and regulatory compliance thereon.</li>
-        <li>Obtaining prior/post facto approvals under FEMA from Reserve Bank of India (RBI).</li>
-        <li>External Commercial Borrowings- Advisory & Compliances.</li>
-        <li>Periodical Filing of Returns with RBI.</li>
-        <li>Other Advisory Services under FEMA</li>
-        <li>Issue of Statutory Certificates under FEMA & RBI regulation.</li>
-      </ol>
-    </>,
-    id: "fema_advisory",
-    icon: <TbDeviceIpadSearch size={30} />
-  },
-  {
-    name: "Loan Syndication Services",
-    description: "We understand that the businesses depends on efficient utilization of funds and a lot depends on a well-organised fund flow system to keep businesses running. Aims to provide customised financing solutions to meet their working capital and growth finance needs",
-    content: <>
-      <div>
-        RJGCA deals with SMEs, mid-corporate and large corporate clients, and aims to provide customised financing solutions to meet their working capital and growth finance needs. We understand that businesses depend on efficient utilization of funds and a lot depends on a well-organised fund flow system to keep businesses running.
-        <br />
-        RJGCA enjoys a sound reputation in the banking segment as it has a strong relationships with financial institutions, banks and NBFCs.
-      </div>
-      <br />
-      <div>Our services include:</div>
-      <ol className="list-decimal ml-5">
-        <li>Project Finance</li>
-        <li>Working Capital Loan</li>
-        <li>Overdraft /Cash Credit Facility</li>
-        <li>Term Loan</li>
-        <li>Packing Credit limits</li>
-        <li>Housing Loan & Loan against property and stock</li>
-        <li>Personal Loan</li>
-      </ol>
-    </>,
-    id: "loan_syndication_services",
-    icon: <BsBank size={30} />
-  },
-  {
-    name: "Societies, Trust and Co-operative Society Regulations & Advisory",
-    description: "It is impperative for the enterprise to keep a regular watch on foreign exchange transactions, in the context of sectoral caps, investment caps, so as to overcome from the adverse regulatory actions.",
-    content: <>
-      <div>
-        Charity begins at home and has countless ripples that affect the societies and communities at large. Whether it is a trust managed by a few people or a large section of the society, we provide the best financial advice and services. Trust and societies form a pivotal pillar of the economic structure of the country, hence it is our duty to ensure that your organization stands on a strong and sustainable economic pillar.
-      </div>
-      <br />
-      <div>Our services include:</div>
-      <ol className="list-decimal ml-5">
-        <li>Formation of Society, Trust & Section 8 Company</li>
-        <li>Registration U/s 12AA and 80G of Income Tax Act</li>
-        <li>Registration and filing of returns under Foreign Contribution Regulation Act (FCRA)</li>
-        <li>Statutory Audit under Maharashtra Society Registration Act, 1860</li>
-        <li>Internal Audit as per model Bye-Laws and Act</li>
-        <li>Accounting & Support Services</li>
-        <li>Direct & Indirect taxation compliances</li>
-        <li>Minutes Drafting for Various Meetings i.e. Board Meeting, EGM & AGM</li>
-        <li>Compliances relating to Bye-Laws and Act</li>
-        <li>Advisory in above matters</li>
-      </ol>
-    </>,
-    id: "societies_trust_and_cooperative_society_regulations_and_advisory",
-    icon: <SiHomeadvisor size={30} />
   },
   {
     name: "CMA Projections",
