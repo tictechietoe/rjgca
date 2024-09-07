@@ -91,6 +91,12 @@ const Footer = () => {
       symbol: <FaPhoneAlt size={30} />,
       value: <>
         <div><a href="tel:9372597268">+91 9372597268</a></div>
+      </>,
+      key: "contact"
+    },
+    {
+      symbol: <FaPhoneAlt size={30} />,
+      value: <>
         <div><a href="tel:9022573304">+91 9022573304</a></div>
       </>,
       key: "contact"

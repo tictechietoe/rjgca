@@ -1,7 +1,7 @@
 // src/components/Home.js
 import React from 'react';
-import Services from '../components/Services';
-import Our from '../components/Our';
+import Services from '../components/Services.jsx';
+import Our from '../components/Our.jsx';
 import ImageCarousel from '../components/ImageCarousel.jsx';
 
 import meeting from '../assets/images/meeting.jpg';

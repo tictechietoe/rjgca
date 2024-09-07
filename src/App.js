@@ -6,16 +6,16 @@ import {
   Routes
 } from 'react-router-dom';
 import Navbar from './components/NavBar';
-import HomePage from './Pages/HomePage';
-import TeamPage from './Pages/TeamPage';
-import ServicesPage from './Pages/ServicesPage';
-import QueryPage from './Pages/QueryPage';
+import HomePage from './pages/HomePage';
+import TeamPage from './pages/TeamPage';
+import ServicesPage from './pages/ServicesPage';
+import QueryPage from './pages/QueryPage';
 import Footer from './components/Footer';
-import ContactUsPage from './Pages/ContactUsPage';
-import ApplicationPage from './Pages/ApplicationPage';
-import ValuesPage from './Pages/ValuesPage';
-import DisclaimerPage from './Pages/DisclaimerPage';
-import AboutUs from './Pages/AboutUsPage';
+import ContactUsPage from './pages/ContactUsPage';
+import ApplicationPage from './pages/ApplicationPage';
+import ValuesPage from './pages/ValuesPage';
+import DisclaimerPage from './pages/DisclaimerPage';
+import AboutUs from './pages/AboutUsPage';
 
 function App() {
   return (

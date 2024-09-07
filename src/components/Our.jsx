@@ -91,7 +91,7 @@ const Our = () => {
             }
           </div>
           <div className="pt-2 flex justify-center">
-            <button className="bg-custom-primary text-custom-secondary font-bold py-2 px-4 rounded-md" onClick={onMoreValuesClick}>
+            <button className="bg-custom-primary text-white font-bold py-2 px-4 rounded-md" onClick={onMoreValuesClick}>
               More Details
             </button>
           </div>

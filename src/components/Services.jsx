@@ -38,27 +38,27 @@ const OurServices = () => {
             <img src={ servicesListing } alt="service listing" width="500px" className="overflow-hidden my-10" />
             <img src={ servicesProviding } alt="service providing" width="500px" className="overflow-hidden" />
           </div>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-3 gap-8">
             {
               _.map(servicesData, data => {
                 return (
-                  <button className="flex col-span-1 items-center p-3 border" onClick={ () => navigate(`/services#${data.id}`) }>
-                    <div className="flex flex-col justify-between">
-                      <div className="flex border-dashed border-b-2 border-b-custom-secondary pb-3 items-center">
-                        <div className="w-16 h-16 border-2 border-black rounded-full flex items-center justify-center bg-white basis-1/8">
+                  <div className="flex col-span-1 p-3 hover:cursor-pointer" onClick={ () => navigate(`/services#${data.id}`) }>
+                    <div className="flex flex-col">
+                      <div className="flex border-dashed border-b-2 border-b-custom-secondary items-center pb-3">
+                        <div className="w-16 h-16 border-2 border-black rounded-full flex justify-center bg-white basis-1/8">
                           <div className="relative right-1 bottom-1 w-16 h-16 border-2 border-black rounded-full flex items-center justify-center bg-custom-secondary z-10">
-                            {data.icon}
+                            { data.icon }
                           </div>
                         </div>
                         <div className="text-custom-secondary text-sm font-semibold mx-5 basis-7/8">
                           { data.name }
                         </div>
                       </div>
-                      <div className="pt-2 text-white text-sm text-balance">
+                      <div className="pt-2 text-white text-sm">
                         { data.description }
                       </div>
                     </div>
-                  </button>
+                  </div>
                 );
               })
             }
