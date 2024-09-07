@@ -1,7 +1,7 @@
 // src/components/Services.js
 import React from 'react';
 import _ from 'lodash';
-import servicesData from '../data/servicesData';
+import services from '../data/servicesData';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import servicesShowcase from '../assets/images/servicesShowcase.jpg';
@@ -9,6 +9,9 @@ import BannerImage from '../components/BannerImage';
 
 const ServicesPage = () => {
   const location = useLocation();
+  const servicesData = services({
+    iconSize: 50
+  });
 
   useEffect(() => {
     if (location.hash) {
@@ -42,40 +45,28 @@ const ServicesPage = () => {
         fromLink="/"
         toText="Services"
       />
-      <div className="mx-5 md:mx-40 lg:mx-60">
-        <h2 className="flex py-2 text-xl font-medium border-b sm:border-dashed justify-center mt-5">
-          SERVICES PROVIDED
-        </h2>
-        <div className="my-5">
-          {
-            _.map(servicesData, service => {
-              const {
-                icon = <></>,
-                name = "",
-                id = "",
-                content= <></>
-              } = service;
-
-              return (
-                <div key={id} id={id} className="my-5">
-                  <div className="flex justify-start p-2 items-center">
-                    <div className="w-14 h-14 border-2 border-gray-500 rounded-lg flex items-center justify-center bg-black">
-                      <div className="relative right-0.5 bottom-0.5 w-14 h-14 border-2 border-gray-500 rounded-lg flex items-center justify-center bg-white z-10">
-                        {icon}
-                      </div>
+      <div className="grid grid-cols-3 gap-8 p-10">
+        {
+          _.map(servicesData, data => {
+            return (
+              <button className="flex col-span-1 items-center mt-10 p-3 hover:border-2 hover:border-custom-secondary hover:rounded-xl hover:shadow-2xl">
+                <div className="flex flex-col">
+                  <div className="flex border-dashed pb-3 items-center">
+                    <div className="flex items-center justify-center text-custom-secondary border-2 border-custom-secondary p-1 rounded-xl z-10">
+                      { data.icon }
                     </div>
-                    <h2 className="text-lg leading-tight font-medium text-center mx-5 pb-5 border-b">
-                      {_.upperCase(name)}
-                    </h2>
+                    <div className="text-custom-secondary text-base font-bol font-semibold mx-5 basis-7/8">
+                      { _.upperCase(data.name) }
+                    </div>
                   </div>
-                  <div className="mx-10">
-                    {content}
+                  <div className="pt-2 text-sm">
+                    { data.description }
                   </div>
                 </div>
-              );
-            })
-          }
-        </div>
+              </button>
+            );
+          })
+        }
       </div>
     </div>
   );

@@ -58,9 +58,9 @@ const Navbar = () => {
     } = content;
 
     return (
-      <button key={title} className="text-custom-secondary px-2 rounded-sm transition delay-100 duration-100 ease-in-out hover:font-extrabold">
+      <button key={title} className="text-custom-secondary mx-2 rounded-sm transition delay-100 duration-100 ease-in-out hover:shadow-xl">
         <Link to={navigateUrl}>
-          <div className="flex items-center py-1 px-1 hover:border-2 hover:bg-custom-secondary hover:border-white hover:text-white">
+          <div className="flex items-center p-1 hover:bg-custom-secondary hover:text-white">
             <div className="mx-1">{icon}</div>
             <div className="mx-1 hover:text-lg">{title}</div>
           </div>
@@ -72,26 +72,11 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between sticky top-0 z-30 bg-custom-nav-color drop-shadow-lg">
       <Logo />
-      <div>
-        {/* <div className="flex justify-end py-3">
+      <div className="flex flex-col items-center">
+        <div className="flex flex-1 font-medium text-sm flex-wrap">
           {
-            _.map(quickLinks, item => {
-              return (
-                <div className="px-5 py-1 mx-5 text-white border-white border-2 hover:font-bold hover:bg-white hover:text-custom-secondary rounded-xl">
-                  { item }
-                </div>
-              );
-            })
+            _.map(navbarContent, content => navItem(content))
           }
-        </div> */}
-        <div className="px-4 py-0.5 hidden md:block lg:block py-2">
-          <div className="flex flex-col items-center">
-            <div className="flex flex-1 font-medium text-sm flex-wrap">
-              {
-                _.map(navbarContent, content => navItem(content))
-              }
-            </div>
-          </div>
         </div>
       </div>
     </nav>

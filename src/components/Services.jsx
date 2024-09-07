@@ -1,6 +1,6 @@
 // src/components/OurServices.js
 import React from 'react';
-import servicesData from '../data/servicesData';
+import services from '../data/servicesData';
 import servicesProviding from '../assets/images/servicesProviding.jpg';
 import servicesListing from '../assets/images/servicesListing.jpg';
 import _ from 'lodash';
@@ -10,6 +10,9 @@ import { useNavigate } from 'react-router-dom';
 const OurServices = () => {
 
   const navigate = useNavigate();
+  const servicesData = services({
+    iconSize: 30
+  });
 
   return (
     <div className="relative bg-custom-primary">
@@ -39,7 +42,7 @@ const OurServices = () => {
             {
               _.map(servicesData, data => {
                 return (
-                  <button className="flex col-span-1 items-center mt-10 p-3 border" onClick={ () => navigate(`/services#${data.id}`) }>
+                  <button className="flex col-span-1 items-center p-3 border" onClick={ () => navigate(`/services#${data.id}`) }>
                     <div className="flex flex-col justify-between">
                       <div className="flex border-dashed border-b-2 border-b-custom-secondary pb-3 items-center">
                         <div className="w-16 h-16 border-2 border-black rounded-full flex items-center justify-center bg-white basis-1/8">
@@ -51,7 +54,7 @@ const OurServices = () => {
                           { data.name }
                         </div>
                       </div>
-                      <div className="pt-2 text-white text-sm">
+                      <div className="pt-2 text-white text-sm text-balance">
                         { data.description }
                       </div>
                     </div>
