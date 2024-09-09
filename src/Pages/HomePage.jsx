@@ -10,6 +10,7 @@ import solutions from '../assets/images/solutions.jpg';
 import difference from '../assets/images/difference.jpg';
 import assets from '../assets/images/assets.jpg';
 import helping from '../assets/images/helping.jpg';
+import Quote from '../components/Quote.jsx';
 import { FaLightbulb } from "react-icons/fa";
 
 const Home = () => {
@@ -34,12 +35,11 @@ const Home = () => {
   return (
     <div>
       <ImageCarousel images={images} textContent={ textContent }/>
-      <div className="flex items-center justify-center p-10">
-        <FaLightbulb size={ 50 } className="mx-10 text-yellow-400"/>
-        <div className="font-bold text-xl text-blue-950">
-          - "Every problem has a solution. You just have to be creative enough to find it."
-        </div>
-      </div>
+      <Quote
+        icon={ <FaLightbulb size={ 50 } /> }
+        iconColor="yellow-400"
+        message="Every problem has a solution. You just have to be creative enough to find it"
+      />
       <Our />
       <Services />
     </div>

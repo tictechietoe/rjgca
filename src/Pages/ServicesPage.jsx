@@ -4,8 +4,10 @@ import _ from 'lodash';
 import services from '../data/servicesData';
 import servicesShowcase from '../assets/images/servicesShowcase.jpg';
 import BannerImage from '../components/BannerImage';
+import { useNavigate } from 'react-router-dom';
 
 const ServicesPage = () => {
+  const navigate = useNavigate();
   const servicesData = services({
     iconSize: 50
   });
@@ -23,7 +25,10 @@ const ServicesPage = () => {
         {
           _.map(servicesData, data => {
             return (
-              <div className="flex col-span-1 items-center mt-10 p-3 hover:cursor-pointer hover:border-2 hover:border-custom-secondary hover:rounded-xl hover:shadow-2xl">
+              <div
+                className="flex col-span-1 items-center mt-10 p-3 hover:cursor-pointer hover:border-2 hover:border-custom-secondary hover:rounded-xl hover:shadow-2xl"
+                onClick={ () => navigate(`/services/${data.id}`) }
+              >
                 <div className="flex flex-col">
                   <div className="flex border-dashed pb-3 items-center">
                     <div className="flex items-center justify-center text-custom-secondary border-2 border-custom-secondary p-1 rounded-xl z-10">

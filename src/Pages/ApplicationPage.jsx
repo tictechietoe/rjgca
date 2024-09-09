@@ -72,7 +72,7 @@ const ApplicationPage = () => {
         fromLink="/"
         toText="Careers"
       />
-      <form onSubmit={handleSubmit} className="max-w-4xl mx-auto p-8 bg-white shadow-md rounded-lg my-10">
+      <form onSubmit={handleSubmit} className="max-w-4xl mx-auto p-8 bg-white shadow-md rounded-lg my-10 border">
         <h2 className="text-center text-2xl mb-6"> APPLY HERE </h2>
         <p className="text-center mb-6">
           We nurture and cultivate a sense of pride in the work and create team leaders. Your growth chart will be governed by well-defined transparent policies of the firm. Apply via the form given below and meet us for face-to-face interview.
@@ -243,15 +243,15 @@ const ApplicationPage = () => {
           </div>
         }
         <div className="flex justify-between mt-6 mt-6 text-center">
-          <button type="button" className="bg-gray-300 text-gray-700 font-bold py-2 px-4 rounded" onClick={() => setFormData({})}>
-            Back
+          <button type="button" className="bg-custom-mark-color text-white font-bold py-2 px-4 rounded" onClick={() => setFormData({})}>
+            BACK
           </button>
           <button
             type="submit"
             disabled={showFormLoader}
-            className={`px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 ${showFormLoader && 'opacity-25 cursor-not-allowed'}`}
+            className={`px-4 py-2 bg-custom-secondary text-white font-bold rounded ${showFormLoader && 'opacity-25 cursor-not-allowed'}`}
           >
-            Send Application
+            SEND APPLICATION
           </button>
         </div>
       </form>

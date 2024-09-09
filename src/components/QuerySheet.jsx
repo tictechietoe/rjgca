@@ -1,8 +1,8 @@
 // src/components/QueryForm.js
 import React, { useState } from 'react';
-import Loader from '../components/Loader';
+import Loader from './Loader';
 
-const QueryPage = () => {
+const QuerySheet = () => {
   const defaultObject = {
     name: '',
     designation: '',
@@ -62,7 +62,7 @@ const QueryPage = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-lg my-10">
+    <div className="mx-20 p-6 bg-white shadow-md rounded-lg my-10 border">
       <form onSubmit={handleSubmit}>
         <h2 className="flex text-2xl text-center mb-6 justify-around">QUERY SHEET</h2>
         <p className="text-center mb-6">
@@ -215,15 +215,15 @@ const QueryPage = () => {
           </div>
         }
         <div className="flex justify-between mt-6">
-          <button type="button" className="bg-gray-300 text-gray-700 font-bold py-2 px-4 rounded" onClick={() => setFormData({})}>
-            Back
+          <button type="button" className="bg-custom-mark-color text-white font-bold py-2 px-4 rounded" onClick={() => setFormData({})}>
+            CLEAR
           </button>
           <button
             type="submit"
             disabled={showFormLoader}
-            className={`px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 ${showFormLoader && 'opacity-25 cursor-not-allowed'}`}
+            className={`px-4 py-2 bg-custom-secondary text-white font-bold rounded hover:bg-custom-primary ${showFormLoader && 'opacity-25 cursor-not-allowed'}`}
           >
-            Submit
+            SUBMIT
           </button>
         </div>
       </form>
@@ -231,4 +231,4 @@ const QueryPage = () => {
   );
 };
 
-export default QueryPage;
+export default QuerySheet;

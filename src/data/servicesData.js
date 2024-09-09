@@ -13,7 +13,7 @@ import { BsBank } from "react-icons/bs";
 const services = ({ iconSize = 30 }) => {
   return [
     {
-      name: "Business Setup In India & Registrations",
+      name: "Business Setup In India and Registrations",
       description: "Establishing your business in a developing country like India requires the right professional support and we will provide you right assistance to thrive your business and adhere to all the compliances and regulations of the country.",
       content: <>
         <div>
@@ -44,7 +44,7 @@ const services = ({ iconSize = 30 }) => {
         </ol>
       </>,
       icon: <IoDocumentsSharp size={ iconSize } />,
-      id: "bussiness_setup_in_india_&_registration",
+      id: "bussiness_setup_in_india_and_registration",
       iconDescription: "calculator icon"
     },
     {
@@ -74,11 +74,11 @@ const services = ({ iconSize = 30 }) => {
           <li>Staff Recruitment & Training</li>
         </ol>
       </>,
-      id: "accounting_and_business_support_seervices",
+      id: "accounting_and_business_support_services",
       icon: <MdAccountBalance size={ iconSize } />
     },
     {
-      name: "Regulatory compliance & Advisory",
+      name: "Regulatory compliance and Advisory",
       description: "Taxation presents arguably the most dynamic and complex challenge in the context of financial planning. Managing tax complexity to escalate value of the business is one of the fundamental considerations of major business decisions",
       content: <>
         <div>

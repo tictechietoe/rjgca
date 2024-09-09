@@ -21,7 +21,7 @@ const Navbar = () => {
     {
       title: 'ABOUT US',
       to: '/aboutus',
-      icon: <SiAboutdotme size={20} />
+      icon: <FaWpforms size={20} />
     },
     {
       title: 'TEAM',
@@ -32,11 +32,6 @@ const Navbar = () => {
       title: 'SERVICES',
       to: '/services',
       icon: <MdSupportAgent size={20} />
-    },
-    {
-      title: 'QUERY',
-      to: '/query',
-      icon: <FaWpforms size={20} />
     },
     {
       title: 'CAREERS',

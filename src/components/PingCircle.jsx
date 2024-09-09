@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PingCircle = ({ size = 'md', color = 'red', pos = 0 }) => {
+const PingCircle = ({ size = 'md', color = 'red'}) => {
   const sizeClasses = {
     xs: 'w-1 h-1',
     sm: 'w-2 h-2',
@@ -8,11 +8,8 @@ const PingCircle = ({ size = 'md', color = 'red', pos = 0 }) => {
     lg: 'w-4 h-4',
   };
 
-  console.log(pos);
-
-
   return (
-    <span className={ `relative end-${pos} flex h-5 w-5` }>
+    <span className="relative end-1.5 flex h-5 w-5">
       <span className={`animate-ping absolute inline-flex h-full w-full rounded-full bg-${color} opacity-95`}></span>
       <span className={`relative inline-flex rounded-full ${sizeClasses[size]} bg-${color}`}></span>
     </span>

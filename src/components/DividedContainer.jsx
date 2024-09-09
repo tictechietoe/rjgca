@@ -24,7 +24,6 @@ const DividedContainer = ({ questionColor, questionText, questionSide, answerCon
       <div className="w-0 py-7">
         <PingCircle
           color={ questionColor }
-          pos={ questionSide === 'left' ? 2 : 0 }
         />
       </div>
       <div className="border-l-8 border-dashed basis-1/2">

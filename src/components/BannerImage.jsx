@@ -20,7 +20,7 @@ const BannerImage = ({ image, title, fromText, fromLink, toText, }) => {
         <div className="relative z-10 h-full flex flex-col justify-center items-center text-white p-4">
           <div className="border-b-2 border-dashed text-2xl pb-2 font-medium">R J Gala & Associates</div>
           <h2 className="text-3xl hover:text-custom-secondary text-5xl text-custom-secondary font-extrabold my-5">{ title }</h2>
-          <div className="flex items-center justify-between w-52">
+          <div className="flex items-center justify-between">
             <Link className="text-lg text-center hover:text-custom-secondary p-1" onClick={ () => window.open(fromLink, '_blank') }>
               { fromText }
             </Link>

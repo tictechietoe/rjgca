@@ -42,7 +42,7 @@ const OurServices = () => {
             {
               _.map(servicesData, data => {
                 return (
-                  <div className="flex col-span-1 p-3 hover:cursor-pointer" onClick={ () => navigate(`/services#${data.id}`) }>
+                  <div className="flex col-span-1 p-3 hover:cursor-pointer" onClick={ () => navigate(`/services/${data.id}`) }>
                     <div className="flex flex-col">
                       <div className="flex border-dashed border-b-2 border-b-custom-secondary items-center pb-3">
                         <div className="w-16 h-16 border-2 border-black rounded-full flex justify-center bg-white basis-1/8">
