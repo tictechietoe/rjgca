@@ -1,7 +1,6 @@
 // src/components/OurServices.js
 import React from 'react';
 import services from '../data/servicesData';
-import servicesProviding from '../assets/images/servicesProviding.jpg';
 import servicesListing from '../assets/images/servicesListing.jpg';
 import _ from 'lodash';
 import { useNavigate } from 'react-router-dom';
@@ -34,11 +33,10 @@ const OurServices = () => {
           </div>
         </div>
         <div className="flex">
-          <div className="w-full flex flex-col justify-around pr-10">
-            <img src={ servicesListing } alt="service listing" width="500px" className="overflow-hidden my-10" />
-            <img src={ servicesProviding } alt="service providing" width="500px" className="overflow-hidden" />
+          <div className="w-full flex flex-col items-center justify-around m-10 basis-1/3">
+            <img src={ servicesListing } alt="service listing" className="overflow-hidden" />
           </div>
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-3 gap-8 basis-2/3">
             {
               _.map(servicesData, data => {
                 return (

@@ -44,7 +44,7 @@ const Our = () => {
         </div>
       </>,
       leftDiv: <>
-        <div className="overflow-hidden h-80 mr-10 rotate-[10deg]">
+        <div className="overflow-hidden h-80 mr-10">
           <img width="400px" alt="out vision" src={ vision } />
         </div>
       </>,
@@ -66,7 +66,7 @@ const Our = () => {
         </div>
       </>,
       rightDiv: <>
-        <div className="overflow-hidden h-80 mr-10 rotate-[-10deg]">
+        <div className="overflow-hidden h-80 mr-10">
           <img width="700px" alt="our mission" src={ mission } />
         </div>
       </>,
@@ -98,7 +98,7 @@ const Our = () => {
         </div>
       </>,
       leftDiv: <>
-        <div className="overflow-hidden h-80 mr-10 rotate-[10deg]">
+        <div className="overflow-hidden h-80 mr-10">
           <img width="400px" alt="our values" src={ values } />
         </div>
       </>,

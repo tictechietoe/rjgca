@@ -2,7 +2,7 @@
 import React from 'react';
 import _ from 'lodash';
 import services from '../data/servicesData';
-import servicesShowcase from '../assets/images/servicesShowcase.jpg';
+import auditAssurance from '../assets/images/auditAssurance.jpg';
 import BannerImage from '../components/BannerImage';
 
 const AuditAssurance = () => {
@@ -13,7 +13,7 @@ const AuditAssurance = () => {
   return (
     <div>
       <BannerImage
-        image={ servicesShowcase }
+        image={ auditAssurance }
         title={ _.upperCase(servicesData[6].name) }
         fromText="Services"
         fromLink="/services"

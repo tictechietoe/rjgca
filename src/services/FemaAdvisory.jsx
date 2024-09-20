@@ -2,7 +2,7 @@
 import React from 'react';
 import _ from 'lodash';
 import services from '../data/servicesData';
-import servicesShowcase from '../assets/images/servicesShowcase.jpg';
+import foreignExchange from '../assets/images/foreignExchange.jpg';
 import BannerImage from '../components/BannerImage';
 
 const FemaAdvisory = () => {
@@ -13,7 +13,7 @@ const FemaAdvisory = () => {
   return (
     <div>
       <BannerImage
-        image={ servicesShowcase }
+        image={ foreignExchange }
         title={ _.upperCase(servicesData[4].name) }
         fromText="Services"
         fromLink="/services"

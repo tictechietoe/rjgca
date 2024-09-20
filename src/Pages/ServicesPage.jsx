@@ -31,7 +31,7 @@ const ServicesPage = () => {
               >
                 <div className="flex flex-col">
                   <div className="flex border-dashed pb-3 items-center">
-                    <div className="flex items-center justify-center text-custom-secondary border-2 border-custom-secondary p-1 rounded-xl z-10">
+                    <div className="flex items-center justify-center text-custom-secondary p-1 rounded-xl z-10">
                       { data.icon }
                     </div>
                     <div className="text-custom-secondary text-base font-bol font-semibold mx-5 basis-7/8">

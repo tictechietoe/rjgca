@@ -26,6 +26,12 @@ const ApplicationPage = () => {
 
   const handleChange = (e) => {
     const { name, value, type, files } = e.target;
+
+    if (type === 'file') {
+      console.log(files[0]);
+      console.log(formData);
+    }
+
     setFormData((prevFormData) => ({
       ...prevFormData,
       [name]: type === 'file' ? files[0] : value
@@ -93,7 +99,7 @@ const ApplicationPage = () => {
                 name="firstName"
                 value={formData.firstName}
                 onChange={handleChange}
-                required
+                // required
                 className="mt-1 p-2 w-full border rounded"
               />
             </div>
@@ -104,7 +110,7 @@ const ApplicationPage = () => {
                 name="lastName"
                 value={formData.lastName}
                 onChange={handleChange}
-                required
+                // required
                 className="mt-1 p-2 w-full border rounded"
               />
             </div>
@@ -115,7 +121,7 @@ const ApplicationPage = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                required
+                // required
                 className="mt-1 p-2 w-full border rounded"
               />
             </div>
@@ -126,7 +132,7 @@ const ApplicationPage = () => {
                 name="mobileNo"
                 value={formData.mobileNo}
                 onChange={handleChange}
-                required
+                // required
                 className="mt-1 p-2 w-full border rounded"
               />
             </div>
@@ -136,7 +142,7 @@ const ApplicationPage = () => {
                 name="gender"
                 value={formData.gender}
                 onChange={handleChange}
-                required
+                // required
                 className="mt-1 p-2 w-full border rounded"
               >
                 <option value="">Select..</option>
@@ -162,7 +168,7 @@ const ApplicationPage = () => {
                 name="dob"
                 value={formData.dob}
                 onChange={handleChange}
-                required
+                // required
                 className="mt-1 p-2 w-full border rounded"
               />
             </div>
@@ -197,14 +203,14 @@ const ApplicationPage = () => {
               />
             </div>
             {
-              false &&
+              true &&
               <div>
                 <label className="block  font-medium text-gray-700">Upload Resume * (Max size 1 mb)</label>
                 <input
                   type="file"
                   name="resume"
                   onChange={handleChange}
-                  required
+                  // required
                   className="mt-1 p-2 w-full border rounded"
                 />
               </div>

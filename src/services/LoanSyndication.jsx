@@ -2,7 +2,7 @@
 import React from 'react';
 import _ from 'lodash';
 import services from '../data/servicesData';
-import servicesShowcase from '../assets/images/servicesShowcase.jpg';
+import loanService from '../assets/images/loanService.jpg';
 import BannerImage from '../components/BannerImage';
 
 const LoanSyndication = () => {
@@ -13,7 +13,7 @@ const LoanSyndication = () => {
   return (
     <div>
       <BannerImage
-        image={ servicesShowcase }
+        image={ loanService }
         title={ _.upperCase(servicesData[7].name) }
         fromText="Services"
         fromLink="/services"

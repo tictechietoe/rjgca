@@ -78,11 +78,11 @@ const Footer = () => {
       symbol: <CgWebsite size={30} />,
       value: <>
         <a
-          href="https://rjgca.netlify.app"
+          href="https://www.rjgca.in"
           target="_blank"
           rel="noreferrer"
         >
-          rjgca.netlify.app
+          www.rjgca.in
         </a>
       </>,
       key: "website"

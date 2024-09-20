@@ -2,7 +2,7 @@
 import React from 'react';
 import _ from 'lodash';
 import services from '../data/servicesData';
-import servicesShowcase from '../assets/images/servicesShowcase.jpg';
+import cmaProjections from '../assets/images/cmaProjections.jpg';
 import BannerImage from '../components/BannerImage';
 
 const CmaProjections = () => {
@@ -13,7 +13,7 @@ const CmaProjections = () => {
   return (
     <div>
       <BannerImage
-        image={ servicesShowcase }
+        image={ cmaProjections }
         title={ _.upperCase(servicesData[9].name) }
         fromText="Services"
         fromLink="/services"

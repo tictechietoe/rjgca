@@ -6,7 +6,6 @@ import { RiTeamFill, RiBillFill } from "react-icons/ri";
 import { FaHome, FaWpforms } from "react-icons/fa";
 import { MdSupportAgent } from "react-icons/md";
 import { PiPhoneCallFill } from "react-icons/pi";
-import { SiAboutdotme } from "react-icons/si";
 import Logo from './Logo';
 
 

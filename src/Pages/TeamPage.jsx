@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import _ from 'lodash';
 import teamImage from '../assets/images/team.jpg';
-import BannerImage from '../components/BannerImage';
+import BannerImage from '../components/BannerImage.jsx';
 import Quote from '../components/Quote.jsx';
 import rahul from '../assets/faces/rahul.jpg';
 import { FaPeopleGroup } from "react-icons/fa6";
@@ -19,7 +19,7 @@ const TeamCard = ({ data }) => {
   return (
     <div className="flex bg-white shadow-lg basis-1/4 h-1/2 p-5 mx-5 border">
       <div className="flex flex-col justify-center">
-        <img src={ image } />
+        <img alt="team pic" src={ image } />
         <h2 className="flex justify-center text-lg font-bold text-custom-primary">{ name }</h2>
         <div className="flex justify-center text-custom-secondary font-medium">{ designation }</div>
         <div className="flex flex-col">
@@ -88,7 +88,7 @@ const Team = () => {
       <h2 className="flex py-2 px-5 text-xl font-medium justify-start text-custom-secondary">FOUNDER'S PROFILE</h2>
       <div className="flex">
         <div className="flex px-5 flex-col basis-2/6 justify-center">
-          <img src={ rahul } />
+          <img alt="profile pic" src={ rahul } />
           <h2 className="flex justify-center text-lg font-bold text-custom-primary">RAHUL J GALA</h2>
         </div>
         <div className="base-1/6 pl-5 flex flex-col justify-center">
