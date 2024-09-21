@@ -5,10 +5,9 @@ import contact from '../assets/images/contact.jpg';
 import BannerImage from '../components/BannerImage';
 import QuerySheet from '../components/QuerySheet';
 import Logo from '../components/Logo';
+import SocialMedia from '../components/SocialMedia';
 
 const ContactInfo = () => {
-  const socialLinks = ['linkedin', 'youtube', 'instagram'];
-
   return (
     <div>
       <BannerImage
@@ -21,11 +20,9 @@ const ContactInfo = () => {
       <div className="flex">
         <QuerySheet />
         <div className="flex flex-col pt-16">
-          <h2 className="flex justify-center text-2xl mb-16">CONTACT INFORMATION</h2>
+          <h2 className="flex justify-center text-2xl mb-10">CONTACT INFORMATION</h2>
+          <SocialMedia />
           <div className="flex flex-col justify-center">
-            <div className="flex justify-center">
-              { _.map(socialLinks, link => <span className="mx-5">{ link }</span>) }
-            </div>
             <Logo />
           </div>
           <div className="flex flex-col justify-between p-10">

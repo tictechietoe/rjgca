@@ -14,20 +14,87 @@ import {
   FaMoneyBillTransfer,
   FaPeopleRoof,
   FaBuildingUser,
-  FaHandshakeAngle
+  FaHandshakeAngle,
+  FaHandshakeSimple,
+  FaFileInvoiceDollar,
+  FaFileSignature
 } from "react-icons/fa6";
+
+import {
+  VscServerProcess
+} from "react-icons/vsc";
+
+import {
+  ImOffice
+} from "react-icons/im";
+
+import {
+  PiBuildingApartmentFill,
+  PiSealCheckFill,
+  PiTreeStructureBold,
+  PiProjectorScreenChartFill
+} from "react-icons/pi";
+
+import {
+  HiReceiptTax
+} from "react-icons/hi";
+
+import {
+  CgInternal
+} from "react-icons/cg";
+
+import {
+  TbPigMoney,
+  TbTransactionRupee,
+  TbDeviceIpadHorizontalPlus,
+  TbDeviceIpadDollar,
+  TbReceiptRefund,
+  TbFilePercent,
+  TbMessageReply
+} from "react-icons/tb";
+
+import {
+  BiSolidBank
+} from "react-icons/bi";
 
 import {
   GoLaw
 } from "react-icons/go";
 
 import {
-  RiSecurePaymentFill
+  LiaFileContractSolid
+} from "react-icons/lia";
+
+import {
+  RiSecurePaymentFill,
+  RiMoneyRupeeCircleLine,
+  RiHomeOfficeFill,
+  RiRefund2Line,
+  RiFileList3Fill
 } from "react-icons/ri";
 
 import {
-  FaRegCreditCard
+  RxIdCard
+} from "react-icons/rx";
+
+import {
+  FaRegCreditCard,
+  FaPeopleCarry,
+  FaFileAlt,
+  FaRegFilePdf,
+  FaFileInvoice,
+  FaRegEye
 } from "react-icons/fa";
+
+import {
+  LuFileKey2,
+  LuFileSignature,
+  LuFileOutput
+} from "react-icons/lu";
+
+import {
+  LiaFileInvoiceSolid
+} from "react-icons/lia";
 
 import {
   SiAmazonsimpleemailservice,
@@ -45,12 +112,18 @@ import {
 import {
   MdOutlineGroupAdd,
   MdRealEstateAgent,
-  MdAccountBalance
+  MdOutlineCreditCardOff,
+  MdAreaChart,
+  MdAssistantNavigation,
+  MdTrackChanges
 } from "react-icons/md";
 
 import {
   BsBank,
-  BsBuildingFillX
+  BsBuildingFillX,
+  BsFillPersonVcardFill,
+  BsPostcardFill,
+  BsPersonVcardFill
 } from "react-icons/bs";
 
 import {
@@ -65,7 +138,6 @@ import {
   UilMeetingBoard,
   UilClipboardNotes,
   UilFileNetwork,
-  UilFileUploadAlt,
   UilFileGraph,
   UilFileInfoAlt,
   UilAward,
@@ -75,7 +147,50 @@ import {
   UilChartPieAlt,
   UilFileContract,
   UilFileMedicalAlt,
-  UilAbacus
+  UilAbacus,
+  UilMoneyWithdraw,
+  UilCreditCard,
+  UilSearchPlus,
+  UilBookAlt,
+  UilGameStructure,
+  UilSitemap,
+  UilBusSchool,
+  UilChartLine,
+  UilBookOpen,
+  UilFileContractDollar,
+  UilDollarAlt,
+  UilNotes,
+  UilFileCheckAlt,
+  UilCopyLandscape,
+  UilDiary,
+  UilFileBookmarkAlt,
+  UilCopyright,
+  UilEnvelopeBookmark,
+  UilRegistered,
+  UilCloudUpload,
+  UilTrademarkCircle,
+  UilBookReader,
+  UilMoneyInsert,
+  UilBill,
+  UilUserMd,
+  UilCloudDatabaseTree,
+  UilHouseUser,
+  UilCalculatorAlt,
+  UilPanelAdd,
+  UilChartBar,
+  UilFileEditAlt,
+  UilTransaction,
+  UilChart,
+  UilBag,
+  UilCrosshairAlt,
+  UilPoundCircle,
+  UilReceiptAlt,
+  UilInbox,
+  UilChartGrowthAlt,
+  UilReceipt,
+  UilEnvelopeRedo,
+  UilDesktopCloudAlt,
+  UilPresentationPlay
 } from '@iconscout/react-unicons'
 
 import Card from '../components/Card';
@@ -92,25 +207,25 @@ const services = ({ iconSize = 30 }) => {
 
         <div>Our services include:</div>
         <div className="grid grid-cols-3 gap-4 p-10 mb-5">
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Company & LLP Incorporation and obtaining requisite government approvals" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Formation of Partnership firm, Conversion of Partnership Firms and Private Ltd Companies into LLP" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Setting up Branch office, Liaison office, Project Office, Joint Venture, Owned Subsidiary etc." />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Assistance in obtaining requisite approvals from regulatory authorities" />
+          <Card icon={<UilFileCheckAlt size={ iconSize } />} name="Company & LLP Incorporation and obtaining requisite government approvals" />
+          <Card icon={<FaHandshakeSimple size={ iconSize } />} name="Formation of Partnership firm, Conversion of Partnership Firms and Private Ltd Companies into LLP" />
+          <Card icon={<ImOffice size={ iconSize } />} name="Setting up Branch office, Liaison office, Project Office, Joint Venture, Owned Subsidiary etc." />
+          <Card icon={<PiSealCheckFill size={ iconSize } />} name="Assistance in obtaining requisite approvals from regulatory authorities" />
         </div>
 
         <div>Procure other registrations like:</div>
         <div className="grid grid-cols-3 p-5">
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="PAN" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="TAN" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="MSME Registration (Udyog Aadhaar)" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Shops & Establishment Registration" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="GST Registration" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Import Export Code Registration" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="PTEC & PTRC Registration" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Provident Fund & ESIC Registration" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Logo / Trade Mark Registration" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="FSAI Registration" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="ISO Certification" />
+          <Card icon={<BsPersonVcardFill size={ iconSize } />} name="PAN" />
+          <Card icon={<BsPostcardFill size={ iconSize } />} name="TAN" />
+          <Card icon={<UilCopyLandscape size={ iconSize } />} name="MSME Registration (Udyog Aadhaar)" />
+          <Card icon={<RxIdCard size={ iconSize } />} name="Shops & Establishment Registration" />
+          <Card icon={<UilDiary size={ iconSize } />} name="GST Registration" />
+          <Card icon={<UilFileBookmarkAlt size={ iconSize } />} name="Import Export Code Registration" />
+          <Card icon={<UilCopyright size={ iconSize } />} name="PTEC & PTRC Registration" />
+          <Card icon={<UilEnvelopeBookmark size={ iconSize } />} name="Provident Fund & ESIC Registration" />
+          <Card icon={<UilRegistered size={ iconSize } />} name="Logo / Trade Mark Registration" />
+          <Card icon={<UilTrademarkCircle size={ iconSize } />} name="FSAI Registration" />
+          <Card icon={<BsFillPersonVcardFill size={ iconSize } />} name="ISO Certification" />
         </div>
       </>,
       icon: <IoDocumentsSharp size={ iconSize } />,
@@ -127,25 +242,25 @@ const services = ({ iconSize = 30 }) => {
 
         <div>Our services include:</div>
         <div className="grid grid-cols-3 gap-4 p-5">
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Book-keeping and Accounting" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Cloud based accounting" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Review and management of Accounting system" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Review and management of Accounts Receivable" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Review and management of Accounts Payable" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Review and management of Banking and finance operation" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="MIS reporting" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Virtual CFO services" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Inventory accounting system" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Fixed Asset management" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Liaison With Auditors" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Back office operations including Payroll/ HR management" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Standard Operating Processes" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Budgetory Systems" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Staff Recruitment & Training" />
+          <Card icon={<UilDiary size={ iconSize } />} name="Book-keeping and Accounting" />
+          <Card icon={<UilCloudUpload size={ iconSize } />} name="Cloud based accounting" />
+          <Card icon={<UilBookReader size={ iconSize } />} name="Review and management of Accounting system" />
+          <Card icon={<UilMoneyWithdraw size={ iconSize } />} name="Review and management of Accounts Receivable" />
+          <Card icon={<UilMoneyInsert size={ iconSize } />} name="Review and management of Accounts Payable" />
+          <Card icon={<UilBill size={ iconSize } />} name="Review and management of Banking and finance operation" />
+          <Card icon={<UilFileGraph size={ iconSize } />} name="MIS reporting" />
+          <Card icon={<UilUserMd size={ iconSize } />} name="Virtual CFO services" />
+          <Card icon={<UilCloudDatabaseTree size={ iconSize } />} name="Inventory accounting system" />
+          <Card icon={<UilHouseUser size={ iconSize } />} name="Fixed Asset management" />
+          <Card icon={<AiOutlineAudit size={ iconSize } />} name="Liaison With Auditors" />
+          <Card icon={<RiHomeOfficeFill size={ iconSize } />} name="Back office operations including Payroll/ HR management" />
+          <Card icon={<VscServerProcess size={ iconSize } />} name="Standard Operating Processes" />
+          <Card icon={<UilCalculatorAlt size={ iconSize } />} name="Budgetory Systems" />
+          <Card icon={<FaPeopleCarry size={ iconSize } />} name="Staff Recruitment & Training" />
         </div>
       </>,
       id: "accounting_and_business_support_services",
-      icon: <MdAccountBalance size={ iconSize } />
+      icon: <FaFileInvoiceDollar size={ iconSize } />
     },
     {
       name: "Regulatory compliance and Advisory",
@@ -158,35 +273,35 @@ const services = ({ iconSize = 30 }) => {
         <div>Our services include:</div>
         <h3 className="font-bold underline text-custom-primary">DIRECT TAXATION</h3>
         <div className="grid grid-cols-3 gap-4 p-5 mb-5">
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Preparation and filing of Income Tax returns and other forms" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Review and compliance of TDS regulations" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Review and compliance of Transfer Pricing regulations" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Preparing and filing replies to various notices and representing the clients before regulatory authorities" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Preparing and filing appeal and representing the clients before CIT(A)" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Assistance in refund applications" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Tax Planning" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Expatriate and Non Resident Taxation services" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Providing Advices and Opinions on specific issues arising under direct tax laws" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Preparation of Income Tax Compliance Tracker" />
+          <Card icon={<HiReceiptTax size={ iconSize } />} name="Preparation and filing of Income Tax returns and other forms" />
+          <Card icon={<FaFileInvoice size={ iconSize } />} name="Review and compliance of TDS regulations" />
+          <Card icon={<LuFileOutput size={ iconSize } />} name="Review and compliance of Transfer Pricing regulations" />
+          <Card icon={<TbDeviceIpadDollar size={ iconSize } />} name="Preparing and filing replies to various notices and representing the clients before regulatory authorities" />
+          <Card icon={<FaFileSignature size={ iconSize } />} name="Preparing and filing appeal and representing the clients before CIT(A)" />
+          <Card icon={<TbReceiptRefund size={ iconSize } />} name="Assistance in refund applications" />
+          <Card icon={<UilReceipt size={ iconSize } />} name="Tax Planning" />
+          <Card icon={<UilFileContractDollar size={ iconSize } />} name="Expatriate and Non Resident Taxation services" />
+          <Card icon={<UilChartLine size={ iconSize } />} name="Providing Advices and Opinions on specific issues arising under direct tax laws" />
+          <Card icon={<MdTrackChanges size={ iconSize } />} name="Preparation of Income Tax Compliance Tracker" />
         </div>
 
         <h3 className="font-bold underline text-custom-primary">IN-DIRECT TAXATION</h3>
         <div className="grid grid-cols-3 gap-4 p-5">
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Computation of GST liability, assistance in making payment and filing of periodic GST returns" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Preparation and filing of Profession tax returns" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Assist in reconciliation of ITC as per books and portal, GSTR-2A reconciliation, GSTR1 vs E-way bill reconciliation, etc" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Preparation of GST compliance tracker" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Assist in queries related to e-Way bills generation" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Review as-is position of the Company as to whether the same is in consonance with the existing GST provisions" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Identify risks and opportunities viz. areas of non-compliance, areas of savings, etc. and advising on the same" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Review of various processes followed from the GST point of view" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Preparation and filing of refund claims including liaising with the authorities and obtaining refund orders" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Preparing and filing replies to various notices and representing the clients before regulatory authorities" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Preparing and filing appeal and representing the clients before appellate authorities" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Drafting and filing applications seeking advance rulings" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Orientation and staff training for GST compliance" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Advising on various GST related queries" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Support in realigning accounting and IT systems to GST framework" />
+          <Card icon={<FaFileAlt size={ iconSize } />} name="Computation of GST liability, assistance in making payment and filing of periodic GST returns" />
+          <Card icon={<TbFilePercent size={ iconSize } />} name="Preparation and filing of Profession tax returns" />
+          <Card icon={<MdAssistantNavigation size={ iconSize } />} name="Assist in reconciliation of ITC as per books and portal, GSTR-2A reconciliation, GSTR1 vs E-way bill reconciliation, etc" />
+          <Card icon={<MdTrackChanges size={ iconSize } />} name="Preparation of GST Compliance Tracker" />
+          <Card icon={<LiaFileInvoiceSolid size={ iconSize } />} name="Assist in queries related to e-Way bills generation" />
+          <Card icon={<UilChartGrowthAlt size={ iconSize } />} name="Review as-is position of the Company as to whether the same is in consonance with the existing GST provisions" />
+          <Card icon={<UilComparison size={ iconSize } />} name="Identify risks and opportunities viz. areas of non-compliance, areas of savings, etc. and advising on the same" />
+          <Card icon={<FaRegEye size={ iconSize } />} name="Review of various processes followed from the GST point of view" />
+          <Card icon={<RiRefund2Line size={ iconSize } />} name="Preparation and filing of refund claims including liaising with the authorities and obtaining refund orders" />
+          <Card icon={<TbMessageReply size={ iconSize } />} name="Preparing and filing replies to various notices and representing the clients before regulatory authorities" />
+          <Card icon={<LuFileSignature size={ iconSize } />} name="Preparing and filing appeal and representing the clients before appellate authorities" />
+          <Card icon={<RiFileList3Fill size={ iconSize } />} name="Drafting and filing applications seeking advance rulings" />
+          <Card icon={<UilPresentationPlay size={ iconSize } />} name="Orientation and staff training for GST compliance" />
+          <Card icon={<UilEnvelopeRedo size={ iconSize } />} name="Advising on various GST related queries" />
+          <Card icon={<UilDesktopCloudAlt size={ iconSize } />} name="Support in realigning accounting and IT systems to GST framework" />
         </div>
       </>,
       id: "regulatory_compliance_and_advisory",
@@ -202,17 +317,17 @@ const services = ({ iconSize = 30 }) => {
 
         <div>Our services include:</div>
         <div className="grid grid-cols-3 gap-4 p-5 mb-5">
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Fund raising — Debt, Venture capital and private equity" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Business Valuations" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Accounting & Financial Due Diligence" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Tax Due Diligence" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Building Business Model" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Transaction Advisory Services" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Ind AS Advisory" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Transaction Support services" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Business Structuring services" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Business Advisory" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Risk Assessment" />
+          <Card icon={<UilPanelAdd size={ iconSize } />} name="Fund raising — Debt, Venture capital and private equity" />
+          <Card icon={<UilChartBar size={ iconSize } />} name="Business Valuations" />
+          <Card icon={<UilFileGraph size={ iconSize } />} name="Accounting & Financial Due Diligence" />
+          <Card icon={<HiReceiptTax size={ iconSize } />} name="Tax Due Diligence" />
+          <Card icon={<UilFileEditAlt size={ iconSize } />} name="Building Business Model" />
+          <Card icon={<UilTransaction size={ iconSize } />} name="Transaction Advisory Services" />
+          <Card icon={<UilChart size={ iconSize } />} name="Ind AS Advisory" />
+          <Card icon={<TbTransactionRupee size={ iconSize } />} name="Transaction Support services" />
+          <Card icon={<PiTreeStructureBold size={ iconSize } />} name="Business Structuring services" />
+          <Card icon={<UilBag size={ iconSize } />} name="Business Advisory" />
+          <Card icon={<UilCrosshairAlt size={ iconSize } />} name="Risk Assessment" />
         </div>
       </>,
       id: "corporate_advisory",
@@ -228,17 +343,17 @@ const services = ({ iconSize = 30 }) => {
 
         <div>Our services include:</div>
         <div className="grid grid-cols-3 gap-4 p-5 mb-5">
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Foreign Direct Investment in India (FDI)- Advisory & compliances" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Advising on inbound investments in India on repatriable or non-repatriable basis" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Advisory and setting up of entry structure like subsidiary Company/branch/liaison office/project/site office in India" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Advisory on Foreign Policies & procedures in India" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Advisory on Transfer of shares from residents to non-residents" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Advisory on Transfer of immovable property and regulatory compliance thereon" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Obtaining prior/post facto approvals under FEMA from Reserve Bank of India (RBI)" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="External Commercial Borrowings- Advisory & Compliances" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Periodical Filing of Returns with RBI" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Other Advisory Services under FEMA" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Issue of Statutory Certificates under FEMA & RBI regulation" />
+          <Card icon={<UilReceiptAlt size={ iconSize } />} name="Foreign Direct Investment in India (FDI) - Advisory & compliances" />
+          <Card icon={<UilInbox size={ iconSize } />} name="Advising on inbound investments in India on repatriable or non-repatriable basis" />
+          <Card icon={<SiHomeadvisor size={ iconSize } />} name="Advisory and setting up of entry structure like subsidiary Company / branch / liaison office / project / site office in India" />
+          <Card icon={<PiProjectorScreenChartFill size={ iconSize } />} name="Advisory on Foreign Policies & procedures in India" />
+          <Card icon={<MdAreaChart size={ iconSize } />} name="Advisory on Transfer of shares from residents to non-residents" />
+          <Card icon={<TbDeviceIpadHorizontalPlus size={ iconSize } />} name="Advisory on Transfer of immovable property and regulatory compliance thereon" />
+          <Card icon={<BiSolidBank size={ iconSize } />} name="Obtaining prior / post facto approvals under FEMA from Reserve Bank of India (RBI)" />
+          <Card icon={<UilPoundCircle size={ iconSize } />} name="External Commercial Borrowings - Advisory & Compliances" />
+          <Card icon={<FaFileAlt size={ iconSize } />} name="Periodical Filing of Returns with RBI" />
+          <Card icon={<LuFileKey2 size={ iconSize } />} name="Other Advisory Services under FEMA" />
+          <Card icon={<LiaFileContractSolid size={ iconSize } />} name="Issue of Statutory Certificates under FEMA & RBI regulation" />
         </div>
       </>,
       id: "fema_advisory",
@@ -254,23 +369,23 @@ const services = ({ iconSize = 30 }) => {
 
         <div>Our services include:</div>
         <div className="grid grid-cols-3 gap-4 p-5 mb-5">
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Formation of Society, Trust & Section 8 Company" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Registration U/s 12AA and 80G of Income Tax Act" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Registration and filing of returns under Foreign Contribution Regulation Act (FCRA)" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Statutory Audit under Maharashtra Society Registration Act, 1860" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Internal Audit as per model Bye-Laws and Act" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Accounting & Support Services" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Direct & Indirect taxation compliances" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Minutes Drafting for Various Meetings i.e. Board Meeting, EGM & AGM" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Compliances relating to Bye-Laws and Act" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Advisory in above matters" />
+          <Card icon={<PiBuildingApartmentFill size={ iconSize } />} name="Formation of Society, Trust & Section 8 Company" />
+          <Card icon={<HiReceiptTax size={ iconSize } />} name="Registration U/s 12AA and 80G of Income Tax Act" />
+          <Card icon={<UilDollarAlt size={ iconSize } />} name="Registration and filing of returns under Foreign Contribution Regulation Act (FCRA)" />
+          <Card icon={<UilSearchPlus size={ iconSize } />} name="Statutory Audit under Maharashtra Society Registration Act, 1860" />
+          <Card icon={<CgInternal size={ iconSize } />} name="Internal Audit as per model Bye-Laws and Act" />
+          <Card icon={<UilFileGraph size={ iconSize } />} name="Accounting & Support Services" />
+          <Card icon={<UilFileContractDollar size={ iconSize } />} name="Direct & Indirect taxation compliances" />
+          <Card icon={<UilNotes size={ iconSize } />} name="Minutes Drafting for Various Meetings i.e. Board Meeting, EGM & AGM" />
+          <Card icon={<GrCompliance size={ iconSize } />} name="Compliances relating to Bye-Laws and Act" />
+          <Card icon={<UilAbacus size={ iconSize } />} name="Advisory in above matters" />
         </div>
       </>,
       id: "societies_trust_and_cooperative_society_regulations_and_advisory",
       icon: <SiHomeadvisor size={ iconSize } />
     },
     {
-      name: "Audit & Assurance",
+      name: "Audit and Assurance",
       description: "The Audit renders an opportunity to provide you with updated insight into your business and insight that could identify potential threats or opportunities that can be factored into your future business plans.",
       content: <>
         <div className="mb-5">
@@ -279,22 +394,22 @@ const services = ({ iconSize = 30 }) => {
 
         <div>Our services include:</div>
         <div className="grid grid-cols-3 gap-4 p-5 mb-5">
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Statutory Audit" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Concurrent Audit" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Internal Audit" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Income Tax Audit" />
+          <Card icon={<UilSearchPlus size={ iconSize } />} name="Statutory Audit" />
+          <Card icon={<UilGameStructure size={ iconSize } />} name="Concurrent Audit" />
+          <Card icon={<CgInternal size={ iconSize } />} name="Internal Audit" />
+          <Card icon={<HiReceiptTax size={ iconSize } />} name="Income Tax Audit" />
           <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Transfer Pricing audit" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="GST Audit" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Bank Audit" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Management Audit" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Operations Audit" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Stock Audit" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="System Audit" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Certification" />
+          <Card icon={<UilBookAlt size={ iconSize } />} name="GST Audit" />
+          <Card icon={<UilUniversity size={ iconSize } />} name="Bank Audit" />
+          <Card icon={<UilSitemap size={ iconSize } />} name="Management Audit" />
+          <Card icon={<UilBusSchool size={ iconSize } />} name="Operations Audit" />
+          <Card icon={<UilChartLine size={ iconSize } />} name="Stock Audit" />
+          <Card icon={<UilBookOpen size={ iconSize } />} name="System Audit" />
+          <Card icon={<UilAward size={ iconSize } />} name="Certification" />
         </div>
       </>,
       id: "audit_and_assurance",
-      icon: <FaMoneyBillTransfer size={ iconSize } />
+      icon: <AiOutlineAudit size={ iconSize } />
     },
     {
       name: "Loan Syndication Services",
@@ -308,13 +423,13 @@ const services = ({ iconSize = 30 }) => {
 
         <div>Our services include:</div>
         <div className="grid grid-cols-3 gap-4 p-5 mb-5">
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Project Finance" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Working Capital Loan" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Overdraft /Cash Credit Facility" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Term Loan" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Packing Credit limits" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Housing Loan & Loan against property and stock" />
-          <Card icon={<IoDocumentsSharp size={ iconSize } />} name="Personal Loan" />
+          <Card icon={<UilMoneyWithdraw size={ iconSize } />} name="Project Finance" />
+          <Card icon={<UilCoins size={ iconSize } />} name="Working Capital Loan" />
+          <Card icon={<UilCreditCard size={ iconSize } />} name="Overdraft / Cash Credit Facility" />
+          <Card icon={<TbPigMoney size={ iconSize } />} name="Term Loan" />
+          <Card icon={<MdOutlineCreditCardOff size={ iconSize } />} name="Packing Credit limits" />
+          <Card icon={<FaMoneyBillTransfer size={ iconSize } />} name="Housing Loan & Loan against property and stock" />
+          <Card icon={<RiMoneyRupeeCircleLine size={ iconSize } />} name="Personal Loan" />
         </div>
       </>,
       id: "loan_syndication_services",
@@ -333,7 +448,7 @@ const services = ({ iconSize = 30 }) => {
           <Card icon={<UilMeetingBoard size={ iconSize } />} name="Assistance in holding & conducting Board Meeting, Annual General Meeting,  and  Extra-Ordinary General Meeting" />
           <Card icon={<UilClipboardNotes size={ iconSize } />} name="Maintenance of Minutes Book, Statutory Registers, and all other prescribed secretarial records under the Companies Act, 2013" />
           <Card icon={<UilFileNetwork size={ iconSize } />} name="E-Filing of Annual Return & Financial Statements with MCA" />
-          <Card icon={<UilFileUploadAlt size={ iconSize } />} name="E-Filing of various statutory forms, returns and reports with MCA, NCLT, etc" />
+          <Card icon={<FaRegFilePdf size={ iconSize } />} name="E-Filing of various statutory forms, returns and reports with MCA, NCLT, etc" />
           <Card icon={<UilFileMedicalAlt size={ iconSize } />} name="Assisting in Reporting of Financial Data in XBRL format with MCA" />
           <Card icon={<UilFileInfoAlt size={ iconSize } />} name="Certification services of various e-forms" />
           <Card icon={<UilAward size={ iconSize } />} name="Obtaining Director Identification Number (DIN) and Digital Signature Certificate (DSC)" />

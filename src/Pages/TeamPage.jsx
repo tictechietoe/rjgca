@@ -54,7 +54,7 @@ const Team = () => {
       expertise: <>
         <ul className="list-disc ml-5 pb-5">
           <li>Audit</li>
-          <li>Accounting & Business Support</li>
+          <li>Accounting and Business Support</li>
           <li>Corporate Advisory</li>
         </ul>
       </>
@@ -95,7 +95,7 @@ const Team = () => {
           <ul className="list-disc ml-5 pb-5">
             <li>Chartered Accountant (ICAI)</li>
             <li>Certified  in GST course (ICAI)</li>
-            <li>Trained in Securities & Financial Assets Valuation (PVAI)</li>
+            <li>Trained in Securities and Financial Assets Valuation (PVAI)</li>
             <li>Graduate (HR College)</li>
           </ul>
           <ul className="list-disc ml-5">
@@ -105,10 +105,10 @@ const Team = () => {
         </div>
         <div className="basis-3/6">
           <div className="my-2 text-sm">
-            Rahul J Gala is a young  Chartered Accountant and the founder of  R J Gala & Associates. He is a commerce graduate from HR College of Commerce and Economics (Mumbai University). He is certified in GST course held by Institute of Chartered Accountants of India and also availed professional training in the field of Securities & Financial Assets valuation conducted by a recognised institute.
+            Rahul J Gala is a young  Chartered Accountant and the founder of  R J Gala and Associates. He is a commerce graduate from HR College of Commerce and Economics (Mumbai University). He is certified in GST course held by Institute of Chartered Accountants of India and also availed professional training in the field of Securities and Financial Assets valuation conducted by a recognised institute.
           </div>
           <div className="my-2 text-sm">
-            In his professional lifespan, he has accumulated rich experience in several fields of professional services, different sectors and with diverse clients. He has considerable domain expertize in Direct & Indirect Taxation, Accounting, Audit and Advisory. His understanding of the intricacies of businesses enables him to provide clients with comprehensive, accurate and technology enabled solutions for their current and future business issues.  He has successfully represented various clients before tax authories on complex tax litigation matters.
+            In his professional lifespan, he has accumulated rich experience in several fields of professional services, different sectors and with diverse clients. He has considerable domain expertize in Direct and Indirect Taxation, Accounting, Audit and Advisory. His understanding of the intricacies of businesses enables him to provide clients with comprehensive, accurate and technology enabled solutions for their current and future business issues.  He has successfully represented various clients before tax authories on complex tax litigation matters.
           </div>
           {
             !showFounderMoreDetails &&
@@ -125,7 +125,7 @@ const Team = () => {
         showFounderMoreDetails &&
         <div className="px-5">
           <div className="my-2 text-sm">
-            Prior to founding R J Gala & Associates, he has headed the Accounting and Taxation department and also served in the capacity as a consultant in different professionally managed  corporate organisations. He has worked very closely with top companies and firms including Big Four on several occassions.
+            Prior to founding R J Gala and Associates, he has headed the Accounting and Taxation department and also served in the capacity as a consultant in different professionally managed  corporate organisations. He has worked very closely with top companies and firms including Big Four on several occassions.
           </div>
           <div className="my-2 text-sm">
             As a leader, he has always been a strong source of inspiration for the team and aspiring professionals within the organization. He is a strong believer of giving back to the society and hence is associated with various not-for-profit organizations. He strongly believes that exceptional client service represents a dedication to going above and beyond expectations in every working relationship.
@@ -163,7 +163,7 @@ const Team = () => {
           Our team is a mix of motivated young professionals and experienced Chartered Accountants, Company Secretaries, Cost Accountants, Lawyers and CFAs who are specialised and has expertise in their respective areas . Expert professionals ensure that our clients receive prompt and personalized solutions at all times and also committed to add value and optimize benefits accruing to the clients.
         </div>
         <div className="my-5">
-          Different together. At R J Gala & Associates, we‘re not all the same. And that‘s our greatest strength. It’s important that our workforce reflects the diversity of the people we serve. Hiring people with different backgrounds and points of view helps us make better decisions, deliver outstanding results and create better experiences for everyone.
+          Different together. At R J Gala and Associates, we‘re not all the same. And that‘s our greatest strength. It’s important that our workforce reflects the diversity of the people we serve. Hiring people with different backgrounds and points of view helps us make better decisions, deliver outstanding results and create better experiences for everyone.
         </div>
         { foundersProfile }
         <div>

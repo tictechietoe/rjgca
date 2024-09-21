@@ -15,7 +15,6 @@ const ApplicationPage = () => {
     qualification: '',
     portfolio: '',
     company: '',
-    resume: null,
     experienceYears: '0',
     experienceMonths: '0',
     comments: ''
@@ -23,50 +22,78 @@ const ApplicationPage = () => {
 
   const [formData, setFormData] = useState(defaultApplication);
   const [showFormLoader, setShowFormLoader] = useState(false);
+  const [resume, setResume] = useState(null);
+
+  const handleResumeFile = (e) => {
+    const selectedResume = e.target.files[0];
+    setResume(selectedResume);
+  };
 
   const handleChange = (e) => {
-    const { name, value, type, files } = e.target;
-
-    if (type === 'file') {
-      console.log(files[0]);
-      console.log(formData);
-    }
+    const { name, value } = e.target;
 
     setFormData((prevFormData) => ({
       ...prevFormData,
-      [name]: type === 'file' ? files[0] : value
+      [name]: value
     }));
   };
 
-  const handleSubmit = (e) => {
+  const sendData = async (payload) => {
+    console.log(payload);
+
+    try {
+      await fetch("https://script.google.com/macros/s/AKfycbworxpwQGA2h7WUqRScZnMy0TzWizsFUXDm-ZQXKSKpzu6m5RNuEeSfptJmeEK4woE6aw/exec", {
+        method: "POST",
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          type: "application",
+          data: payload
+        })
+      });
+
+      alert("Application has been recorded successfully.");
+      setFormData(defaultApplication);
+    } catch (error) {
+      console.error('Error:', error);
+      alert("Some error recording the application. Can you please try again after some time.");
+    } finally {
+      setShowFormLoader(false);
+    }
+  };
+
+  const handleSubmit = async (e) => {
     // initallly activate the loader
     setShowFormLoader(true);
 
     e.preventDefault();
     // Here you can add code to send the formData to a serve
 
-    fetch("https://script.google.com/macros/s/AKfycbzMUQ8CIY3OsCSldz1llRileM7nB11VazV7eRSp1IUgwWldMR2sFvicJQHGlgY7UwBwlg/exec", {
-      method: "POST",
-      mode: 'no-cors',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        type: "application",
-        data: formData
-      })
-    })
-      .then((res) => {
-        alert("Application has been recorded succesfully.");
-        setFormData(defaultApplication);
-      })
-      .catch((err) => {
-        alert("Some error recording the query. Can you please try again after some time.");
-      })
-      .finally(() => {
-        // at the end remove the loader
-        setShowFormLoader(false);
-      });
+    let payload = {
+      ...formData,
+      date: new Date()
+    };
+
+    if (resume) {
+      const reader = new FileReader();
+      reader.onload = async (e) => {
+        const base64File = e.target.result.split(',')[1]; // Remove data URL part
+        payload = {
+          ...payload,
+          resume: {
+            name: resume.name,
+            type: resume.type,
+            content: base64File
+          }
+        };
+        await sendData(payload);
+      };
+      reader.readAsDataURL(resume);
+    } else {
+      await sendData(payload);
+    }
   };
 
   return (
@@ -99,7 +126,7 @@ const ApplicationPage = () => {
                 name="firstName"
                 value={formData.firstName}
                 onChange={handleChange}
-                // required
+                required
                 className="mt-1 p-2 w-full border rounded"
               />
             </div>
@@ -110,7 +137,7 @@ const ApplicationPage = () => {
                 name="lastName"
                 value={formData.lastName}
                 onChange={handleChange}
-                // required
+                required
                 className="mt-1 p-2 w-full border rounded"
               />
             </div>
@@ -121,7 +148,7 @@ const ApplicationPage = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                // required
+                required
                 className="mt-1 p-2 w-full border rounded"
               />
             </div>
@@ -132,7 +159,7 @@ const ApplicationPage = () => {
                 name="mobileNo"
                 value={formData.mobileNo}
                 onChange={handleChange}
-                // required
+                required
                 className="mt-1 p-2 w-full border rounded"
               />
             </div>
@@ -142,7 +169,7 @@ const ApplicationPage = () => {
                 name="gender"
                 value={formData.gender}
                 onChange={handleChange}
-                // required
+                required
                 className="mt-1 p-2 w-full border rounded"
               >
                 <option value="">Select..</option>
@@ -168,7 +195,7 @@ const ApplicationPage = () => {
                 name="dob"
                 value={formData.dob}
                 onChange={handleChange}
-                // required
+                required
                 className="mt-1 p-2 w-full border rounded"
               />
             </div>
@@ -205,12 +232,11 @@ const ApplicationPage = () => {
             {
               true &&
               <div>
-                <label className="block  font-medium text-gray-700">Upload Resume * (Max size 1 mb)</label>
+                <label className="block  font-medium text-gray-700">Upload Resume (Max size 1 mb)</label>
                 <input
                   type="file"
                   name="resume"
-                  onChange={handleChange}
-                  // required
+                  onChange={handleResumeFile}
                   className="mt-1 p-2 w-full border rounded"
                 />
               </div>

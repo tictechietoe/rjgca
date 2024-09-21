@@ -6,6 +6,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { useNavigate } from 'react-router-dom';
 import Logo from './Logo';
+import SocialMedia from './SocialMedia';
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -117,22 +118,25 @@ const Footer = () => {
   ];
 
   const contactUsSection = <>
-    {
-      _.map(linksData, link => {
-        const {
-          symbol = <></>,
-          value = <></>,
-          key = ""
-        } = link;
+    <div>
+      {
+        _.map(linksData, link => {
+          const {
+            symbol = <></>,
+            value = <></>,
+            key = ""
+          } = link;
 
-        return (
-          <div key={key} className="flex justify-start items-center pl-10 p-2 hover:ml-2 focus:ml-2 focus:shadow-lg transition-all duration-300 my-2 hover:font-bold hover:text-custom-secondary">
-            <div className="px-2">{symbol}</div>
-            <div className="px-2">{value}</div>
-          </div>
-        );
-      })
-    }
+          return (
+            <div key={key} className="flex justify-start items-center pl-10 p-2 hover:ml-2 focus:ml-2 focus:shadow-lg transition-all duration-300 my-2 hover:font-bold hover:text-custom-secondary">
+              <div className="px-2">{symbol}</div>
+              <div className="px-2">{value}</div>
+            </div>
+          );
+        })
+      }
+      <SocialMedia />
+    </div>
   </>;
 
   const sectionDetails = [

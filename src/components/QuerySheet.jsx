@@ -35,7 +35,7 @@ const QuerySheet = () => {
     e.preventDefault();
     // Here you can add code to send the formData to a serve
 
-    fetch("https://script.google.com/macros/s/AKfycbzMUQ8CIY3OsCSldz1llRileM7nB11VazV7eRSp1IUgwWldMR2sFvicJQHGlgY7UwBwlg/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbworxpwQGA2h7WUqRScZnMy0TzWizsFUXDm-ZQXKSKpzu6m5RNuEeSfptJmeEK4woE6aw/exec", {
       method: "POST",
       mode: 'no-cors',
       headers: {
@@ -43,7 +43,10 @@ const QuerySheet = () => {
       },
       body: JSON.stringify({
         type: "query",
-        data: formData
+        data: {
+          ...formData,
+          date: new Date()
+        }
       })
     })
       .then((res) => {
