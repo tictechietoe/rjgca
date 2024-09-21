@@ -1,6 +1,5 @@
 // src/components/ContactInfo.js
 import React from 'react';
-import _ from 'lodash';
 import contact from '../assets/images/contact.jpg';
 import BannerImage from '../components/BannerImage';
 import QuerySheet from '../components/QuerySheet';

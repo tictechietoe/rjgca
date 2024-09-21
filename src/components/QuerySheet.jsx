@@ -73,7 +73,7 @@ const QuerySheet = () => {
         </p>
         {
           showFormLoader &&
-          <div className="flex items-center justify-center h-48">
+          <div className="flex items-center justify-center h-96">
             <Loader text="Saving your query... Please wait for few seconds..."/>
           </div>
         }
