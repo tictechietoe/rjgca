@@ -27,7 +27,7 @@ const values = [
         content: "We add",
         quality: "VALUE",
         icon: <IoDiamondOutline size={ 25 } />,
-        detail: "Pursue excellence by delivering path breaking solutions and seek to innovate in everything we do."
+        detail: "Pursue excellence by delivering path-breaking solutions and seek to innovate in everything we do."
     },
     {
         content: "We act",

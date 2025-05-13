@@ -38,8 +38,8 @@ const Our = () => {
             OUR VISION
           </div>
           <div className="my-3 p-5 font-extrabold text-xl border-2 border-gray-200 text-custom-secondary">
-            <p>To be amongst the top notch consultancy firms and be a preferred choice as Business Advisor.</p>
-            <p className="text-custom-primary">Happy Clients, Happy us</p>
+            <p>To be among the top-notch consulting firms and the preferred choice for business advisory services.</p>
+            <p className="text-custom-primary">Happy Clients, Happy Us</p>
           </div>
         </div>
       </>,
@@ -58,10 +58,12 @@ const Our = () => {
             OUR MISSION
           </div>
           <div className="my-3 p-5 font-extrabold text-xl border-2 border-gray-200 text-custom-secondary">
-            <p>
-              To deliver consistent, customized and workable solutions to our clients backed with the highest level of efficiency and technology. Work continuously to improve the quality of our services, investing in learning and development of our people and innovation.
-            </p>
-            <p className="text-custom-primary mt-2">To deliver out-of-the-box solutions that are technically sound, innovative and actionable.</p>
+            <ul className="list-disc ml-5">
+              <li>Deliver consistent, customised and workable solutions to our clients, backed by the highest level of efficiency and technology.</li>
+              <li>Continuously improve the quality of our services by investing in learning, development, and innovation.</li>
+              <li>Work to enhance the skills and knowledge of our people.</li>
+              <li>Provide out-of-the-box solutions that are technically sound, innovative, and actionable.</li>
+            </ul>
           </div>
         </div>
       </>,

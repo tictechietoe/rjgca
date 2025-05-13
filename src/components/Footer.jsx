@@ -18,7 +18,7 @@ const Footer = () => {
   const disclaimerSection = <>
     <div className="pl-10">
       <p>
-        Your access to this website constitutes your agreement to be bound by all terms and conditions listed herein below.
+        Your access to this website constitutes your agreement to be bound by all terms and conditions listed below.
       </p>
       <br />
       <p>
@@ -181,10 +181,10 @@ const Footer = () => {
   const companyDetails = (
     <div>
       <div className="pb-5">
-        R J Gala & Associate's purpose is to serve its clients through combined resources, information and expertise and ensure to achieve the highest standards of service to our clients.
+        R J Gala & Associates' purpose is to serve its clients through combined resources, information and expertise and ensure to achieve the highest standards of service to our clients.
       </div>
       <div>
-        We are a young and dynamic firm equipped with an experienced team of chartered accountants and it is located at Mumbai.
+        We are a young and dynamic firm equipped with an experienced team of chartered accountants and it is based in Mumbai.
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ const QuerySheet = () => {
   const defaultObject = {
     name: '',
     designation: '',
-    organization: '',
+    organisation: '',
     officeAddress: '',
     city: '',
     email: '',
@@ -69,7 +69,7 @@ const QuerySheet = () => {
       <form onSubmit={handleSubmit}>
         <h2 className="flex text-2xl text-center mb-6 justify-around">QUERY SHEET</h2>
         <p className="text-center mb-6">
-          Help us to help you! Close and continuous communication with clients is one of our top priorities. We put our clients and their queries as the main proprity and at the centre of our business.
+          Help us to help you! Close and continuous communication with clients is one of our top priorities. We put our clients and their queries as the main priority and at the centre of our business.
         </p>
         {
           showFormLoader &&
@@ -102,12 +102,12 @@ const QuerySheet = () => {
               />
             </div>
             <div>
-              <label className="block text-gray-700">Organization</label>
+              <label className="block text-gray-700">Organisation</label>
               <input
                 type="text"
-                name="organization"
+                name="organisation"
                 className="mt-1 p-2 w-full border rounded"
-                value={formData.organization}
+                value={formData.organisation}
                 onChange={handleChange}
               />
             </div>

@@ -24,12 +24,12 @@ const Home = () => {
   ];
 
   const textContent = [
-    'Accessable. Approachable. Accountable',
-    'We are here to help your bussiness',
-    'Finding Solutions and not Execuses',
+    'Accessible. Approachable. Accountable',
+    'We are here to help your business',
+    'Finding Solutions and not Excuses',
     'Making a Difference',
     'Surround yourself with Assets, Not Liabilities',
-    'We Build Relations'
+    'We Build Relationships'
   ];
 
   return (

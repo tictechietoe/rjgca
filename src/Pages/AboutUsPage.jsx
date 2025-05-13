@@ -43,7 +43,7 @@ const AboutUsPage = () => {
       title: "WHAT DO WE DO ?",
       content: <>
         <ul className="list-disc ml-5">
-          <li>We recognise that Today's Business World mandates quality professional services that are delivered in a timely and a cost effective manner.</li>
+          <li>We recognise that Today's Business World mandates quality professional services that are delivered in a timely and cost-effective manner.</li>
           <li>We at R J Gala & Associates strive to provide the same to our clients.</li>
         </ul>
       </>,
@@ -89,8 +89,8 @@ const AboutUsPage = () => {
       title: "WHAT IS OUR BELIEF ?",
       content: <>
         <ul className="list-disc ml-5">
-          <li>We believe in putting our client's requirements in fore front at all times.</li>
-          <li>understanding the complexities of their business space and develop solutions in accordance thereof.</li>
+          <li>We believe in putting our clients' requirements at the forefront at all times.</li>
+          <li>Understanding the complexities of their business space and developing solutions in accordance therewith.</li>
         </ul>
       </>,
       side: 'left',
@@ -101,7 +101,7 @@ const AboutUsPage = () => {
       title: "WHAT DO WE PROVIDE ?",
       content: <>
         <ul className="list-disc ml-5">
-          <li>We are not just service providers to our clients, we are trusted business advisors – because we put our clients at the centre of our business.</li>
+          <li>We are not just service providers to our clients, we are trusted business advisers – because we put our clients at the centre of our business.</li>
           <li>Our services are driven by quality and commitment to our clients, and responsive quality service is our primary focus.</li>
         </ul>
       </>,
@@ -115,7 +115,7 @@ const AboutUsPage = () => {
         <ul className="list-disc ml-5">
           <li>Close and continuous communication with clients is one of our top priorities.</li>
           <li>Apart from our people, our greatest assets are the networks and relationships we have nurtured over the years.</li>
-          <li>It helps in facilitating and rendering faster effective solutions to attain <b>maximum client satisfaction</b></li>
+          <li>It helps in facilitating and rendering faster, effective solutions to attain <b>maximum client satisfaction</b></li>
         </ul>
       </>,
       side: 'left',

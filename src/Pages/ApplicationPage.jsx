@@ -108,7 +108,7 @@ const ApplicationPage = () => {
       <form onSubmit={handleSubmit} className="max-w-4xl mx-auto p-8 bg-white shadow-md rounded-lg my-10 border">
         <h2 className="text-center text-2xl mb-6"> APPLY HERE </h2>
         <p className="text-center mb-6">
-          We nurture and cultivate a sense of pride in the work and create team leaders. Your growth chart will be governed by well-defined transparent policies of the firm. Apply via the form given below and meet us for face-to-face interview.
+          We nurture and cultivate a sense of pride in the work and create team leaders. Your growth chart will be governed by well-defined, transparent policies of the firm. Apply via the form given below and meet us for a face-to-face interview.
         </p>
         {
           showFormLoader &&
@@ -232,7 +232,7 @@ const ApplicationPage = () => {
             {
               true &&
               <div>
-                <label className="block  font-medium text-gray-700">Upload Resume (Max size 1 mb)</label>
+                <label className="block  font-medium text-gray-700">Upload CV (Max size 1 MB)</label>
                 <input
                   type="file"
                   name="resume"
@@ -243,7 +243,7 @@ const ApplicationPage = () => {
             }
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block  font-medium text-gray-700">Years Of Experience</label>
+                <label className="block  font-medium text-gray-700">Years of Experience</label>
                 <input
                   name="experienceYears"
                   type="number"

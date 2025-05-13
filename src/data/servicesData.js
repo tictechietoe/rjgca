@@ -267,7 +267,7 @@ const services = ({ iconSize = 30 }) => {
       description: "Taxation presents arguably the most dynamic and complex challenge in the context of financial planning. Managing tax complexity to escalate value of the business is one of the fundamental considerations of major business decisions",
       content: <>
         <div className="mb-5">
-          India’s taxation system is among the more complex systems globally and is constantly being updated to account for changes in the economy and policy.  Managing tax complexity to escalate value of the business is one of the fundamental considerations of major business decisions. RJGCA's taxation services are innovative, proactive and based on tax efficient strategies. We offer effective tax management, tax structuring and advisory services. Taxation presents arguably the most dynamic and complex challenge in the context of financial planning. Our approach remains versatile with an awareness that individual issues must be dealt with on their own merits but with the overall, long-term considerations always in mind. We endeavor to identify potential threats & opportunities and advise on appropriate strategies to mitigate exposure and optimize tax incidence on our clients.
+          India's taxation system is among the more complex systems globally and is constantly being updated to account for changes in the economy and policy.  Managing tax complexity to escalate value of the business is one of the fundamental considerations of major business decisions. RJGCA's taxation services are innovative, proactive and based on tax efficient strategies. We offer effective tax management, tax structuring and advisory services. Taxation presents arguably the most dynamic and complex challenge in the context of financial planning. Our approach remains versatile with an awareness that individual issues must be dealt with on their own merits but with the overall, long-term considerations always in mind. We endeavor to identify potential threats & opportunities and advise on appropriate strategies to mitigate exposure and optimize tax incidence on our clients.
         </div>
 
         <div>Our services include:</div>
@@ -364,7 +364,7 @@ const services = ({ iconSize = 30 }) => {
       description: "It is impperative for the enterprise to keep a regular watch on foreign exchange transactions, in the context of sectoral caps, investment caps, so as to overcome from the adverse regulatory actions.",
       content: <>
         <div className="mb-5">
-          Charity begins at home and has countless ripples that affect the societies and communities at large. Whether it is a trust managed by a few people or a large section of the society, we provide the best financial advice and services. Trust and societies form a pivotal pillar of the economic structure of the country, hence it is our duty to ensure that your organization stands on a strong and sustainable economic pillar.
+          Charity begins at home and has countless ripples that affect societies and communities at large. Whether it is a trust managed by a few people or a large section of society, we provide the best financial advice and services. Trusts and societies form a pivotal pillar of the economic structure of the country; hence, it is our duty to ensure that your organisation stands on a strong and sustainable economic pillar.
         </div>
 
         <div>Our services include:</div>
@@ -412,7 +412,7 @@ const services = ({ iconSize = 30 }) => {
       icon: <AiOutlineAudit size={ iconSize } />
     },
     {
-      name: "Loan Syndication Services",
+      name: "Outsourcing Services",
       description: "We understand that the businesses depends on efficient utilization of funds and a lot depends on a well-organised fund flow system to keep businesses running. Aims to provide customised financing solutions to meet their working capital and growth finance needs",
       content: <>
         <div className="mb-5">
@@ -455,7 +455,7 @@ const services = ({ iconSize = 30 }) => {
           <Card icon={<GrCompliance size={ iconSize } />} name="Compliances relating to Managerial Remuneration" />
           <Card icon={<UilPostcard size={ iconSize } />} name="Compliances relating to Change of Name, Change of Objects, change of status from Public Ltd to Private Ltd and vice-versa" />
           <Card icon={<FaBuildingUser size={ iconSize } />} name="Compliances Relating to Limited Liability Partnership / Company i.e. Pvt. Ltd, Public Ltd, One Person Company (OPC) and Section 8 Company" />
-          <Card icon={<FaPeopleRoof size={ iconSize } />} name="Ensuring board of director’s compliance as per Companies Act" />
+          <Card icon={<FaPeopleRoof size={ iconSize } />} name="Ensuring board of director's compliance as per Companies Act" />
           <Card icon={<MdRealEstateAgent size={ iconSize } />} name="Interstate and Intrastate change of Registered office" />
           <Card icon={<UilCheckCircle size={ iconSize } />} name="Procedures and compliances related to making inter-company loans, investments, guarantees, and providing of securities" />
           <Card icon={<BsBuildingFillX size={ iconSize } />} name="Assisting in winding up/closure of companies in India" />
@@ -476,10 +476,10 @@ const services = ({ iconSize = 30 }) => {
     },
     {
       name: "CMA Projections",
-      description: "Our CMA (Credit Monitoring Arrangement) projection services and designed to help MSMEs secure financing and maintaining strong relationship with financial institutions.",
+      description: "Our CMA (Credit Monitoring Arrangement) projection services are designed to help MSMEs secure financing and maintaining strong relationship with financial institutions.",
       content: <>
         <div className="mb-5">
-          Our CMA (Credit Monitoring Arrangement) projection services and designed to help MSMEs secure financing and maintaining strong relationship with financial institutions.
+          Our CMA (Credit Monitoring Arrangement) projection services are designed to help MSMEs secure financing and maintaining strong relationship with financial institutions.
         </div>
 
         <div>We provide:</div>
@@ -497,10 +497,10 @@ const services = ({ iconSize = 30 }) => {
     },
     {
       name: "CFO Services",
-      description: "Our CFO services, tailored specifically for Micro, Small, and Medium Enterprises(MSMEs), provide expert financial management and strategic support to help your business thrive.",
+      description: "Our CFO services are tailored specifically for Micro, Small, and Medium Enterprises(MSMEs), provide expert financial management and strategic support to help your business thrive.",
       content: <>
         <div className="mb-5">
-          Our CFO services, tailored specifically for Micro, Small, and Medium Enterprises(MSMEs), provide expert financial management and strategic support to help your business thrive.
+          Our CFO services aretailored specifically for Micro, Small, and Medium Enterprises(MSMEs), provide expert financial management and strategic support to help your business thrive.
         </div>
 
         <div>As your dedicated partner, we offer</div>

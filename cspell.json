@@ -1,0 +1,16 @@
+{
+  "version": "0.2",
+  "language": "en-GB",
+  "dictionaries": ["en-GB"],
+  "ignorePaths": [
+    "node_modules",
+    "build",
+    "dist",
+    "package-lock.json",
+    "yarn.lock"
+  ],
+  "files": [
+    "src/**/*.js",
+    "src/**/*.jsx"
+  ]
+} 
