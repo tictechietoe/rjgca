@@ -36,15 +36,15 @@ const Footer = () => {
       name: 'Income Tax Department'
     },
     {
-      url: 'https://incometaxindia.gov.in/Pages/default.aspx',
+      url: 'https://www.cbic.gov.in/',
       name: 'Central Board of Excise and Customs'
     },
     {
-      url: 'https://incometaxindia.gov.in/Pages/default.aspx',
+      url: 'https://services.india.gov.in/service/detail/website-of-tax-information-network',
       name: 'E-Tax Information Network'
     },
     {
-      url: 'https://incometaxindia.gov.in/Pages/default.aspx',
+      url: 'https://www.mca.gov.in/content/mca/global/en/home.html',
       name: 'Ministry of Corporate Affairs'
     },
     {

@@ -65,6 +65,7 @@ const Team = () => {
         <ul className="list-disc ml-5 pb-5">
           <li>FEMA Advisory</li>
           <li>Secretarial Services </li>
+          <li>Corporate Finance</li>
         </ul>
       </>
     },
@@ -106,7 +107,7 @@ const Team = () => {
             Rahul J Gala is a young  Chartered Accountant and the founder of  R J Gala and Associates. He is a commerce graduate from HR College of Commerce and Economics (Mumbai University). He is certified in GST course held by Institute of Chartered Accountants of India and also availed professional training in the field of Securities and Financial Assets valuation conducted by a recognised institute.
           </div>
           <div className="my-2 text-sm">
-            In his professional lifespan, he has accumulated rich experience in several fields of professional services, different sectors and with diverse clients. He has considerable domain expertise in Direct and Indirect Taxation, Accounting, Audit and Advisory. His Understanding of the intricacies of businesses enables him to provide clients with comprehensive, accurate and technology-enabled solutions for their current and future business issues.  He has successfully represented various clients before tax authorities on complex tax litigation matters.
+            In his professional lifespan, he has accumulated rich experience in several fields of professional services, different sectors and with diverse clients. He have considerable domain expertise in Direct and Indirect Taxation, Accounting, Audit and Advisory. His Understanding of the intricacies of businesses enables him to provide clients with comprehensive, accurate and technology-enabled solutions for their current and future business issues.  He has successfully represented various clients before tax authorities on complex tax litigation matters.
           </div>
           {
             !showFounderMoreDetails &&

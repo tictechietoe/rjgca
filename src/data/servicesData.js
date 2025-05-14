@@ -335,7 +335,7 @@ const services = ({ iconSize = 30 }) => {
     },
     {
       name: "FEMA Advisory",
-      description: "It is impperative for the enterprise to keep a regular watch on foreign exchange transactions, in the context of sectoral caps, investment caps, so as to overcome from the adverse regulatory actions.",
+      description: "It is imperative for the enterprise to keep a regular watch on foreign exchange transactions, in the context of sectoral caps, investment caps, so as to overcome from the adverse regulatory actions.",
       content: <>
         <div className="mb-5">
           India has become significant player in global market and have seen surge of cross border activities. A breakthrough flow of funds, inbound as well as outbound has expanded the level of check on compliances in context of the foreign exchange regulations. It is impperative for the enterprise to keep a regular watch on foreign exchange transactions, in the context of sectoral caps, investment caps, so as to overcome from the adverse regulatory actions. In order to circumvent detrimental circumstances, we have specially designed these services, to ensure due compliance of FEMA laws.
@@ -413,12 +413,10 @@ const services = ({ iconSize = 30 }) => {
     },
     {
       name: "Outsourcing Services",
-      description: "We understand that the businesses depends on efficient utilization of funds and a lot depends on a well-organised fund flow system to keep businesses running. Aims to provide customised financing solutions to meet their working capital and growth finance needs",
+      description: "Outsourcing your finance and compliance functions can help your business reduce costs and improve efficiency. We provide end-to-end outsourcing services including bookkeeping, payroll, tax filings, and regulatory compliance, enabling you to focus on strategic growth while we handle the back office.",
       content: <>
         <div className="mb-5">
-          RJGCA deals with SMEs, mid-corporate and large corporate clients, and aims to provide customised financing solutions to meet their working capital and growth finance needs. We understand that businesses depend on efficient utilization of funds and a lot depends on a well-organised fund flow system to keep businesses running.
-          <br />
-          RJGCA enjoys a sound reputation in the banking segment as it has a strong relationships with financial institutions, banks and NBFCs.
+        Outsourcing your finance and compliance functions can help your business reduce costs and improve efficiency. We provide end-to-end outsourcing services including bookkeeping, payroll, tax filings, and regulatory compliance, enabling you to focus on strategic growth while we handle the back office.
         </div>
 
         <div>Our services include:</div>
