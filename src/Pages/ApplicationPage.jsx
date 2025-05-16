@@ -243,7 +243,7 @@ const ApplicationPage = () => {
             }
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block  font-medium text-gray-700">Years of Experience</label>
+                <label className="block  font-medium text-gray-700">Years of Exp.</label>
                 <input
                   name="experienceYears"
                   type="number"
@@ -253,7 +253,7 @@ const ApplicationPage = () => {
                 />
               </div>
               <div>
-                <label className="block  font-medium text-gray-700">Months Of Experience</label>
+                <label className="block  font-medium text-gray-700">Months Of Exp.</label>
                 <input
                   name="experienceMonths"
                   type="number"

@@ -14,6 +14,8 @@ const Navbar = () => {
   const [activeSubDropdown, setActiveSubDropdown] = useState(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isQuickLinksOpen, setIsQuickLinksOpen] = useState(false);
+  const [mobileExpandedSections, setMobileExpandedSections] = useState({});
   const dropdownRef = useRef(null);
   const mobileMenuRef = useRef(null);
 
@@ -36,6 +38,8 @@ const Navbar = () => {
         !event.target.closest('.mobile-menu-button')
       ) {
         setIsMobileMenuOpen(false);
+        setIsQuickLinksOpen(false);
+        setMobileExpandedSections({});
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -226,7 +230,7 @@ const Navbar = () => {
   // Mobile Submenu
   const MobileSubDropdownMenu = ({ section, visible }) => (
     <div
-      className={`pl-4 bg-gray-50 ${visible ? 'block' : 'hidden'}`}
+      className={`pl-4 bg-white ${visible ? 'block' : 'hidden'}`}
     >
       {section.links.map((link, index) => (
         <a
@@ -374,8 +378,6 @@ const Navbar = () => {
   };
 
   // Mobile Quick Links
-  const [mobileExpandedSections, setMobileExpandedSections] = useState({});
-
   const mobileQuickLinksItem = () => {
     const toggleSection = (sectionTitle) => {
       setMobileExpandedSections(prev => ({
@@ -384,40 +386,56 @@ const Navbar = () => {
       }));
     };
 
+    const toggleQuickLinks = () => {
+      // If we're closing the quick links, reset all expanded sections
+      if (isQuickLinksOpen) {
+        setMobileExpandedSections({});
+      }
+      setIsQuickLinksOpen(!isQuickLinksOpen);
+    };
+
     return (
-      <div className="w-full">
-        <div className={mobileNavButtonClass + " justify-between"}>
+      <div className="w-full -mx-4">
+        <div 
+          className={mobileNavButtonClass + " justify-between bg-gray-50"}
+          onClick={toggleQuickLinks}
+        >
           <div className="flex items-center">
             <span className="mr-3">{quickLinks.icon}</span>
             <span>{quickLinks.title}</span>
           </div>
+          <span>{isQuickLinksOpen ? '−' : '+'}</span>
         </div>
-        <div className="bg-white">
-          {quickLinks.sections.map((section, index) => (
-            <div key={index} className="border-b border-gray-100">
-              <div
-                className="px-4 py-2 flex justify-between items-center cursor-pointer hover:bg-gray-50"
-                onClick={() => toggleSection(section.title)}
-              >
-                <span className="text-sm font-medium">{section.title}</span>
-                <span>{mobileExpandedSections[section.title] ? '−' : '+'}</span>
+        {isQuickLinksOpen && (
+          <div className="bg-white">
+            {quickLinks.sections.map((section, index) => (
+              <div key={index} className="border-b border-gray-100">
+                <div
+                  className="px-4 py-2 flex justify-between items-center cursor-pointer bg-gray-100 hover:bg-gray-200"
+                  onClick={() => toggleSection(section.title)}
+                >
+                  <span className="text-sm font-medium">{section.title}</span>
+                  <span>{mobileExpandedSections[section.title] ? '−' : '+'}</span>
+                </div>
+                <MobileSubDropdownMenu 
+                  section={section} 
+                  visible={mobileExpandedSections[section.title]} 
+                />
               </div>
-              <MobileSubDropdownMenu 
-                section={section} 
-                visible={mobileExpandedSections[section.title]} 
-              />
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     );
   };
 
   // --- Render ---
   return (
-    <nav className="sticky top-0 z-30 bg-custom-nav-color drop-shadow-lg">
+    <nav className="sticky top-0 z-30 bg-custom-nav-color drop-shadow-lg" style={{"--navbar-height": "60px"}}>
       <div className="flex items-center justify-between px-4 py-2">
-        <Logo />
+        <div className="flex-shrink-0">
+          <Logo />
+        </div>
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center">
@@ -430,8 +448,15 @@ const Navbar = () => {
         
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-custom-secondary focus:outline-none mobile-menu-button"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="md:hidden text-custom-secondary focus:outline-none mobile-menu-button z-40 p-2"
+          onClick={() => {
+            if (isMobileMenuOpen) {
+              // Reset all states when closing the menu
+              setIsQuickLinksOpen(false);
+              setMobileExpandedSections({});
+            }
+            setIsMobileMenuOpen(!isMobileMenuOpen);
+          }}
         >
           {isMobileMenuOpen ? <MdClose size={24} /> : <HiMenu size={24} />}
         </button>
@@ -441,9 +466,10 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div 
           ref={mobileMenuRef}
-          className="md:hidden bg-white shadow-lg absolute top-full left-0 right-0 z-50 border-t border-gray-200"
+          className="md:hidden bg-white shadow-lg fixed top-[calc(var(--navbar-height,60px))] left-0 right-0 z-30 border-t border-gray-200 overflow-y-auto max-h-[80vh]"
+          style={{bottom: "auto"}}
         >
-          <div className="flex flex-col w-full">
+          <div className="flex flex-col w-full px-4">
             {_.map(navbarContent, content => (
               content.title === 'QUICK LINKS' 
                 ? mobileQuickLinksItem() 
