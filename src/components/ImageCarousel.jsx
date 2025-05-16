@@ -80,7 +80,7 @@ const ImageCarousel = ({ images, textContent }) => {
   }, [currentIndex]);
 
   return (
-    <div className="w-full h-[75vh] relative overflow-hidden">
+    <div className="w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[75vh] relative overflow-hidden">
       <div 
         className="flex h-full transition-transform ease-in-out will-change-transform"
         style={{ 
@@ -96,8 +96,8 @@ const ImageCarousel = ({ images, textContent }) => {
                 alt={`Carousel screen ${index}`}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center p-8">
-                <div className="text-white text-5xl font-bold">
+              <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center p-4 sm:p-6 md:p-8">
+                <div className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center">
                   { index === currentIndex ? displayedText : '' }
                   <span className="animate-blink">|</span>
                 </div>
@@ -109,16 +109,22 @@ const ImageCarousel = ({ images, textContent }) => {
 
       <button
         onClick={ prevSlide }
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 text-black p-2 rounded-full hover:bg-opacity-75 transition-all"
+        className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 text-black p-1 sm:p-2 rounded-full hover:bg-opacity-75 transition-all"
+        aria-label="Previous slide"
       >
-        <FaChevronLeft size={ 50 } />
+        <FaChevronLeft size={20} className="sm:hidden" />
+        <FaChevronLeft size={30} className="hidden sm:block md:hidden" />
+        <FaChevronLeft size={50} className="hidden md:block" />
       </button>
 
       <button
         onClick={ nextSlide }
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 text-black p-2 rounded-full hover:bg-opacity-95 transition-all"
+        className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 text-black p-1 sm:p-2 rounded-full hover:bg-opacity-95 transition-all"
+        aria-label="Next slide"
       >
-        <FaChevronRight size={ 50 } />
+        <FaChevronRight size={20} className="sm:hidden" />
+        <FaChevronRight size={30} className="hidden sm:block md:hidden" />
+        <FaChevronRight size={50} className="hidden md:block" />
       </button>
 
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
@@ -127,9 +133,10 @@ const ImageCarousel = ({ images, textContent }) => {
             <button
               key={index}
               onClick={ () => changeSlide(index) }
-              className={`w-3 h-3 rounded-full ${
+              className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full ${
                 index === currentIndex ? 'bg-white' : 'bg-white bg-opacity-50'
               }`}
+              aria-label={`Go to slide ${index + 1}`}
             />
           ))
         }

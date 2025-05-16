@@ -206,7 +206,7 @@ const services = ({ iconSize = 30 }) => {
         </div>
 
         <div>Our services include:</div>
-        <div className="grid grid-cols-3 gap-4 p-10 mb-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-4 sm:p-6 lg:p-10 mb-5">
           <Card icon={<UilFileCheckAlt size={ iconSize } />} name="Company & LLP Incorporation and obtaining requisite government approvals" />
           <Card icon={<FaHandshakeSimple size={ iconSize } />} name="Formation of Partnership firm, Conversion of Partnership Firms and Private Ltd Companies into LLP" />
           <Card icon={<ImOffice size={ iconSize } />} name="Setting up Branch office, Liaison office, Project Office, Joint Venture, Owned Subsidiary etc." />
@@ -214,7 +214,7 @@ const services = ({ iconSize = 30 }) => {
         </div>
 
         <div>Procure other registrations like:</div>
-        <div className="grid grid-cols-3 p-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-4 sm:p-5">
           <Card icon={<BsPersonVcardFill size={ iconSize } />} name="PAN" />
           <Card icon={<BsPostcardFill size={ iconSize } />} name="TAN" />
           <Card icon={<UilCopyLandscape size={ iconSize } />} name="MSME Registration (Udyog Aadhaar)" />
@@ -241,7 +241,7 @@ const services = ({ iconSize = 30 }) => {
         </div>
 
         <div>Our services include:</div>
-        <div className="grid grid-cols-3 gap-4 p-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-4 sm:p-6 lg:p-10 mb-5">
           <Card icon={<UilDiary size={ iconSize } />} name="Book-keeping and Accounting" />
           <Card icon={<UilCloudUpload size={ iconSize } />} name="Cloud based accounting" />
           <Card icon={<UilBookReader size={ iconSize } />} name="Review and management of Accounting system" />
@@ -272,7 +272,7 @@ const services = ({ iconSize = 30 }) => {
 
         <div>Our services include:</div>
         <h3 className="font-bold underline text-custom-primary">DIRECT TAXATION</h3>
-        <div className="grid grid-cols-3 gap-4 p-5 mb-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-4 sm:p-6 lg:p-10 mb-5">
           <Card icon={<HiReceiptTax size={ iconSize } />} name="Preparation and filing of Income Tax returns and other forms" />
           <Card icon={<FaFileInvoice size={ iconSize } />} name="Review and compliance of TDS regulations" />
           <Card icon={<LuFileOutput size={ iconSize } />} name="Review and compliance of Transfer Pricing regulations" />
@@ -286,7 +286,7 @@ const services = ({ iconSize = 30 }) => {
         </div>
 
         <h3 className="font-bold underline text-custom-primary">IN-DIRECT TAXATION</h3>
-        <div className="grid grid-cols-3 gap-4 p-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-4 sm:p-6 lg:p-10">
           <Card icon={<FaFileAlt size={ iconSize } />} name="Computation of GST liability, assistance in making payment and filing of periodic GST returns" />
           <Card icon={<TbFilePercent size={ iconSize } />} name="Preparation and filing of Profession tax returns" />
           <Card icon={<MdAssistantNavigation size={ iconSize } />} name="Assist in reconciliation of ITC as per books and portal, GSTR-2A reconciliation, GSTR1 vs E-way bill reconciliation, etc" />
@@ -316,7 +316,7 @@ const services = ({ iconSize = 30 }) => {
         </div>
 
         <div>Our services include:</div>
-        <div className="grid grid-cols-3 gap-4 p-5 mb-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-4 sm:p-6 lg:p-10 mb-5">
           <Card icon={<UilPanelAdd size={ iconSize } />} name="Fund raising — Debt, Venture capital and private equity" />
           <Card icon={<UilChartBar size={ iconSize } />} name="Business Valuations" />
           <Card icon={<UilFileGraph size={ iconSize } />} name="Accounting & Financial Due Diligence" />
@@ -342,7 +342,7 @@ const services = ({ iconSize = 30 }) => {
         </div>
 
         <div>Our services include:</div>
-        <div className="grid grid-cols-3 gap-4 p-5 mb-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-4 sm:p-6 lg:p-10 mb-5">
           <Card icon={<UilReceiptAlt size={ iconSize } />} name="Foreign Direct Investment in India (FDI) - Advisory & compliances" />
           <Card icon={<UilInbox size={ iconSize } />} name="Advising on inbound investments in India on repatriable or non-repatriable basis" />
           <Card icon={<SiHomeadvisor size={ iconSize } />} name="Advisory and setting up of entry structure like subsidiary Company / branch / liaison office / project / site office in India" />
@@ -368,7 +368,7 @@ const services = ({ iconSize = 30 }) => {
         </div>
 
         <div>Our services include:</div>
-        <div className="grid grid-cols-3 gap-4 p-5 mb-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-4 sm:p-6 lg:p-10 mb-5">
           <Card icon={<PiBuildingApartmentFill size={ iconSize } />} name="Formation of Society, Trust & Section 8 Company" />
           <Card icon={<HiReceiptTax size={ iconSize } />} name="Registration U/s 12AA and 80G of Income Tax Act" />
           <Card icon={<UilDollarAlt size={ iconSize } />} name="Registration and filing of returns under Foreign Contribution Regulation Act (FCRA)" />
@@ -393,7 +393,7 @@ const services = ({ iconSize = 30 }) => {
         </div>
 
         <div>Our services include:</div>
-        <div className="grid grid-cols-3 gap-4 p-5 mb-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-4 sm:p-6 lg:p-10 mb-5">
           <Card icon={<UilSearchPlus size={ iconSize } />} name="Statutory Audit" />
           <Card icon={<UilGameStructure size={ iconSize } />} name="Concurrent Audit" />
           <Card icon={<CgInternal size={ iconSize } />} name="Internal Audit" />
@@ -420,7 +420,7 @@ const services = ({ iconSize = 30 }) => {
         </div>
 
         <div>Our services include:</div>
-        <div className="grid grid-cols-3 gap-4 p-5 mb-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-4 sm:p-5 mb-5">
           <Card icon={<UilMoneyWithdraw size={ iconSize } />} name="Project Finance" />
           <Card icon={<UilCoins size={ iconSize } />} name="Working Capital Loan" />
           <Card icon={<UilCreditCard size={ iconSize } />} name="Overdraft / Cash Credit Facility" />
@@ -442,7 +442,7 @@ const services = ({ iconSize = 30 }) => {
         </div>
 
         <div>Our services include:</div>
-        <div className="grid grid-cols-3 gap-4 p-5 mb-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-4 sm:p-6 lg:p-10 mb-5">
           <Card icon={<UilMeetingBoard size={ iconSize } />} name="Assistance in holding & conducting Board Meeting, Annual General Meeting,  and  Extra-Ordinary General Meeting" />
           <Card icon={<UilClipboardNotes size={ iconSize } />} name="Maintenance of Minutes Book, Statutory Registers, and all other prescribed secretarial records under the Companies Act, 2013" />
           <Card icon={<UilFileNetwork size={ iconSize } />} name="E-Filing of Annual Return & Financial Statements with MCA" />
@@ -481,7 +481,7 @@ const services = ({ iconSize = 30 }) => {
         </div>
 
         <div>We provide:</div>
-        <div className="grid grid-cols-3 gap-4 p-5 mb-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-4 sm:p-5 mb-5">
           <Card icon={<UilChartGrowth size={ iconSize } />} name="Detailed Financial Projections" />
           <Card icon={<UilUniversity size={ iconSize } />} name="Bank Loan Assistance" />
           <Card icon={<UilComparison size={ iconSize } />} name="Financial Health Ananlysis" />
@@ -502,7 +502,7 @@ const services = ({ iconSize = 30 }) => {
         </div>
 
         <div>As your dedicated partner, we offer</div>
-        <div className="grid grid-cols-3 gap-4 p-5 mb-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-4 sm:p-5 mb-5">
           <Card icon={<UilCoins size={ iconSize } />} name="Financial Planning & strategy" />
           <Card icon={<UilRupeeSign size={ iconSize } />} name="Cash FLow Management" />
           <Card icon={<UilCrosshair size={ iconSize } />} name="Compliance & Risk Management" />

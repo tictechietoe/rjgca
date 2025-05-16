@@ -4,15 +4,18 @@ import _ from 'lodash';
 import { Link } from 'react-router-dom';
 import { RiTeamFill, RiBillFill } from "react-icons/ri";
 import { FaHome, FaWpforms, FaLink } from "react-icons/fa";
-import { MdSupportAgent } from "react-icons/md";
+import { MdSupportAgent, MdClose } from "react-icons/md";
 import { PiPhoneCallFill } from "react-icons/pi";
+import { HiMenu } from "react-icons/hi";
 import Logo from './Logo';
 
 const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [activeSubDropdown, setActiveSubDropdown] = useState(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const mobileMenuRef = useRef(null);
 
   // Click outside handler
   useEffect(() => {
@@ -26,6 +29,14 @@ const Navbar = () => {
         setActiveSubDropdown(null);
         setIsDropdownOpen(false);
       }
+      
+      if (
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target) &&
+        !event.target.closest('.mobile-menu-button')
+      ) {
+        setIsMobileMenuOpen(false);
+      }
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
@@ -34,6 +45,9 @@ const Navbar = () => {
   // Stable nav item width for Quick Links
   const navButtonClass =
     "flex items-center px-2 py-1 rounded-sm transition delay-100 duration-100 ease-in-out hover:shadow-xl text-custom-secondary font-medium text-sm hover:bg-custom-secondary hover:text-white bg-transparent focus:outline-none";
+
+  const mobileNavButtonClass =
+    "flex items-center px-4 py-3 w-full rounded-sm text-custom-secondary font-medium text-base hover:bg-custom-secondary hover:text-white transition-colors duration-200";
 
   const quickLinks = {
     title: "QUICK LINKS",
@@ -209,6 +223,25 @@ const Navbar = () => {
     </div>
   );
 
+  // Mobile Submenu
+  const MobileSubDropdownMenu = ({ section, visible }) => (
+    <div
+      className={`pl-4 bg-gray-50 ${visible ? 'block' : 'hidden'}`}
+    >
+      {section.links.map((link, index) => (
+        <a
+          key={index}
+          href={link.href}
+          className="block px-4 py-2 text-sm text-gray-700 hover:bg-custom-secondary hover:text-white border-b border-gray-100"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+  );
+
   // Wrapper for dropdown and subdropdown to handle mouse leave
   const DropdownWrapper = ({ visible, children }) => (
     <div
@@ -277,6 +310,25 @@ const Navbar = () => {
     );
   };
 
+  const mobileNavItem = (content = {}) => {
+    const {
+      title = '',
+      to: navigateUrl = '/',
+      icon = <></>
+    } = content;
+    return (
+      <Link
+        to={navigateUrl}
+        key={title}
+        className={mobileNavButtonClass}
+        onClick={() => setIsMobileMenuOpen(false)}
+      >
+        <span className="mr-3">{icon}</span>
+        <span>{title}</span>
+      </Link>
+    );
+  };
+
   // --- Quick Links Dropdown Logic ---
   const quickLinksParentRef = useRef(null);
 
@@ -321,17 +373,85 @@ const Navbar = () => {
     );
   };
 
-  // --- Render ---
-  return (
-    <nav className="flex items-center justify-between sticky top-0 z-30 bg-custom-nav-color drop-shadow-lg">
-      <Logo />
-      <div className="flex flex-col items-center">
-        <div className="flex flex-1 font-medium text-sm flex-wrap gap-1">
-          {_.map(navbarContent, content => (
-            content.title === 'QUICK LINKS' ? quickLinksItem() : navItem(content)
+  // Mobile Quick Links
+  const [mobileExpandedSections, setMobileExpandedSections] = useState({});
+
+  const mobileQuickLinksItem = () => {
+    const toggleSection = (sectionTitle) => {
+      setMobileExpandedSections(prev => ({
+        ...prev,
+        [sectionTitle]: !prev[sectionTitle]
+      }));
+    };
+
+    return (
+      <div className="w-full">
+        <div className={mobileNavButtonClass + " justify-between"}>
+          <div className="flex items-center">
+            <span className="mr-3">{quickLinks.icon}</span>
+            <span>{quickLinks.title}</span>
+          </div>
+        </div>
+        <div className="bg-white">
+          {quickLinks.sections.map((section, index) => (
+            <div key={index} className="border-b border-gray-100">
+              <div
+                className="px-4 py-2 flex justify-between items-center cursor-pointer hover:bg-gray-50"
+                onClick={() => toggleSection(section.title)}
+              >
+                <span className="text-sm font-medium">{section.title}</span>
+                <span>{mobileExpandedSections[section.title] ? '−' : '+'}</span>
+              </div>
+              <MobileSubDropdownMenu 
+                section={section} 
+                visible={mobileExpandedSections[section.title]} 
+              />
+            </div>
           ))}
         </div>
       </div>
+    );
+  };
+
+  // --- Render ---
+  return (
+    <nav className="sticky top-0 z-30 bg-custom-nav-color drop-shadow-lg">
+      <div className="flex items-center justify-between px-4 py-2">
+        <Logo />
+        
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center">
+          <div className="flex flex-1 font-medium text-sm flex-wrap gap-1">
+            {_.map(navbarContent, content => (
+              content.title === 'QUICK LINKS' ? quickLinksItem() : navItem(content)
+            ))}
+          </div>
+        </div>
+        
+        {/* Mobile Menu Button */}
+        <button 
+          className="md:hidden text-custom-secondary focus:outline-none mobile-menu-button"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          {isMobileMenuOpen ? <MdClose size={24} /> : <HiMenu size={24} />}
+        </button>
+      </div>
+      
+      {/* Mobile Navigation Menu */}
+      {isMobileMenuOpen && (
+        <div 
+          ref={mobileMenuRef}
+          className="md:hidden bg-white shadow-lg absolute top-full left-0 right-0 z-50 border-t border-gray-200"
+        >
+          <div className="flex flex-col w-full">
+            {_.map(navbarContent, content => (
+              content.title === 'QUICK LINKS' 
+                ? mobileQuickLinksItem() 
+                : mobileNavItem(content)
+            ))}
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

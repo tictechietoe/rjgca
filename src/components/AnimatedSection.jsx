@@ -27,14 +27,14 @@ const AnimatedSection = ({ leftDiv, rightDiv, dominant }) => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="flex justify-between items-center relative p-5">
+    <div ref={sectionRef} className="flex flex-col md:flex-row justify-between items-center relative p-3 sm:p-5 gap-4 md:gap-0">
       <div
-        className={`transition-all duration-1000 transform ${isVisible ? 'translate-x-10 opacity-100' : '-translate-x-full opacity-0'} ${dominant === 'left' ? 'z-10' : 'z-0'}`}
+        className={`w-full md:w-1/2 transition-all duration-1000 transform ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'} ${dominant === 'left' ? 'z-10' : 'z-0'}`}
       >
         { leftDiv }
       </div>
       <div
-        className={` transition-all duration-1000 transform ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'} ${dominant === 'right' ? 'z-10' : 'z-0'}`}
+        className={`w-full md:w-1/2 transition-all duration-1000 transform ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'} ${dominant === 'right' ? 'z-10' : 'z-0'}`}
       >
         { rightDiv }
       </div>

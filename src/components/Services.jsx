@@ -10,21 +10,24 @@ const OurServices = () => {
 
   const navigate = useNavigate();
   const servicesData = services({
-    iconSize: 30
+    iconSize: 24
   });
 
   return (
-    <div className="relative bg-custom-primary">
-      <div className="flex flex-col items-start p-12">
-        <div className="flex my-5 text-3xl">
-          <h2 className="text-white font-semibold mr-5">
+    <div className="relative bg-custom-primary py-6 sm:py-8">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8">
+        {/* Header section - centered on all screens */}
+        <div className="flex flex-row flex-wrap justify-center my-4 text-2xl md:text-3xl whitespace-nowrap">
+          <h2 className="text-white font-semibold mr-2">
             SERVICES
           </h2>
           <h2 className="text-custom-secondary font-semibold">
             PROVIDED
           </h2>
         </div>
-        <div className="text-xl px-10 border-l-4 border-custom-mark-color">
+        
+        {/* Subtitle section - centered on all screens */}
+        <div className="text-base md:text-xl mx-auto text-center border-l-0 sm:border-l-4 border-custom-mark-color w-full sm:w-auto mb-8 px-4 sm:px-6">
           <div className="text-white">
             Help us to help you.
           </div>
@@ -32,34 +35,46 @@ const OurServices = () => {
             At your service !
           </div>
         </div>
-        <div className="flex">
-          <div className="w-full flex flex-col items-center justify-around m-10 basis-1/3">
-            <img src={ servicesListing } alt="service listing" className="overflow-hidden" />
+        
+        {/* Main content section */}
+        <div className="flex flex-col lg:flex-row max-w-7xl mx-auto">
+          {/* Image section - hidden on mobile, visible on larger screens */}
+          <div className="w-full lg:w-1/3 hidden sm:flex justify-center items-center mb-8 lg:mb-0">
+            <img src={servicesListing} alt="service listing" className="w-full max-w-xs h-auto object-contain" />
           </div>
-          <div className="grid grid-cols-3 gap-8 basis-2/3">
-            {
-              _.map(servicesData, data => {
-                return (
-                  <div className="flex col-span-1 p-3 hover:cursor-pointer" onClick={ () => navigate(`/services/${data.id}`) }>
-                    <div className="flex flex-col">
-                      <div className="flex border-dashed border-b-2 border-b-custom-secondary items-center pb-3">
-                        <div className="w-16 h-16 border-2 border-black rounded-full flex justify-center bg-white basis-1/8">
-                          <div className="relative right-1 bottom-1 w-16 h-16 border-2 border-black rounded-full flex items-center justify-center bg-custom-secondary z-10">
-                            { data.icon }
+          
+          {/* Services grid - using TeamPage-like implementation */}
+          <div className="w-full lg:w-2/3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8">
+              {
+                _.map(servicesData, data => (
+                  <div 
+                    key={data.id}
+                    className="bg-custom-primary rounded-lg shadow-md border border-gray-800 overflow-hidden hover:bg-gray-900 transition-colors duration-300 h-full"
+                    onClick={() => navigate(`/services/${data.id}`)}
+                  >
+                    <div className="p-4 h-full flex flex-col cursor-pointer">
+                      <div className="flex flex-col items-center border-dashed border-b-2 border-b-custom-secondary pb-4 mb-4">
+                        {/* Icon centered */}
+                        <div className="w-14 h-14 border-2 border-black rounded-full flex justify-center bg-white mb-3">
+                          <div className="relative right-1 bottom-1 w-14 h-14 border-2 border-black rounded-full flex items-center justify-center bg-custom-secondary z-10">
+                            {data.icon}
                           </div>
                         </div>
-                        <div className="text-custom-secondary text-sm font-semibold mx-5 basis-7/8">
-                          { data.name }
+                        {/* Service title */}
+                        <div className="text-custom-secondary text-base font-semibold text-center w-full">
+                          {data.name}
                         </div>
                       </div>
-                      <div className="pt-2 text-white text-sm">
-                        { data.description }
+                      {/* Service description */}
+                      <div className="text-white text-sm text-center flex-grow">
+                        {data.description}
                       </div>
                     </div>
                   </div>
-                );
-              })
-            }
+                ))
+              }
+            </div>
           </div>
         </div>
       </div>
