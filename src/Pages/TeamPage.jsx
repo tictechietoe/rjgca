@@ -5,6 +5,8 @@ import teamImage from '../assets/images/team.jpg';
 import BannerImage from '../components/BannerImage.jsx';
 import Quote from '../components/Quote.jsx';
 import rahul from '../assets/faces/rahul.jpg';
+import unknown_female from '../assets/faces/unknown_female.jpg';
+import unknown_male from '../assets/faces/unknown_male.jpg';
 import { FaPeopleGroup } from "react-icons/fa6";
 
 const TeamCard = ({ data }) => {
@@ -16,21 +18,27 @@ const TeamCard = ({ data }) => {
   } = data;
 
   return (
-    <div className="flex flex-col items-center justify-between bg-white shadow-md w-full max-w-xs h-auto md:h-[420px] p-5 sm:p-6 mx-auto border rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl min-w-[200px] min-h-[400px]">
-      <img alt="team pic" src={image} className="w-28 h-28 sm:w-36 sm:h-36 object-cover rounded-full mb-4 border-2 border-custom-secondary" />
-      <h2 className="text-base sm:text-lg font-bold text-custom-primary text-center mb-2 overflow-hidden break-words w-full">
-        {name}
-      </h2>
-      <div className="flex flex-col items-center mb-3 w-full space-y-1">
-        {designation.map((cred, idx) => (
-          <span key={idx} className="text-center text-sm sm:text-[1rem] font-semibold text-custom-secondary leading-tight w-full overflow-hidden break-words">{cred}</span>
-        ))}
+    <div className="bg-white shadow-md w-full max-w-xs h-auto md:h-[450px] p-5 sm:p-6 mx-auto border rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl min-w-[200px] min-h-[400px] flex flex-col items-center justify-between">
+      <div className="flex justify-center">
+        <img alt="team pic" src={image} className="w-28 h-28 sm:w-36 sm:h-36 object-cover rounded-full border-2 border-custom-secondary mb-4" />
       </div>
-      <div className="flex flex-col w-full items-center flex-grow">
-        <div className="flex justify-center mb-3 text-black font-bold">Expertise</div>
-        <div className="flex flex-col items-center gap-2 w-full">
+      <div className="flex justify-center">
+        <h2 className="text-base sm:text-lg font-bold text-custom-primary text-center mb-2 overflow-hidden break-words w-full">
+          {name}
+        </h2>
+      </div>
+      <div className="flex justify-center">
+        <div className="flex flex-col items-center mb-1 w-full">
+          {designation.map((cred, idx) => (
+            <span key={idx} className="text-center text-sm sm:text-[1rem] font-semibold text-custom-secondary leading-tight w-full overflow-hidden break-words">{cred}</span>
+          ))}
+        </div>
+      </div>
+      <div className="flex flex-col w-full items-center flex-grow justify-center">
+        <div className="flex justify-center text-black font-bold">Expertise</div>
+        <div className="flex flex-col items-center">
           {Array.isArray(expertise) ? expertise.map((item, i) => (
-            <span key={i} className="text-center text-sm sm:text-base text-black w-full overflow-hidden break-words">{item}</span>
+            <span key={i} className="text-center text-sm sm:text-base text-black overflow-hidden break-words">{item}</span>
           )) : expertise}
         </div>
       </div>
@@ -45,19 +53,17 @@ const Team = () => {
     {
       name: "Bhumika Gala",
       designation: ["CA", "Bcom"],
-      image: rahul,
+      image: unknown_female,
       expertise: ["CFO Services"]
     },
     {
-      name: "Vinayak Kulkarni\nCouncil Member, ICMA",
+      name: "Vinayak Kulkarni\n(Council Member, ICAI)",
       designation: [
-        "CMA",
-        "CIMA (UK)",
-        "Diploma in IFRS (UK)",
-        "Advance Diploma in Management Accountant",
-        "Bcom"
+        "CMA, Diploma in IFRS (UK)",
+        "CIMA Adv Dip MA (UK)",
+        "Bcom",
       ],
-      image: rahul,
+      image: unknown_male,
       expertise: [
         "Audit and assurance",
         "Accounting and Business Support",
@@ -67,7 +73,7 @@ const Team = () => {
     {
       name: "Sameer Negandhi",
       designation: ["CS", "Bcom"],
-      image: rahul,
+      image: unknown_male,
       expertise: [
         "FEMA Advisory",
         "Secretarial Services",
@@ -77,7 +83,7 @@ const Team = () => {
     {
       name: "Sadashiv Kashozal",
       designation: ["CS", "LLB", "Bcom"],
-      image: rahul,
+      image: unknown_male,
       expertise: [
         "Due Diligence",
         "Corporate Advisory"
@@ -167,7 +173,7 @@ const Team = () => {
         </div>
         { foundersProfile }
         <div>
-          <h2 className="py-3 sm:py-5 px-2 sm:px-5 text-lg sm:text-xl font-semibold text-center" style={{ color: '#FFD700', fontSize: '1.25rem', fontWeight: '600', letterSpacing: '1px' }}>TEAM OF PROFESSIONALS</h2>
+          <h2 className="py-3 sm:py-5 px-2 sm:px-5 text-lg sm:text-xl font-semibold text-center text-custom-secondary" style={{ fontSize: '1.25rem', fontWeight: '600', letterSpacing: '1px' }}>TEAM OF PROFESSIONALS</h2>
           <div className="w-full max-w-7xl mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-8 px-4">
               {_.map(teamMembers, (member, index) => <TeamCard key={index} data={member} />)}

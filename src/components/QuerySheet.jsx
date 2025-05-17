@@ -65,9 +65,9 @@ const QuerySheet = () => {
   };
 
   return (
-    <div className="mx-20 p-6 bg-white shadow-md rounded-lg my-10 border">
+    <div className="mx-4 md:mx-20 p-6 bg-white shadow-md rounded-lg my-10 border">
+      <h2 className="flex text-2xl text-center mb-6 justify-around">QUERY SHEET</h2>
       <form onSubmit={handleSubmit}>
-        <h2 className="flex text-2xl text-center mb-6 justify-around">QUERY SHEET</h2>
         <p className="text-center mb-6">
           Help us to help you! Close and continuous communication with clients is one of our top priorities. We put our clients and their queries as the main priority and at the centre of our business.
         </p>

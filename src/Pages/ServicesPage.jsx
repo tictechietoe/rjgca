@@ -38,7 +38,7 @@ const ServicesPage = () => {
                       {_.upperCase(data.name)}
                     </div>
                   </div>
-                  <div className="pt-1 sm:pt-2 text-xs sm:text-sm text-pretty">
+                  <div className="mb-5 sm:text-sm text-pretty">
                     {data.description}
                   </div>
                 </div>

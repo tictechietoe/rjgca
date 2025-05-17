@@ -410,7 +410,10 @@ const Navbar = () => {
       <div className="w-full">
         <div 
           className={`${mobileNavButtonClass} justify-between bg-gray-50 quick-links-button`}
-          onClick={() => setIsQuickLinksOpen(!isQuickLinksOpen)}
+          onClick={() => {
+            setIsQuickLinksOpen(!isQuickLinksOpen);
+            setMobileExpandedSections({}); // Reset expanded sections
+          }}
         >
           <div className="flex items-center">
             <span className="mr-3">{quickLinks.icon}</span>
@@ -429,9 +432,9 @@ const Navbar = () => {
                   <span className="text-sm font-medium">{section.title}</span>
                   <span>{mobileExpandedSections[section.title] ? '−' : '+'}</span>
                 </div>
-                <MobileSubDropdownMenu 
-                  section={section} 
-                  visible={mobileExpandedSections[section.title]} 
+                <MobileSubDropdownMenu
+                  section={section}
+                  visible={mobileExpandedSections[section.title]}
                 />
               </div>
             ))}
