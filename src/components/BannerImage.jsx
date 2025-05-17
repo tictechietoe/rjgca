@@ -17,7 +17,7 @@ const BannerImage = ({ image, title, fromText, fromLink, toText, }) => {
         
         <div className="relative z-10 h-full flex flex-col justify-center items-center text-white p-2 sm:p-4">
           <div className="border-b-2 border-dashed text-lg sm:text-5xl pb-2 font-medium">R J Gala & Associates</div>
-          <h2 className="text-xl text-center sm:text-3xl md:text-5xl hover:text-custom-secondary text-custom-secondary font-extrabold my-3 sm:my-5">{ title }</h2>
+          <h2 className="text-xl text-center sm:text-3xl md:text-3xl hover:text-custom-secondary text-custom-secondary font-extrabold my-3 sm:my-5">{ title }</h2>
           <div className="flex flex-row items-center justify-center gap-1 sm:gap-4">
             <Link className="text-base sm:text-lg text-center hover:text-custom-secondary p-1 hover:cursor-pointer" to={ fromLink }>
               { fromText }

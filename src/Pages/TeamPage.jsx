@@ -112,7 +112,7 @@ const Team = () => {
         <div className="my-2 text-xs sm:text-sm text-justify text-center sm:text-justify">
           Rahul J Gala is a young Chartered Accountant and the founder of R J Gala and Associates. He is a commerce graduate from HR College of Commerce and Economics (Mumbai University). He is certified in GST course held by Institute of Chartered Accountants of India and also availed professional training in the field of Securities and Financial Assets valuation conducted by a recognised institute.
         </div>
-        <div className="my-2 text-xs sm:text-sm text-justify text-center sm:text-justify">
+        <div className="my-2 text-medium sm:text-sm text-justify text-center sm:text-justify">
           In his professional lifespan, he has accumulated rich experience in several fields of professional services, different sectors and with diverse clients. He has considerable domain expertise in Direct and Indirect Taxation, Accounting, Audit and Advisory. His understanding of the intricacies of businesses enables him to provide clients with comprehensive, accurate and technology-enabled solutions for their current and future business issues. He has successfully represented various clients before tax authorities on complex tax litigation matters.
         </div>
         {!showFounderMoreDetails && (
@@ -175,7 +175,7 @@ const Team = () => {
         <div>
           <h2 className="py-3 sm:py-5 px-2 sm:px-5 text-lg sm:text-xl font-semibold text-center text-custom-secondary" style={{ fontSize: '1.25rem', fontWeight: '600', letterSpacing: '1px' }}>TEAM OF PROFESSIONALS</h2>
           <div className="w-full max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-8 px-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-8">
               {_.map(teamMembers, (member, index) => <TeamCard key={index} data={member} />)}
             </div>
           </div>

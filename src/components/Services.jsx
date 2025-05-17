@@ -28,10 +28,10 @@ const OurServices = () => {
         
         {/* Subtitle section - centered on all screens */}
         <div className="text-base md:text-xl mx-auto text-center border-l-0 sm:border-l-4 border-custom-mark-color w-full sm:w-auto mb-8 px-4 sm:px-6">
-          <div className="text-white">
+          <div className="flex text-white">
             Help us to help you.
           </div>
-          <div className="text-custom-secondary">
+          <div className="flex text-custom-secondary">
             At your service !
           </div>
         </div>
@@ -42,10 +42,14 @@ const OurServices = () => {
           <div className="w-full lg:w-1/3 hidden sm:flex justify-center items-center mb-8 lg:mb-0">
             <img src={servicesListing} alt="service listing" className="w-full max-w-xs h-auto object-contain" />
           </div>
-          
+
           {/* Services grid - using TeamPage-like implementation */}
           <div className="w-full lg:w-2/3">
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8">
+              
+              {/* Image section - hidden on mobile, visible on larger screens */}
+              
+
               {
                 _.map(servicesData, data => (
                   <div 
@@ -67,7 +71,7 @@ const OurServices = () => {
                         </div>
                       </div>
                       {/* Service description */}
-                      <div className="text-white text-sm text-center flex-grow">
+                      <div className="text-white text-sm text-center flex-grow overflow-hidden text-ellipsis line-clamp-3">
                         {data.description}
                       </div>
                     </div>
