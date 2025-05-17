@@ -19,7 +19,7 @@ const AuditAssurance = () => {
         fromLink="/services"
         toText={ servicesData[6].name }
       />
-      <div className="p-20">
+      <div className="p-3 sm:p-6 md:p-10 lg:p-16">
         { servicesData[6].content }
       </div>
     </div>

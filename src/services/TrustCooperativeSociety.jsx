@@ -19,7 +19,7 @@ const TrustCooperativeSociety = () => {
         fromLink="/services"
         toText={ servicesData[5].name }
       />
-      <div className="p-20">
+      <div className="p-3 sm:p-6 md:p-10 lg:p-16">
         { servicesData[5].content }
       </div>
     </div>

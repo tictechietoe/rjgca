@@ -1,11 +1,28 @@
 // src/components/AboutUs.js
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import _ from 'lodash';
 import BannerImage from '../components/BannerImage';
 import aboutus from '../assets/images/aboutus.jpg';
 import DividedContainer from '../components/DividedContainer';
 
 const AboutUsPage = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Track screen size changes
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // Set initial value
+    checkScreenSize();
+    
+    // Add event listener
+    window.addEventListener('resize', checkScreenSize);
+    
+    // Cleanup
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
 
   const sectionRefs = {
     'who': useRef(null),
@@ -19,7 +36,7 @@ const AboutUsPage = () => {
 
     if (section) {
       window.scrollTo({
-        top: section.offsetTop - 100,
+        top: section.offsetTop - (isMobile ? 80 : 100),
         behavior: 'smooth',
       });
     }
@@ -28,7 +45,7 @@ const AboutUsPage = () => {
   const aboutUsData = [
     {
       id: 'who_are_we',
-      title: "WHO ARE WE ?",
+      title: "WHO ARE WE",
       content: <>
         <div>
           <b>R J Gala & Associates</b>, Chartered Accountants is a multi-disciplinary professional firm adding value to the business of the clients in India and around the world.
@@ -40,7 +57,7 @@ const AboutUsPage = () => {
     },
     {
       id: 'what_do_we_do',
-      title: "WHAT DO WE DO ?",
+      title: "WHAT DO WE DO",
       content: <>
         <ul className="list-disc ml-5">
           <li>We recognise that Today's Business World mandates quality professional services that are delivered in a timely and cost-effective manner.</li>
@@ -52,7 +69,7 @@ const AboutUsPage = () => {
     },
     {
       id: 'how_are_we_different',
-      title: "HOW ARE WE DIFFERENT ?",
+      title: "HOW ARE WE DIFFERENT",
       content: <>
         Our differentiation is derived from a
         <ul className="list-disc ml-5">
@@ -67,7 +84,7 @@ const AboutUsPage = () => {
     },
     {
       id: 'what_are_our_services',
-      title: "WHAT ARE OUR SERVICES ?",
+      title: "WHAT ARE OUR SERVICES",
       content: <>
         <div>
           We provide gamut of services ranging from
@@ -86,7 +103,7 @@ const AboutUsPage = () => {
     },
     {
       id: 'what_is_our_belief',
-      title: "WHAT IS OUR BELIEF ?",
+      title: "WHAT IS OUR BELIEF",
       content: <>
         <ul className="list-disc ml-5">
           <li>We believe in putting our clients' requirements at the forefront at all times.</li>
@@ -98,7 +115,7 @@ const AboutUsPage = () => {
     },
     {
       id: 'what_do_we_provide',
-      title: "WHAT DO WE PROVIDE ?",
+      title: "WHAT DO WE PROVIDE",
       content: <>
         <ul className="list-disc ml-5">
           <li>We are not just service providers to our clients, we are trusted business advisers – because we put our clients at the centre of our business.</li>
@@ -110,7 +127,7 @@ const AboutUsPage = () => {
     },
     {
       id: 'what_do_we_want',
-      title: "WHAT DO WE WANT ?",
+      title: "WHAT DO WE WANT",
       content: <>
         <ul className="list-disc ml-5">
           <li>Close and continuous communication with clients is one of our top priorities.</li>
@@ -123,7 +140,7 @@ const AboutUsPage = () => {
     },
     {
       id: 'what_is_our_purpose',
-      title: "WHAT IS OUR PURPOSE ?",
+      title: "WHAT IS OUR PURPOSE",
       content: <>
         <ul className="list-disc ml-5">
           <li>Our purpose is to build trust and solve important problems.</li>
@@ -150,23 +167,22 @@ const AboutUsPage = () => {
           <div className="font-bold text-xl text-custom-secondary border-b-2 border-b-custom-secondary">
             LET'S ANSWER SOME QUESTIONS
           </div>
-          <div className="flex font-bold text-xl mt-10">
-            <button className="text-custom-primary p-3 m-2 shadow-xl border" onClick={(e) => handleScroll(e, 'who')} >WHO   ?</button>
-            <button className="text-custom-mark-color p-3 m-2 shadow-xl border" onClick={(e) => handleScroll(e, 'how')} >HOW   ?</button>
-            <button className="text-custom-secondary p-3 m-2 shadow-xl border" onClick={(e) => handleScroll(e, 'what')} >WHAT   ?</button>
+          <div className="flex flex-row flex-nowrap justify-center w-full overflow-x-auto py-4 px-2 mt-6">
+            <button className="text-custom-primary p-3 mx-2 shadow-xl border whitespace-nowrap min-w-[80px] flex-shrink-0 font-bold" onClick={(e) => handleScroll(e, 'who')}>WHO</button>
+            <button className="text-custom-mark-color p-3 mx-2 shadow-xl border whitespace-nowrap min-w-[80px] flex-shrink-0 font-bold" onClick={(e) => handleScroll(e, 'how')}>HOW</button>
+            <button className="text-custom-secondary p-3 mx-2 shadow-xl border whitespace-nowrap min-w-[80px] flex-shrink-0 font-bold" onClick={(e) => handleScroll(e, 'what')}>WHAT</button>
           </div>
         </div>
         <div className="flex flex-col my-10">
           {
             _.map(aboutUsData, data => {
               return (
-                <div id={ data.id } ref={ sectionRefs[data.type] }>
+                <div key={data.id} id={data.id} ref={data.type ? sectionRefs[data.type] : null}>
                   <DividedContainer
-                    key={ data.id }
-                    questionColor={ data.color }
-                    questionText={ data.title }
-                    questionSide={ data.side }
-                    answerContent={ data.content }
+                    questionColor={data.color}
+                    questionText={data.title}
+                    questionSide={data.side}
+                    answerContent={data.content}
                   />
                 </div>
               );

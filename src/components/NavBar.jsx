@@ -14,10 +14,25 @@ const Navbar = () => {
   const [activeSubDropdown, setActiveSubDropdown] = useState(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isQuickLinksOpen, setIsQuickLinksOpen] = useState(false);
   const [mobileExpandedSections, setMobileExpandedSections] = useState({});
+  const [isQuickLinksOpen, setIsQuickLinksOpen] = useState(false);
+  
   const dropdownRef = useRef(null);
   const mobileMenuRef = useRef(null);
+
+  // Close mobile menu when screen size changes to desktop
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsMobileMenuOpen(false);
+        setIsQuickLinksOpen(false);
+        setMobileExpandedSections({});
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   // Click outside handler
   useEffect(() => {
@@ -38,6 +53,7 @@ const Navbar = () => {
         !event.target.closest('.mobile-menu-button')
       ) {
         setIsMobileMenuOpen(false);
+        // Reset all expanded sections when closing mobile menu
         setIsQuickLinksOpen(false);
         setMobileExpandedSections({});
       }
@@ -325,7 +341,11 @@ const Navbar = () => {
         to={navigateUrl}
         key={title}
         className={mobileNavButtonClass}
-        onClick={() => setIsMobileMenuOpen(false)}
+        onClick={() => {
+          setIsMobileMenuOpen(false);
+          setIsQuickLinksOpen(false);
+          setMobileExpandedSections({});
+        }}
       >
         <span className="mr-3">{icon}</span>
         <span>{title}</span>
@@ -363,7 +383,7 @@ const Navbar = () => {
         onMouseEnter={() => setActiveDropdown('quickLinks')}
       >
         <div
-          className={navButtonClass + ' cursor-pointer'}
+          className={`${navButtonClass} cursor-pointer quick-links-button`}
           onClick={handleClick}
           tabIndex={0}
         >
@@ -386,19 +406,11 @@ const Navbar = () => {
       }));
     };
 
-    const toggleQuickLinks = () => {
-      // If we're closing the quick links, reset all expanded sections
-      if (isQuickLinksOpen) {
-        setMobileExpandedSections({});
-      }
-      setIsQuickLinksOpen(!isQuickLinksOpen);
-    };
-
     return (
-      <div className="w-full -mx-4">
+      <div className="w-full">
         <div 
-          className={mobileNavButtonClass + " justify-between bg-gray-50"}
-          onClick={toggleQuickLinks}
+          className={`${mobileNavButtonClass} justify-between bg-gray-50 quick-links-button`}
+          onClick={() => setIsQuickLinksOpen(!isQuickLinksOpen)}
         >
           <div className="flex items-center">
             <span className="mr-3">{quickLinks.icon}</span>
@@ -431,7 +443,7 @@ const Navbar = () => {
 
   // --- Render ---
   return (
-    <nav className="sticky top-0 z-30 bg-custom-nav-color drop-shadow-lg" style={{"--navbar-height": "60px"}}>
+    <nav className="sticky top-0 z-50 bg-custom-nav-color drop-shadow-lg" style={{"--navbar-height": "60px"}}>
       <div className="flex items-center justify-between px-4 py-2">
         <div className="flex-shrink-0">
           <Logo />
@@ -448,15 +460,8 @@ const Navbar = () => {
         
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-custom-secondary focus:outline-none mobile-menu-button z-40 p-2"
-          onClick={() => {
-            if (isMobileMenuOpen) {
-              // Reset all states when closing the menu
-              setIsQuickLinksOpen(false);
-              setMobileExpandedSections({});
-            }
-            setIsMobileMenuOpen(!isMobileMenuOpen);
-          }}
+          className="md:hidden text-custom-secondary focus:outline-none mobile-menu-button z-50 p-2"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <MdClose size={24} /> : <HiMenu size={24} />}
         </button>
@@ -466,10 +471,9 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div 
           ref={mobileMenuRef}
-          className="md:hidden bg-white shadow-lg fixed top-[calc(var(--navbar-height,60px))] left-0 right-0 z-30 border-t border-gray-200 overflow-y-auto max-h-[80vh]"
-          style={{bottom: "auto"}}
+          className="md:hidden bg-white shadow-lg fixed top-[calc(var(--navbar-height,60px))] left-0 right-0 z-40 border-t border-gray-200 overflow-y-auto max-h-[calc(100vh-var(--navbar-height,60px))] px-2"
         >
-          <div className="flex flex-col w-full px-4">
+          <div className="flex flex-col w-full py-2">
             {_.map(navbarContent, content => (
               content.title === 'QUICK LINKS' 
                 ? mobileQuickLinksItem() 

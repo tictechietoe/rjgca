@@ -13,14 +13,14 @@ const Accounting = () => {
   return (
     <div>
       <BannerImage
-        image={ accountingServices }
-        title={ _.upperCase(servicesData[1].name) }
+        image={accountingServices}
+        title={_.upperCase(servicesData[1].name)}
         fromText="Services"
         fromLink="/services"
-        toText={ servicesData[1].name }
+        toText={servicesData[1].name}
       />
-      <div className="p-20">
-        { servicesData[1].content }
+      <div className="p-3 sm:p-6 md:p-10 lg:p-16">
+        {servicesData[1].content}
       </div>
     </div>
   );

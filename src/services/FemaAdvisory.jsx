@@ -19,7 +19,7 @@ const FemaAdvisory = () => {
         fromLink="/services"
         toText={ servicesData[4].name }
       />
-      <div className="p-20">
+      <div className="p-3 sm:p-6 md:p-10 lg:p-16">
         { servicesData[4].content }
       </div>
     </div>
