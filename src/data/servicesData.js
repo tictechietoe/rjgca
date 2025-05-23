@@ -198,7 +198,7 @@ import Card from '../components/Card';
 const services = ({ iconSize = 30 }) => {
   return [
     {
-      name: "Buisness Setup In India and Registrations",
+      name: "Business Setup In India and Registrations",
       description: "Establishing your business in a developing country like India requires the right professional support and we will provide you right assistance to thrive your business and adhere to all the compliances and regulations of the country.",
       content: <>
         <div className="mb-5">
@@ -285,7 +285,7 @@ const services = ({ iconSize = 30 }) => {
           <Card icon={<MdTrackChanges size={ iconSize } />} name="Preparation of Income Tax Compliance Tracker" />
         </div>
 
-        <h3 className="font-bold underline text-custom-primary">IN-DIRECT TAXATION</h3>
+        <h3 className="font-bold underline text-custom-primary">INDIRECT TAXATION</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 lg:gap-5 p-3 sm:p-4 md:p-6 lg:p-10 mb-5">
           <Card icon={<FaFileAlt size={ iconSize } />} name="Computation of GST liability, assistance in making payment and filing of periodic GST returns" />
           <Card icon={<TbFilePercent size={ iconSize } />} name="Preparation and filing of Profession tax returns" />
@@ -309,7 +309,7 @@ const services = ({ iconSize = 30 }) => {
     },
     {
       name: "Corporate Advisory",
-      description: "Business cannot last in today's world economy without a clear sense of purpose and a strategy. Timely strategic financial advice is the prerequisite of all transactions that take place in today's rapidly evolving competitive landscape.",
+      description: "Business cannot last in today's world economy without a clear sense of purpose and a strategy. Timely strategic financial advice is the pre-requisite of all transactions that take place in today's rapidly evolving competitive landscape.",
       content: <>
         <div className="mb-5">
           Business cannot last in today's world economy without a clear sense of purpose and a strategy to reach goals. RJGCA supports clients as they plan and adapt in order to meet the challenges of expansion and going international. Timely strategic financial advice is the prerequisite of all transactions that take place in today's rapidly evolving competitive landscape. We understand this and assist in identifying opportunities for, or risks to, our clients' interests, which accompany most financial advisory engagements. We provide businesses with corporate finance advice and support across a range of issues, drawing on the resources, expertise and experience.
@@ -338,7 +338,7 @@ const services = ({ iconSize = 30 }) => {
       description: "It is imperative for the enterprise to keep a regular watch on foreign exchange transactions, in the context of sectoral caps, investment caps, so as to overcome from the adverse regulatory actions.",
       content: <>
         <div className="mb-5">
-          India has become significant player in global market and have seen surge of cross border activities. A breakthrough flow of funds, inbound as well as outbound has expanded the level of check on compliances in context of the foreign exchange regulations. It is impperative for the enterprise to keep a regular watch on foreign exchange transactions, in the context of sectoral caps, investment caps, so as to overcome from the adverse regulatory actions. In order to circumvent detrimental circumstances, we have specially designed these services, to ensure due compliance of FEMA laws.
+          India has become significant player in global market and have seen surge of cross border activities. A breakthrough flow of funds, inbound as well as outbound has expanded the level of check on compliances in context of the foreign exchange regulations. It is imperative for the enterprise to keep a regular watch on foreign exchange transactions, in the context of sectoral caps, investment caps, so as to overcome from the adverse regulatory actions. In order to circumvent detrimental circumstances, we have specially designed these services, to ensure due compliance of FEMA laws.
         </div>
 
         <div>Our services include:</div>
@@ -360,7 +360,7 @@ const services = ({ iconSize = 30 }) => {
       icon: <TbDeviceIpadSearch size={ iconSize } />
     },
     {
-      name: "Societies, Trust and Co-operative Society Regulations & Advisory",
+      name: "Societies, Trust & Co-operative Society Regulations & Advisory",
       description: "It is impperative for the enterprise to keep a regular watch on foreign exchange transactions, in the context of sectoral caps, investment caps, so as to overcome from the adverse regulatory actions.",
       content: <>
         <div className="mb-5">
@@ -421,13 +421,12 @@ const services = ({ iconSize = 30 }) => {
 
         <div>Our services include:</div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 lg:gap-5 p-3 sm:p-4 md:p-6 lg:p-10 mb-5">
-          <Card icon={<UilMoneyWithdraw size={ iconSize } />} name="Project Finance" />
-          <Card icon={<UilCoins size={ iconSize } />} name="Working Capital Loan" />
-          <Card icon={<UilCreditCard size={ iconSize } />} name="Overdraft / Cash Credit Facility" />
-          <Card icon={<TbPigMoney size={ iconSize } />} name="Term Loan" />
-          <Card icon={<MdOutlineCreditCardOff size={ iconSize } />} name="Packing Credit limits" />
-          <Card icon={<FaMoneyBillTransfer size={ iconSize } />} name="Housing Loan & Loan against property and stock" />
-          <Card icon={<RiMoneyRupeeCircleLine size={ iconSize } />} name="Personal Loan" />
+          <Card icon={<UilMoneyWithdraw size={ iconSize } />} name="Accounting & Bookkeeping Services" />
+          <Card icon={<UilCoins size={ iconSize } />} name="Payroll Processing & Compliance" />
+          <Card icon={<UilCreditCard size={ iconSize } />} name="GST Compliance Outsourcing" />
+          <Card icon={<TbPigMoney size={ iconSize } />} name="TDS & Income Tax Compilance" />
+          <Card icon={<MdOutlineCreditCardOff size={ iconSize } />} name="Secretarial Compliance Support" />
+
         </div>
       </>,
       id: "loan_syndication_services",

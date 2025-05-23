@@ -86,7 +86,7 @@ const Footer = () => {
           </div>
           <div className={contentClass}>
             <p className="mb-4">
-              R J Gala & Associates' purpose is to serve its clients through combined resources, information and expertise and ensure to achieve the highest standards of service to our clients.
+              R J GALA & ASSOCIATES' purpose is to serve its clients through combined resources, information and expertise and ensure to achieve the highest standards of service to our clients.
             </p>
             <p>
               We are a young and dynamic firm equipped with an experienced team of chartered accountants and it is based in Mumbai.
@@ -151,7 +151,7 @@ const Footer = () => {
 
       {/* Copyright footer */}
       <div className="border-t border-gray-800 py-4 text-center text-xs md:text-sm">
-        &copy; {new Date().getFullYear()} R J Gala & Associates. All rights reserved.
+        &copy; {new Date().getFullYear()} R J GALA & ASSOCIATES. All rights reserved.
       </div>
     </footer>
   );

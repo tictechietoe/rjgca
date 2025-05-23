@@ -48,7 +48,7 @@ const AboutUsPage = () => {
       title: "WHO ARE WE",
       content: <>
         <div>
-          <b>R J Gala & Associates</b>, Chartered Accountants is a multi-disciplinary professional firm adding value to the business of the clients in India and around the world.
+          <b>R J GALA & ASSOCIATES</b>, Chartered Accountants is a multi-disciplinary professional firm adding value to the business of the clients in India and around the world.
         </div>
       </>,
       side: 'left',
@@ -61,7 +61,7 @@ const AboutUsPage = () => {
       content: <>
         <ul className="list-disc ml-5">
           <li>We recognise that Today's Business World mandates quality professional services that are delivered in a timely and cost-effective manner.</li>
-          <li>We at R J Gala & Associates strive to provide the same to our clients.</li>
+          <li>We at R J GALA & ASSOCIATES strive to provide the same to our clients.</li>
         </ul>
       </>,
       side: 'right',

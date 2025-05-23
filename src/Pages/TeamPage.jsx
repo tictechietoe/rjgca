@@ -52,9 +52,14 @@ const Team = () => {
   const teamMembers = [
     {
       name: "Bhumika Gala",
-      designation: ["CA", "Bcom"],
+      designation: ["CA, Bcom"],
       image: unknown_female,
-      expertise: ["CFO Services"]
+      expertise: [
+        "CFO Services",
+        "Corporate Advisory",
+        "Buisness suport services",
+        "Fund raising"
+      ]
     },
     {
       name: "Vinayak Kulkarni\n(Council Member, ICAI)",
@@ -66,13 +71,13 @@ const Team = () => {
       image: unknown_male,
       expertise: [
         "Audit and assurance",
-        "Accounting and Business Support",
+        "Accounting & Business Support",
         "Regulatory compliances and Advisory"
       ]
     },
     {
       name: "Sameer Negandhi",
-      designation: ["CS", "Bcom"],
+      designation: ["CS, Bcom"],
       image: unknown_male,
       expertise: [
         "FEMA Advisory",
@@ -82,7 +87,7 @@ const Team = () => {
     },
     {
       name: "Sadashiv Kashozal",
-      designation: ["CS", "LLB", "Bcom"],
+      designation: ["CS, Bcom", "LLB"],
       image: unknown_male,
       expertise: [
         "Due Diligence",
@@ -104,13 +109,12 @@ const Team = () => {
           <span className="text-sm sm:text-[1rem] font-semibold text-black leading-tight text-center w-full">Graduate (HR College)</span>
         </div>
         <ul className="list-none text-center text-custom-secondary text-sm sm:text-[0.95rem] mb-2">
-          <li>Phone : +91 12345678</li>
-          <li>Email: rahulgala@gmail.com</li>
+          <li>Email: rahul.gala@rjca.in</li>
         </ul>
       </div>
       <div className="w-full px-2 sm:px-5">
         <div className="my-2 text-xs sm:text-sm text-justify text-center sm:text-justify">
-          Rahul J Gala is a young Chartered Accountant and the founder of R J Gala and Associates. He is a commerce graduate from HR College of Commerce and Economics (Mumbai University). He is certified in GST course held by Institute of Chartered Accountants of India and also availed professional training in the field of Securities and Financial Assets valuation conducted by a recognised institute.
+          Rahul J Gala is a young Chartered Accountant and the founder of R J GALA & ASSOCIATES. He is a commerce graduate from HR College of Commerce and Economics (Mumbai University). He is certified in GST course held by Institute of Chartered Accountants of India and also availed professional training in the field of Securities and Financial Assets valuation conducted by a recognised institute.
         </div>
         <div className="my-2 text-medium sm:text-sm text-justify text-center sm:text-justify">
           In his professional lifespan, he has accumulated rich experience in several fields of professional services, different sectors and with diverse clients. He has considerable domain expertise in Direct and Indirect Taxation, Accounting, Audit and Advisory. His understanding of the intricacies of businesses enables him to provide clients with comprehensive, accurate and technology-enabled solutions for their current and future business issues. He has successfully represented various clients before tax authorities on complex tax litigation matters.
@@ -128,7 +132,7 @@ const Team = () => {
         {showFounderMoreDetails && (
           <div>
             <div className="my-2 text-xs sm:text-sm text-justify text-center sm:text-justify">
-              Prior to founding R J Gala and Associates, he has headed the Accounting and Taxation department and also served in the capacity as a consultant in different professionally managed corporate organisations. He has worked very closely with top companies and firms including Big Four on several occasions.
+              Prior to founding R J GALA & ASSOCIATES, he has headed the Accounting and Taxation department and also served in the capacity as a consultant in different professionally managed corporate organisations. He has worked very closely with top companies and firms including Big Four on several occasions.
             </div>
             <div className="my-2 text-xs sm:text-sm text-justify text-center sm:text-justify">
               As a leader, he has always been a strong source of inspiration for the team and aspiring professionals within the organisation. He is a strong believer in giving back to society and hence is associated with various not-for-profit organisations. He strongly believes that exceptional client service represents a dedication to going above and beyond expectations in every working relationship.
@@ -166,10 +170,10 @@ const Team = () => {
           We generate our strength from our team of professionals who have significant functional and industry expertise across services and are well-equipped to deliver outstanding results. Quality of our people is the foundation of our ability to serve our clients in the best way. From our newest staff members through senior staff, exceptional client service represents a dedication to going above and beyond expectations in every working relationship.
         </div>
         <div className="my-3 sm:my-5 text-sm sm:text-base">
-          Our team is a mix of motivated young professionals and experienced Chartered Accountants, Company Secretaries, Cost Accountants, Lawyers and CFAs who are specialised and have expertise in their respective areas. Expert professionals ensure that our clients receive prompt and personalised solutions at all times and are also committed to adding value and optimising benefits accruing to the clients.
+          Our team is a mix of motivated young professionals and experienced Chartered Accountants, Company Secretaries and Cost Accountants who are specialised and have expertise in their respective areas. Expert professionals ensure that our clients receive prompt and personalised solutions at all times and are also committed to adding value and optimising benefits accruing to the clients.
         </div>
         <div className="my-3 sm:my-5 text-sm sm:text-base">
-          Different together. At R J Gala and Associates, we're not all the same. And that's our greatest strength. It's important that our workforce reflects the diversity of the people we serve. Hiring people with different backgrounds and points of view helps us make better decisions, deliver outstanding results and create better experiences for everyone.
+          Different together. At R J GALA & ASSOCIATES, we're not all the same. And that's our greatest strength. It's important that our workforce reflects the diversity of the people we serve. Hiring people with different backgrounds and points of view helps us make better decisions, deliver outstanding results and create better experiences for everyone.
         </div>
         { foundersProfile }
         <div>

@@ -65,7 +65,7 @@ const QuerySheet = () => {
   };
 
   return (
-    <div className="mx-4 md:mx-20 p-6 bg-white shadow-md rounded-lg my-10 border">
+    <div className="flex flex-col max-w-2xl w-full my-14 mx-auto bg-white/80 rounded-xl shadow-xl p-10">
       <h2 className="flex text-2xl text-center mb-6 justify-around">QUERY SHEET</h2>
       <form onSubmit={handleSubmit}>
         <p className="text-center mb-6">
