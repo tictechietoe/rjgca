@@ -312,7 +312,7 @@ const services = ({ iconSize = 30 }) => {
       description: "Business cannot last in today's world economy without a clear sense of purpose and a strategy. Timely strategic financial advice is the pre-requisite of all transactions that take place in today's rapidly evolving competitive landscape.",
       content: <>
         <div className="mb-5">
-          Business cannot last in today's world economy without a clear sense of purpose and a strategy to reach goals. RJGCA supports clients as they plan and adapt in order to meet the challenges of expansion and going international. Timely strategic financial advice is the prerequisite of all transactions that take place in today's rapidly evolving competitive landscape. We understand this and assist in identifying opportunities for, or risks to, our clients' interests, which accompany most financial advisory engagements. We provide businesses with corporate finance advice and support across a range of issues, drawing on the resources, expertise and experience.
+          Business cannot last in today's world economy without a clear sense of purpose and a strategy to reach goals. RJGCA supports clients as they plan and adapt in order to meet the challenges of expansion and going international. Timely strategic financial advice is the pre-requisite of all transactions that take place in today's rapidly evolving competitive landscape. We understand this and assist in identifying opportunities for, or risks to, our clients' interests, which accompany most financial advisory engagements. We provide businesses with corporate finance advice and support across a range of issues, drawing on the resources, expertise and experience.
         </div>
 
         <div>Our services include:</div>
@@ -360,31 +360,6 @@ const services = ({ iconSize = 30 }) => {
       icon: <TbDeviceIpadSearch size={ iconSize } />
     },
     {
-      name: "Societies, Trust & Co-operative Society Regulations & Advisory",
-      description: "It is impperative for the enterprise to keep a regular watch on foreign exchange transactions, in the context of sectoral caps, investment caps, so as to overcome from the adverse regulatory actions.",
-      content: <>
-        <div className="mb-5">
-          Charity begins at home and has countless ripples that affect societies and communities at large. Whether it is a trust managed by a few people or a large section of society, we provide the best financial advice and services. Trusts and societies form a pivotal pillar of the economic structure of the country; hence, it is our duty to ensure that your organisation stands on a strong and sustainable economic pillar.
-        </div>
-
-        <div>Our services include:</div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 lg:gap-5 p-3 sm:p-4 md:p-6 lg:p-10 mb-5">
-          <Card icon={<PiBuildingApartmentFill size={ iconSize } />} name="Formation of Society, Trust & Section 8 Company" />
-          <Card icon={<HiReceiptTax size={ iconSize } />} name="Registration U/s 12AA and 80G of Income Tax Act" />
-          <Card icon={<UilDollarAlt size={ iconSize } />} name="Registration and filing of returns under Foreign Contribution Regulation Act (FCRA)" />
-          <Card icon={<UilSearchPlus size={ iconSize } />} name="Statutory Audit under Maharashtra Society Registration Act, 1860" />
-          <Card icon={<CgInternal size={ iconSize } />} name="Internal Audit as per model Bye-Laws and Act" />
-          <Card icon={<UilFileGraph size={ iconSize } />} name="Accounting & Support Services" />
-          <Card icon={<UilFileContractDollar size={ iconSize } />} name="Direct & Indirect taxation compliances" />
-          <Card icon={<UilNotes size={ iconSize } />} name="Minutes Drafting for Various Meetings i.e. Board Meeting, EGM & AGM" />
-          <Card icon={<GrCompliance size={ iconSize } />} name="Compliances relating to Bye-Laws and Act" />
-          <Card icon={<UilAbacus size={ iconSize } />} name="Advisory in above matters" />
-        </div>
-      </>,
-      id: "societies_trust_and_cooperative_society_regulations_and_advisory",
-      icon: <SiHomeadvisor size={ iconSize } />
-    },
-    {
       name: "Audit and Assurance",
       description: "The Audit renders an opportunity to provide you with updated insight into your business and insight that could identify potential threats or opportunities that can be factored into your future business plans.",
       content: <>
@@ -424,7 +399,7 @@ const services = ({ iconSize = 30 }) => {
           <Card icon={<UilMoneyWithdraw size={ iconSize } />} name="Accounting & Bookkeeping Services" />
           <Card icon={<UilCoins size={ iconSize } />} name="Payroll Processing & Compliance" />
           <Card icon={<UilCreditCard size={ iconSize } />} name="GST Compliance Outsourcing" />
-          <Card icon={<TbPigMoney size={ iconSize } />} name="TDS & Income Tax Compilance" />
+          <Card icon={<TbPigMoney size={ iconSize } />} name="Tds & Income Tax Compliance" />
           <Card icon={<MdOutlineCreditCardOff size={ iconSize } />} name="Secretarial Compliance Support" />
 
         </div>
@@ -494,7 +469,12 @@ const services = ({ iconSize = 30 }) => {
     },
     {
       name: "CFO Services",
-      description: "Our CFO services are tailored specifically for Micro, Small, and Medium Enterprises(MSMEs), provide expert financial management and strategic support to help your business thrive.",
+      description: (
+        <>
+          <span className="hidden lg:inline">Our CFO services are tailored specifically for Micro, Small, and Medium Enterprises(MSMEs),...</span>
+          <span className="inline lg:hidden">Our CFO services are tailored specifically for Micro, Small, and Medium Enterprises(MSMEs), provide expert financial management and strategic support to help your business thrive.</span>
+        </>
+      ),
       content: <>
         <div className="mb-5">
           Our CFO services aretailored specifically for Micro, Small, and Medium Enterprises(MSMEs), provide expert financial management and strategic support to help your business thrive.
@@ -512,6 +492,31 @@ const services = ({ iconSize = 30 }) => {
       </>,
       id: "cfo_services",
       icon: <SiAmazonsimpleemailservice size={ iconSize } />
+    },
+    {
+      name: "Societies, Trust & Co-operative Society Regulations & Advisory",
+      description: "It is imperative for the enterprise to keep a regular watch on foreign exchange transactions, in the context of sectoral caps, investment caps, so as to overcome from the adverse regulatory actions.",
+      content: <>
+        <div className="mb-5">
+          Charity begins at home and has countless ripples that affect societies and communities at large. Whether it is a trust managed by a few people or a large section of society, we provide the best financial advice and services. Trusts and societies form a pivotal pillar of the economic structure of the country; hence, it is our duty to ensure that your organisation stands on a strong and sustainable economic pillar.
+        </div>
+
+        <div>Our services include:</div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 lg:gap-5 p-3 sm:p-4 md:p-6 lg:p-10 mb-5">
+          <Card icon={<PiBuildingApartmentFill size={ iconSize } />} name="Formation of Society, Trust & Section 8 Company" />
+          <Card icon={<HiReceiptTax size={ iconSize } />} name="Registration U/s 12AA and 80G of Income Tax Act" />
+          <Card icon={<UilDollarAlt size={ iconSize } />} name="Registration and filing of returns under Foreign Contribution Regulation Act (FCRA)" />
+          <Card icon={<UilSearchPlus size={ iconSize } />} name="Statutory Audit under Maharashtra Society Registration Act, 1860" />
+          <Card icon={<CgInternal size={ iconSize } />} name="Internal Audit as per model Bye-Laws and Act" />
+          <Card icon={<UilFileGraph size={ iconSize } />} name="Accounting & Support Services" />
+          <Card icon={<UilFileContractDollar size={ iconSize } />} name="Direct & Indirect taxation compliances" />
+          <Card icon={<UilNotes size={ iconSize } />} name="Minutes Drafting for Various Meetings i.e. Board Meeting, EGM & AGM" />
+          <Card icon={<GrCompliance size={ iconSize } />} name="Compliances relating to Bye-Laws and Act" />
+          <Card icon={<UilAbacus size={ iconSize } />} name="Advisory in above matters" />
+        </div>
+      </>,
+      id: "societies_trust_and_cooperative_society_regulations_and_advisory",
+      icon: <SiHomeadvisor size={ iconSize } />
     }
   ];
 };
