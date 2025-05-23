@@ -37,25 +37,44 @@ const socialLinks = [
 
 const SocialMedia = () => {
   return (
-    <div className="hidden md:flex fixed top-1/3 right-0 z-50 flex-col items-center space-y-2">
-      {socialLinks.map((item, idx) => (
-        <a
-          key={idx}
-          href={item.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={item.label}
-          className="group"
-        >
-          <div
-            className="flex items-center justify-center w-12 h-12 mb-2 rounded-l-lg bg-white transition-all duration-200 shadow-2xl hover:bg-gray-100 group-hover:-translate-x-3 group-hover:scale-110 group-hover:shadow-3xl"
-            style={{ color: item.color, boxShadow: '0 4px 24px 0 rgba(0,0,0,0.25), 0 1.5px 8px 0 rgba(0,0,0,0.18)' }}
+    <>
+      {/* Desktop sidebar */}
+      <div className="hidden md:flex fixed top-1/3 right-0 z-50 flex-col items-center space-y-2">
+        {socialLinks.map((item, idx) => (
+          <a
+            key={idx}
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={item.label}
+            className="group"
           >
-            <span className="text-2xl">{item.icon}</span>
-          </div>
-        </a>
-      ))}
-    </div>
+            <div
+              className="flex items-center justify-center w-12 h-12 mb-2 rounded-l-lg bg-white transition-all duration-200 shadow-2xl hover:bg-gray-100 group-hover:-translate-x-3 group-hover:scale-110 group-hover:shadow-3xl"
+              style={{ color: item.color, boxShadow: '0 4px 24px 0 rgba(0,0,0,0.25), 0 1.5px 8px 0 rgba(0,0,0,0.18)' }}
+            >
+              <span className="text-2xl">{item.icon}</span>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      {/* Mobile bottom bar */}
+      <div className="md:hidden fixed bottom-0 left-1/2 -translate-x-1/2 z-50 flex justify-around items-center bg-[rgb(252,252,252)] rounded-2xl shadow-2xl py-2 px-3 mb-4 max-w-xs w-full" style={{ boxShadow: '0 -4px 24px 0 rgba(0,0,0,0.18), 0 -1.5px 8px 0 rgba(0,0,0,0.12)' }}>
+        {socialLinks.map((item, idx) => (
+          <a
+            key={idx}
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={item.label}
+            className="flex items-center justify-center"
+          >
+            <span className="text-xl" style={{ color: item.color }}>{item.icon}</span>
+          </a>
+        ))}
+      </div>
+    </>
   );
 };
 

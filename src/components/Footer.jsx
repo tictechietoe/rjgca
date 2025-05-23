@@ -150,7 +150,7 @@ const Footer = () => {
       </div>
 
       {/* Copyright footer */}
-      <div className="border-t border-gray-800 py-4 text-center text-xs md:text-sm">
+      <div className="border-t border-gray-800 py-4 text-center text-xs md:text-sm pb-20">
         &copy; {new Date().getFullYear()} R J GALA & ASSOCIATES. All rights reserved.
       </div>
     </footer>
