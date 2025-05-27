@@ -9,18 +9,19 @@ const TrustCooperativeSociety = () => {
   const servicesData = services({
     iconSize: 40,
   });
+  const service = _.find(servicesData, { id: 'societies_trust_and_cooperative_society_regulations_and_advisory' });
 
   return (
     <div>
       <BannerImage
         image={ trustCooperativeSociety }
-        title={ _.upperCase(servicesData[5].name) }
+        title={ _.upperCase(service.name) }
         fromText="Services"
         fromLink="/services"
-        toText={ servicesData[5].name }
+        toText={ service.name }
       />
       <div className="p-3 sm:p-6 md:p-10 lg:p-16">
-        { servicesData[5].content }
+        { service.content }
       </div>
     </div>
   );

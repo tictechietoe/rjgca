@@ -9,18 +9,19 @@ const AuditAssurance = () => {
   const servicesData = services({
     iconSize: 40,
   });
+  const service = _.find(servicesData, { id: 'audit_and_assurance' });
 
   return (
     <div>
       <BannerImage
         image={ auditAssurance }
-        title={ _.upperCase(servicesData[6].name) }
+        title={ _.upperCase(service.name) }
         fromText="Services"
         fromLink="/services"
-        toText={ servicesData[6].name }
+        toText={ service.name }
       />
       <div className="p-3 sm:p-6 md:p-10 lg:p-16">
-        { servicesData[6].content }
+        { service.content }
       </div>
     </div>
   );

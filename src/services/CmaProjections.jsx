@@ -9,18 +9,19 @@ const CmaProjections = () => {
   const servicesData = services({
     iconSize: 40,
   });
+  const service = _.find(servicesData, { id: 'cma_projections' });
 
   return (
     <div>
       <BannerImage
         image={ cmaProjections }
-        title={ _.upperCase(servicesData[9].name) }
+        title={ _.upperCase(service.name) }
         fromText="Services"
         fromLink="/services"
-        toText={ servicesData[9].name }
+        toText={ service.name }
       />
       <div className="p-3 sm:p-6 md:p-10 lg:p-16">
-        { servicesData[9].content }
+        { service.content }
       </div>
     </div>
   );

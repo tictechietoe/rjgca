@@ -57,7 +57,7 @@ const Team = () => {
       expertise: [
         "CFO Services",
         "Corporate Advisory",
-        "Buisness suport services",
+        "Business suport services",
         "Fund raising"
       ]
     },

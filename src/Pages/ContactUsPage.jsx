@@ -27,13 +27,14 @@ const ContactInfo = () => {
                 <div className="font-semibold">1. R J Gala & Associates</div>
                 <div className="text-sm">Chartered Accountants</div>
                 <div className="text-xs mt-1">
-                  Office no.3, Ground floor, Vadhan Niwas, Fanaswadi, Off. Dadisheth Agiary Lane, Near Sitaram Poddar School, Landmark: Shiv sena office, Marine Lines E, Mumbai 400002
+                  301, 3rd Floor, Shreeniwas Building, Bandu Gokhale Path, Off. Khadilkar road, Girgaon, Mumbai 400004
                 </div>
               </div>
               <div>
                 <div className="font-semibold">2. R J Gala & Associates</div>
+                <div className="text-sm">Chartered Accountants</div>
                 <div className="text-xs mt-1">
-                  301, 3rd Floor, Shreeniwas Building, Bandu Gokhale Path, Off. Khadilkar road, Girgaon, Mumbai 400004
+                  Office no.3, Ground floor, Vadhan Niwas, Fanaswadi, Off. Dadisheth Agiary Lane, Near Sitaram Poddar School, Landmark: Shiv sena office, Marine Lines E, Mumbai 400002
                 </div>
               </div>
             </div>
